@@ -3,6 +3,8 @@ package com.corral.firebase.shailshah.bakingapp.provider;
 import android.net.Uri;
 import android.provider.BaseColumns;
 
+import static com.corral.firebase.shailshah.bakingapp.provider.BakingAppContractor.BakeryEntry.CONTENT_URI;
+
 /**
  * Created by shailshah on 10/25/17.
  */
@@ -42,7 +44,15 @@ public class BakingAppContractor {
         public static final String COLUMN_SERVINGS = "servings";
 
         public static final String COLIMN_IMAGE_URL = "images";
+        public static final Uri CONTENT_URI = BASE_CONTENT_URI.buildUpon()
+                .appendPath(PATH_BAKERY)
+                .build();
 
 
+    }
+    public static Uri buildWeatherUriWithTitle(String title) {
+        return CONTENT_URI.buildUpon()
+                .appendPath(title)
+                .build();
     }
 }

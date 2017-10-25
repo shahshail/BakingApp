@@ -43,9 +43,21 @@
         </activity>
 
         <provider
-            android:name="com.corral.firebase.shailshah.bakingapp.BakingProvider"
+            android:name="com.corral.firebase.shailshah.bakingapp.provider.BakingProvider"
             android:authorities="com.corral.firebase.shailshah.bakingapp.provider"
             android:exported="false" />
+        <!--
+             Receives GooglePlay execution requests and forwards them to the
+             appropriate internal service.
+        -->
+        <service
+            android:name="com.firebase.jobdispatcher.GooglePlayReceiver"
+            android:exported="true"
+            android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE" >
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

@@ -12,16 +12,20 @@
         "source": "/Users/shailshah/.android/build-cache/aeae6ad58d5dff6b021249d55552646b5585640c/output/res/layout/abc_action_menu_layout.xml"
     },
     {
-        "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_header_item_layout.xml",
-        "source": "/Users/shailshah/.android/build-cache/aeae6ad58d5dff6b021249d55552646b5585640c/output/res/layout/abc_popup_menu_header_item_layout.xml"
-    },
-    {
         "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
         "source": "/Users/shailshah/.android/build-cache/aeae6ad58d5dff6b021249d55552646b5585640c/output/res/layout/abc_action_mode_close_item_material.xml"
     },
     {
+        "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_header_item_layout.xml",
+        "source": "/Users/shailshah/.android/build-cache/aeae6ad58d5dff6b021249d55552646b5585640c/output/res/layout/abc_popup_menu_header_item_layout.xml"
+    },
+    {
         "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/layout/notification_template_media.xml",
         "source": "/Users/shailshah/.android/build-cache/aeae6ad58d5dff6b021249d55552646b5585640c/output/res/layout/notification_template_media.xml"
+    },
+    {
+        "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/layout/preference_list_fragment.xml",
+        "source": "/Users/shailshah/.android/build-cache/74133c24c7da61e1071de1538c792325eaf30cc4/output/res/layout/preference_list_fragment.xml"
     },
     {
         "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
@@ -32,12 +36,12 @@
         "source": "/Users/shailshah/.android/build-cache/f4f9e5e85bc9a464ea9122e171e56684ca6b91cd/output/res/layout/design_navigation_item_subheader.xml"
     },
     {
-        "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
-        "source": "/Users/shailshah/.android/build-cache/aeae6ad58d5dff6b021249d55552646b5585640c/output/res/layout/notification_template_part_chronometer.xml"
-    },
-    {
         "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/layout/item_detail.xml",
         "source": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/res/layout/item_detail.xml"
+    },
+    {
+        "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
+        "source": "/Users/shailshah/.android/build-cache/aeae6ad58d5dff6b021249d55552646b5585640c/output/res/layout/notification_template_part_chronometer.xml"
     },
     {
         "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
@@ -80,6 +84,14 @@
         "source": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/res/layout/item_list_content.xml"
     },
     {
+        "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/layout/preference_widget_seekbar.xml",
+        "source": "/Users/shailshah/.android/build-cache/74133c24c7da61e1071de1538c792325eaf30cc4/output/res/layout/preference_widget_seekbar.xml"
+    },
+    {
+        "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/layout/preference_widget_checkbox.xml",
+        "source": "/Users/shailshah/.android/build-cache/74133c24c7da61e1071de1538c792325eaf30cc4/output/res/layout/preference_widget_checkbox.xml"
+    },
+    {
         "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/layout/design_layout_tab_icon.xml",
         "source": "/Users/shailshah/.android/build-cache/f4f9e5e85bc9a464ea9122e171e56684ca6b91cd/output/res/layout/design_layout_tab_icon.xml"
     },
@@ -88,12 +100,24 @@
         "source": "/Users/shailshah/.android/build-cache/aeae6ad58d5dff6b021249d55552646b5585640c/output/res/layout/support_simple_spinner_dropdown_item.xml"
     },
     {
+        "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/layout/preference_widget_switch_compat.xml",
+        "source": "/Users/shailshah/.android/build-cache/74133c24c7da61e1071de1538c792325eaf30cc4/output/res/layout/preference_widget_switch_compat.xml"
+    },
+    {
         "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
         "source": "/Users/shailshah/.android/build-cache/aeae6ad58d5dff6b021249d55552646b5585640c/output/res/layout/abc_list_menu_item_checkbox.xml"
     },
     {
+        "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/layout/preference_category.xml",
+        "source": "/Users/shailshah/.android/build-cache/74133c24c7da61e1071de1538c792325eaf30cc4/output/res/layout/preference_category.xml"
+    },
+    {
         "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
         "source": "/Users/shailshah/.android/build-cache/aeae6ad58d5dff6b021249d55552646b5585640c/output/res/layout/abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/layout/preference_recyclerview.xml",
+        "source": "/Users/shailshah/.android/build-cache/74133c24c7da61e1071de1538c792325eaf30cc4/output/res/layout/preference_recyclerview.xml"
     },
     {
         "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
@@ -142,6 +166,10 @@
     {
         "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
         "source": "/Users/shailshah/.android/build-cache/aeae6ad58d5dff6b021249d55552646b5585640c/output/res/layout/abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/layout/preference_information.xml",
+        "source": "/Users/shailshah/.android/build-cache/74133c24c7da61e1071de1538c792325eaf30cc4/output/res/layout/preference_information.xml"
     },
     {
         "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
@@ -202,6 +230,10 @@
     {
         "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
         "source": "/Users/shailshah/.android/build-cache/aeae6ad58d5dff6b021249d55552646b5585640c/output/res/layout/abc_screen_simple.xml"
+    },
+    {
+        "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/layout/preference_dialog_edittext.xml",
+        "source": "/Users/shailshah/.android/build-cache/74133c24c7da61e1071de1538c792325eaf30cc4/output/res/layout/preference_dialog_edittext.xml"
     },
     {
         "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/layout/design_navigation_menu_item.xml",
