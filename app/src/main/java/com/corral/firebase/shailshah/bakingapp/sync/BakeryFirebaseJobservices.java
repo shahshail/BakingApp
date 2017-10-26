@@ -19,15 +19,20 @@ public class BakeryFirebaseJobservices extends JobService {
             protected Void doInBackground(Void... params) {
 
                 Context context = getApplicationContext();
-                df
+                BakerySyncTask.syncBakery(context);
+
                 return null;
             }
         }.execute();
-        return false;
+        return true;
     }
 
     @Override
     public boolean onStopJob(JobParameters job) {
-        return false;
+        if (mFetchBakeryDataTask != null)
+        {
+            mFetchBakeryDataTask.cancel(true);
+        }
+        return true;
     }
 }

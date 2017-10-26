@@ -408,7 +408,7 @@
             <flag name="withText" value="4"/>
             
             <flag name="collapseActionView" value="8"/>
-        </attr><attr format="reference" name="actionLayout"/><attr format="string" name="actionViewClass"/><attr format="string" name="actionProviderClass"/><attr format="string" name="contentDescription"/><attr format="string" name="tooltipText"/></declare-styleable>
+        </attr><attr format="reference" name="actionLayout"/><attr format="string" name="actionViewClass"/><attr format="string" name="actionProviderClass"/></declare-styleable>
     <declare-styleable name="MenuView"><attr name="android:itemTextAppearance"/><attr name="android:horizontalDivider"/><attr name="android:verticalDivider"/><attr name="android:headerBackground"/><attr name="android:itemBackground"/><attr name="android:windowAnimationStyle"/><attr name="android:itemIconDisabledAlpha"/><attr format="boolean" name="preserveIconSpacing"/><attr format="reference" name="subMenuArrow"/></declare-styleable>
     <declare-styleable name="MultiSelectListPreference"><attr name="entries"/><attr name="android:entries"/><attr name="entryValues"/><attr name="android:entryValues"/></declare-styleable>
     <declare-styleable name="NavigationView"><attr name="android:background"/><attr name="android:fitsSystemWindows"/><attr name="android:maxWidth"/><attr name="elevation"/><attr format="reference" name="menu"/><attr format="color" name="itemIconTint"/><attr format="color" name="itemTextColor"/><attr format="reference" name="itemBackground"/><attr format="reference" name="itemTextAppearance"/><attr format="reference" name="headerLayout"/></declare-styleable>
@@ -420,7 +420,7 @@
     <declare-styleable name="PreferenceImageView"><attr format="dimension" name="maxWidth"/><attr name="android:maxWidth"/><attr format="dimension" name="maxHeight"/><attr name="android:maxHeight"/></declare-styleable>
     <declare-styleable name="PreferenceTheme"><attr format="reference" name="preferenceTheme"/><attr format="reference" name="preferenceScreenStyle"/><attr format="reference" name="preferenceActivityStyle"/><attr format="reference" name="preferenceFragmentStyle"/><attr format="reference" name="preferenceFragmentCompatStyle"/><attr format="reference" name="preferenceCategoryStyle"/><attr format="reference" name="preferenceStyle"/><attr format="reference" name="preferenceInformationStyle"/><attr format="reference" name="checkBoxPreferenceStyle"/><attr format="reference" name="yesNoPreferenceStyle"/><attr format="reference" name="dialogPreferenceStyle"/><attr format="reference" name="editTextPreferenceStyle"/><attr format="reference" name="ringtonePreferenceStyle"/><attr format="reference" name="dropdownPreferenceStyle"/><attr format="reference" name="preferenceLayoutChild"/><attr format="reference" name="preferencePanelStyle"/><attr format="reference" name="preferenceHeaderPanelStyle"/><attr format="reference" name="preferenceListStyle"/><attr format="reference" name="preferenceFragmentListStyle"/><attr format="dimension" name="preferenceFragmentPaddingSide"/><attr format="reference" name="switchPreferenceStyle"/><attr format="reference" name="switchPreferenceCompatStyle"/><attr format="reference" name="seekBarPreferenceStyle"/></declare-styleable>
     <declare-styleable name="RecycleListView"><attr format="dimension" name="paddingBottomNoButtons"/><attr format="dimension" name="paddingTopNoTitle"/></declare-styleable>
-    <declare-styleable name="RecyclerView"><attr format="string" name="layoutManager"/><attr name="android:orientation"/><attr name="android:descendantFocusability"/><attr format="integer" name="spanCount"/><attr format="boolean" name="reverseLayout"/><attr format="boolean" name="stackFromEnd"/><attr format="boolean" name="fastScrollEnabled"/><attr format="reference" name="fastScrollVerticalThumbDrawable"/><attr format="reference" name="fastScrollVerticalTrackDrawable"/><attr format="reference" name="fastScrollHorizontalThumbDrawable"/><attr format="reference" name="fastScrollHorizontalTrackDrawable"/></declare-styleable>
+    <declare-styleable name="RecyclerView"><attr format="string" name="layoutManager"/><attr name="android:orientation"/><attr name="android:descendantFocusability"/><attr format="integer" name="spanCount"/><attr format="boolean" name="reverseLayout"/><attr format="boolean" name="stackFromEnd"/></declare-styleable>
     <declare-styleable name="ScrimInsetsFrameLayout"><attr format="color|reference" name="insetForeground"/></declare-styleable>
     <declare-styleable name="ScrollingViewBehavior_Layout"><attr format="dimension" name="behavior_overlapTop"/></declare-styleable>
     <declare-styleable name="SearchView"><attr format="reference" name="layout"/><attr format="boolean" name="iconifiedByDefault"/><attr name="android:maxWidth"/><attr format="string" name="queryHint"/><attr format="string" name="defaultQueryHint"/><attr name="android:imeOptions"/><attr name="android:inputType"/><attr format="reference" name="closeIcon"/><attr format="reference" name="goIcon"/><attr format="reference" name="searchIcon"/><attr format="reference" name="searchHintIcon"/><attr format="reference" name="voiceIcon"/><attr format="reference" name="commitIcon"/><attr format="reference" name="suggestionRowLayout"/><attr format="reference" name="queryBackground"/><attr format="reference" name="submitBackground"/><attr name="android:focusable"/></declare-styleable>
@@ -615,9 +615,6 @@
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
     <dimen name="fab_margin">16dp</dimen>
-    <dimen name="fastscroll_default_thickness">8dp</dimen>
-    <dimen name="fastscroll_margin">0dp</dimen>
-    <dimen name="fastscroll_minimum_range">50dp</dimen>
     <item format="float" name="highlight_alpha_material_colored" type="dimen">0.26</item>
     <item format="float" name="highlight_alpha_material_dark" type="dimen">0.20</item>
     <item format="float" name="highlight_alpha_material_light" type="dimen">0.12</item>
@@ -663,7 +660,6 @@
     <item name="textinput_counter" type="id"/>
     <item name="textinput_error" type="id"/>
     <item name="transition_current_scene" type="id"/>
-    <item name="transition_layout_save" type="id"/>
     <item name="transition_scene_layoutid_cache" type="id"/>
     <item name="up" type="id"/>
     <item name="view_offset_helper" type="id"/>
