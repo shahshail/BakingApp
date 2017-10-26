@@ -6,6 +6,7 @@ package com.corral.firebase.shailshah.bakingapp.helper;
 
 public class BakeryInformationHelper {
 
+    private static String ID;
     private static int bakeryId;
     private static String itemName;
     private static String[] itemQuentity;
