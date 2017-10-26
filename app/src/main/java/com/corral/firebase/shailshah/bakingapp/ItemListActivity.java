@@ -2,7 +2,6 @@ package com.corral.firebase.shailshah.bakingapp;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -16,9 +15,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.corral.firebase.shailshah.bakingapp.dummy.DummyContent;
-import com.corral.firebase.shailshah.bakingapp.utils.OpenBakingJsonUtils;
-
-import org.json.JSONException;
+import com.corral.firebase.shailshah.bakingapp.sync.BakerySyncUtils;
 
 import java.util.List;
 
@@ -68,17 +65,7 @@ public class ItemListActivity extends AppCompatActivity {
             mTwoPane = true;
         }
 
-        new AsyncTask<Void, Void, Void>() {
-            @Override
-            protected Void doInBackground(Void... params) {
-                try {
-                    OpenBakingJsonUtils.getSimpleMovieDataFromJson(ItemListActivity.this);
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-                return null;
-            }
-        }.execute();
+        BakerySyncUtils.initialize(this);
 
     }
 

@@ -46,6 +46,18 @@
             android:name="com.corral.firebase.shailshah.bakingapp.provider.BakingProvider"
             android:authorities="com.corral.firebase.shailshah.bakingapp.provider"
             android:exported="false" />
+
+        <service
+            android:name="com.corral.firebase.shailshah.bakingapp.sync.BakeryIntentServices"
+            android:exported="false" />
+        <service
+            android:name="com.corral.firebase.shailshah.bakingapp.sync.BakeryFirebaseJobservices"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
+            </intent-filter>
+        </service>
+
         <!--
              Receives GooglePlay execution requests and forwards them to the
              appropriate internal service.

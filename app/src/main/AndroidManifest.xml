@@ -34,6 +34,18 @@
             android:name=".provider.BakingProvider"
             android:authorities="com.corral.firebase.shailshah.bakingapp.provider"
             android:exported="false" />
+        <service
+            android:name=".sync.BakeryIntentServices"
+            android:exported="false" />
+        <service
+            android:name=".sync.BakeryFirebaseJobservices"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
+            </intent-filter>
+        </service>
+
+
     </application>
 
 </manifest>

@@ -94,15 +94,16 @@ public class OpenBakingJsonUtils {
                 bakingValues.put(BakingAppContractor.BakeryEntry.COLIMN_IMAGE_URL,image);
 
                 BakingContentValue[i] = bakingValues;
-            }
 
+            }
+            return BakingContentValue;
 
         } catch (IOException e) {
             e.printStackTrace();
+            return null;
         }
 
 
-return null;
         }
 
 

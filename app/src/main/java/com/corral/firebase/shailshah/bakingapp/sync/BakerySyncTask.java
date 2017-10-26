@@ -23,8 +23,10 @@ public class BakerySyncTask {
                 ContentResolver bakeryContentResolver = context.getContentResolver();
                 bakeryContentResolver.delete(BakingAppContractor.BakeryEntry.CONTENT_URI, null,null);
 
-                bakeryContentResolver.bulkInsert(BakingAppContractor.BakeryEntry.CONTENT_URI,
+               int status = bakeryContentResolver.bulkInsert(BakingAppContractor.BakeryEntry.CONTENT_URI,
                         bakeryDataValues);
+                Log.v(BakerySyncTask.class.getSimpleName(),"Total numbers of rows are inserted.. " + status);
+
             }
             else
             {
