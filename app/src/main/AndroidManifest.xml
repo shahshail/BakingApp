@@ -22,13 +22,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ItemDetailActivity"
-            android:label="@string/title_item_detail"
-            android:parentActivityName=".ItemListActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:name=".DetailListActivity"
+            android:parentActivityName=".ItemListActivity">
+        </activity>
+        <activity
+            android:name=".DetailDetailActivity"
+            android:parentActivityName=".DetailListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.corral.firebase.shailshah.bakingapp.ItemListActivity" />
+                android:value=".DetailDetailActivity" />
         </activity>
         <provider
             android:name=".provider.BakingProvider"

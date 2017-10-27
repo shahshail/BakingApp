@@ -7,12 +7,12 @@ package com.corral.firebase.shailshah.bakingapp.helper;
 public class BakeryInformationHelper {
 
     private static String ID;
-    private static int bakeryId;
+    private static String bakeryId;
     private static String itemName;
     private static String[] itemQuentity;
     private static String[] itemMeasure;
     private static String[] itemIngredient;
-    private static int[] stepsId;
+    private static String[] stepsId;
     private static String[] stepsShortDescription;
     private static String[] stepsDescription;
     private static String[] stepsVideoUrl;
@@ -21,11 +21,11 @@ public class BakeryInformationHelper {
     private static String itemImagePath;
 
 
-    public static int getBakeryId() {
+    public static String getBakeryId() {
         return bakeryId;
     }
 
-    public static void setBakeryId(int bakeryId) {
+    public static void setBakeryId(String bakeryId) {
         BakeryInformationHelper.bakeryId = bakeryId;
     }
 
@@ -61,11 +61,11 @@ public class BakeryInformationHelper {
         BakeryInformationHelper.itemIngredient = itemIngredient;
     }
 
-    public static int[] getStepsId() {
+    public static String[] getStepsId() {
         return stepsId;
     }
 
-    public static void setStepsId(int[] stepsId) {
+    public static void setStepsId(String[] stepsId) {
         BakeryInformationHelper.stepsId = stepsId;
     }
 
@@ -115,5 +115,13 @@ public class BakeryInformationHelper {
 
     public static void setItemImagePath(String itemImagePath) {
         BakeryInformationHelper.itemImagePath = itemImagePath;
+    }
+
+    public static String getID() {
+        return ID;
+    }
+
+    public static void setID(String ID) {
+        BakeryInformationHelper.ID = ID;
     }
 }

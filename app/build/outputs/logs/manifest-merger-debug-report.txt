@@ -1,28 +1,28 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:2:1-51:12
+ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:2:1-54:12
 	package
-		ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:3:5-54
-		INJECTED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml
+		ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:3:5-54
+		INJECTED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:4:5-67
+ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:4:5-67
 	android:name
-		ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:4:22-64
+		ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:4:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:5:5-79
+ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:5:5-79
 	android:name
-		ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:5:22-76
+		ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:5:22-76
 application
-ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:7:5-49:19
+ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:7:5-52:19
 MERGED from [com.android.support:preference-v7:25.3.1] /Users/shailshah/.android/build-cache/44a1edf99a4f58a746e4ec93f6a11e16afccc4ed/output/AndroidManifest.xml:26:5-20
 MERGED from [com.firebase:firebase-jobdispatcher:0.5.0] /Users/shailshah/.android/build-cache/4562bfb36155703e61c93b5adf8a43aaba2e2249/output/AndroidManifest.xml:26:5-40:19
 MERGED from [com.android.support:design:25.3.1] /Users/shailshah/.android/build-cache/79c6d0990f5a6002a0735056a8e3e0c15284f864/output/AndroidManifest.xml:29:5-20
@@ -39,79 +39,83 @@ MERGED from [com.android.support:support-compat:25.3.1] /Users/shailshah/.androi
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/shailshah/.android/build-cache/6d9bbf36ad389760fe513734f52463fd19632694/output/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:cardview-v7:25.3.1] /Users/shailshah/.android/build-cache/3eec29cdee4d729a5d40c7e123e1f7ab5a002c7d/output/AndroidManifest.xml:26:5-20
 	android:label
-		ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:10:9-41
+		ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:10:9-41
 	android:supportsRtl
-		ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:12:9-35
+		ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:12:9-35
 	android:roundIcon
-		ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:11:9-54
+		ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:11:9-54
 	android:allowBackup
-		ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:8:9-35
+		ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:8:9-35
 	android:icon
-		ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:9:9-43
+		ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:9:9-43
 	android:theme
-		ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:13:9-40
+		ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:13:9-40
 activity#com.corral.firebase.shailshah.bakingapp.ItemListActivity
-ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:14:9-23:20
+ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:14:9-23:20
 	android:label
-		ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:16:13-45
+		ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:16:13-45
 	android:theme
-		ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:17:13-56
+		ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:17:13-56
 	android:name
-		ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:15:13-45
+		ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:15:13-45
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:18:13-22:29
+ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:18:13-22:29
 action#android.intent.action.MAIN
-ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:19:17-69
+ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:19:17-69
 	android:name
-		ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:19:25-66
+		ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:19:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:21:17-77
+ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:21:17-77
 	android:name
-		ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:21:27-74
-activity#com.corral.firebase.shailshah.bakingapp.ItemDetailActivity
-ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:24:9-32:20
-	android:label
-		ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:26:13-54
+		ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:21:27-74
+activity#com.corral.firebase.shailshah.bakingapp.DetailListActivity
+ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:24:9-27:20
 	android:parentActivityName
-		ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:27:13-59
+		ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:26:13-59
+	android:name
+		ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:25:13-47
+activity#com.corral.firebase.shailshah.bakingapp.DetailDetailActivity
+ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:28:9-35:20
+	android:parentActivityName
+		ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:30:13-61
 	android:theme
-		ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:28:13-56
+		ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:31:13-56
 	android:name
-		ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:25:13-47
+		ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:29:13-49
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:29:13-31:92
+ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:32:13-34:57
 	android:value
-		ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:31:17-89
+		ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:34:17-54
 	android:name
-		ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:30:17-63
+		ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:33:17-63
 provider#com.corral.firebase.shailshah.bakingapp.provider.BakingProvider
-ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:33:9-36:40
+ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:36:9-39:40
 	android:authorities
-		ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:35:13-83
+		ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:38:13-83
 	android:exported
-		ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:36:13-37
+		ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:39:13-37
 	android:name
-		ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:34:13-52
+		ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:37:13-52
 service#com.corral.firebase.shailshah.bakingapp.sync.BakeryIntentServices
-ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:37:9-39:40
+ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:40:9-42:40
 	android:exported
-		ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:39:13-37
+		ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:42:13-37
 	android:name
-		ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:38:13-54
+		ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:41:13-54
 service#com.corral.firebase.shailshah.bakingapp.sync.BakeryFirebaseJobservices
-ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:40:9-46:19
+ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:43:9-49:19
 	android:exported
-		ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:42:13-37
+		ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:45:13-37
 	android:name
-		ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:41:13-59
+		ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:44:13-59
 intent-filter#com.firebase.jobdispatcher.ACTION_EXECUTE
-ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:43:13-45:29
+ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:46:13-48:29
 action#com.firebase.jobdispatcher.ACTION_EXECUTE
-ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:44:17-84
+ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:47:17-84
 	android:name
-		ADDED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml:44:25-81
+		ADDED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml:47:25-81
 uses-sdk
-INJECTED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:preference-v7:25.3.1] /Users/shailshah/.android/build-cache/44a1edf99a4f58a746e4ec93f6a11e16afccc4ed/output/AndroidManifest.xml:20:5-43
 MERGED from [com.firebase:firebase-jobdispatcher:0.5.0] /Users/shailshah/.android/build-cache/4562bfb36155703e61c93b5adf8a43aaba2e2249/output/AndroidManifest.xml:22:5-24:41
 MERGED from [com.android.support:design:25.3.1] /Users/shailshah/.android/build-cache/79c6d0990f5a6002a0735056a8e3e0c15284f864/output/AndroidManifest.xml:21:5-23:62
@@ -131,11 +135,11 @@ MERGED from [com.android.support:cardview-v7:25.3.1] /Users/shailshah/.android/b
 	tools:overrideLibrary
 		ADDED from [com.android.support:design:25.3.1] /Users/shailshah/.android/build-cache/79c6d0990f5a6002a0735056a8e3e0c15284f864/output/AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/shailshah/Documents/Projects/BakingApp/app/src/main/AndroidManifest.xml
 meta-data#android.support.VERSION
 ADDED from [com.android.support:preference-v7:25.3.1] /Users/shailshah/.android/build-cache/44a1edf99a4f58a746e4ec93f6a11e16afccc4ed/output/AndroidManifest.xml:22:5-24:34
 MERGED from [com.android.support:design:25.3.1] /Users/shailshah/.android/build-cache/79c6d0990f5a6002a0735056a8e3e0c15284f864/output/AndroidManifest.xml:25:5-27:34

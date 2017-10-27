@@ -33,13 +33,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.corral.firebase.shailshah.bakingapp.ItemDetailActivity"
-            android:label="@string/title_item_detail"
-            android:parentActivityName="com.corral.firebase.shailshah.bakingapp.ItemListActivity"
+            android:name="com.corral.firebase.shailshah.bakingapp.DetailListActivity"
+            android:parentActivityName="com.corral.firebase.shailshah.bakingapp.ItemListActivity" >
+        </activity>
+        <activity
+            android:name="com.corral.firebase.shailshah.bakingapp.DetailDetailActivity"
+            android:parentActivityName="com.corral.firebase.shailshah.bakingapp.DetailListActivity"
             android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.corral.firebase.shailshah.bakingapp.ItemListActivity" />
+                android:value=".DetailDetailActivity" />
         </activity>
 
         <provider

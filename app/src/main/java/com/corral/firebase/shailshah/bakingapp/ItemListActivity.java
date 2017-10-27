@@ -11,6 +11,7 @@ import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -18,10 +19,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
-import com.corral.firebase.shailshah.bakingapp.dummy.DummyContent;
+import com.corral.firebase.shailshah.bakingapp.helper.BakeryInformationHelper;
 import com.corral.firebase.shailshah.bakingapp.provider.BakingAppContractor;
 import com.corral.firebase.shailshah.bakingapp.sync.BakerySyncUtils;
+import com.corral.firebase.shailshah.bakingapp.utils.OpenBakingJsonUtils;
 
 /**
  * An activity representing a list of Items. This activity
@@ -105,11 +106,11 @@ public class ItemListActivity extends AppCompatActivity implements LoaderManager
         mRecyclerView.setAdapter(mDataAdapter);
        // View recyclerView = findViewById(R.id.item_list);
 
-        if (findViewById(R.id.item_detail_container) != null) {
-            // The detail container view will be present only in the
-            // large-screen layouts (res/values-w900dp).
-            // If this view is present, then the
-            // activity should be in two-pane mode.
+        if (findViewById(R.id.item_layout_info) != null) {
+            GridLayoutManager layoutManager = new GridLayoutManager(this,3,GridLayoutManager.VERTICAL,false);
+            mRecyclerView.setLayoutManager(layoutManager);
+            mRecyclerView.setAdapter(mDataAdapter);
+
             mTwoPane = true;
         }
 
@@ -212,7 +213,6 @@ public class ItemListActivity extends AppCompatActivity implements LoaderManager
         public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
             public final TextView mIdView;
             public final TextView mContentView;
-            public DummyContent.DummyItem mItem;
             TextView mNameView;
 
             public ViewHolder(View view) {
@@ -234,21 +234,40 @@ public class ItemListActivity extends AppCompatActivity implements LoaderManager
                 mCursor.moveToPosition(AdapterPosition);
                 String name = mCursor.getString(INDEX_BAKERY_NAME);
                 String id = mCursor.getString(INDEX_ID);
-                Log.v(ItemListActivity.class.getSimpleName(),"The Cursotr name for the bakery is "  +name);
-                if (mTwoPane) {
-                    Bundle arguments = new Bundle();
-                    arguments.putString(ItemDetailFragment.ARG_ITEM_ID, mItem.id);
-                    ItemDetailFragment fragment = new ItemDetailFragment();
-                    fragment.setArguments(arguments);
-                    getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.item_detail_container, fragment)
-                            .commit();
-                } else {
-                    Context context = v.getContext();
-                    Intent intent = new Intent(context, ItemDetailActivity.class);
-                    intent.putExtra(ItemDetailFragment.ARG_ITEM_ID, mItem.id);
-                    context.startActivity(intent);
-                }
+
+                BakeryInformationHelper.setID(id);
+                BakeryInformationHelper.setBakeryId(mCursor.getString(INDEX_BAKERY_ID));
+                BakeryInformationHelper.setItemName(name);
+                BakeryInformationHelper.setItemQuentity(OpenBakingJsonUtils.convertStringToArray(mCursor.getString(INDEX_QUANTITY)));
+                BakeryInformationHelper.setItemMeasure(OpenBakingJsonUtils.convertStringToArray(mCursor.getString(INDEX_MEASURE)));
+                BakeryInformationHelper.setItemIngredient(OpenBakingJsonUtils.convertStringToArray(mCursor.getString(INDEX_INGREDIENT)));
+                BakeryInformationHelper.setStepsId(OpenBakingJsonUtils.convertStringToArray(mCursor.getString(INDEX_STEPS_ID)));
+                BakeryInformationHelper.setStepsShortDescription(OpenBakingJsonUtils.convertStringToArray(mCursor.getString(INDEX_SHORT_DESCRIPTION)));
+                BakeryInformationHelper.setStepsDescription(OpenBakingJsonUtils.convertStringToArray(mCursor.getString(INDEX_DESCRIPTION)));
+                BakeryInformationHelper.setStepsVideoUrl(OpenBakingJsonUtils.convertStringToArray(mCursor.getString(INDEX_VIDEO_URL)));
+                BakeryInformationHelper.setStepsThumbnailUrl(OpenBakingJsonUtils.convertStringToArray(mCursor.getString(INDEX_THUMBNAIL_URL)));
+                BakeryInformationHelper.setItemServings(mCursor.getString(INDEX_SERVINGS));
+                BakeryInformationHelper.setItemImagePath(mCursor.getString(INDEX_IMAGE_URL));
+
+
+
+                Log.v(ItemListActivity.class.getSimpleName(),"The Cursotr name for the bakery is "  +BakeryInformationHelper.getItemName());
+                /**if (mTwoPane) {
+                 Bundle arguments = new Bundle();
+                 arguments.putString(ItemDetailFragment.ARG_ITEM_ID, mItem.id);
+                 ItemDetailFragment fragment = new ItemDetailFragment();
+                 fragment.setArguments(arguments);
+                 getSupportFragmentManager().beginTransaction()
+                 .replace(R.id.item_detail_container, fragment)
+                 .commit();
+                 } else {
+                 Context context = v.getContext();
+                 Intent intent = new Intent(context, ItemDetailActivity.class);
+                 intent.putExtra(ItemDetailFragment.ARG_ITEM_ID, mItem.id);
+                 context.startActivity(intent);
+                 }*/
+                Intent intent = new Intent(v.getContext(),DetailListActivity.class);
+                startActivity(intent);
 
                 mClickHandler.onClick(id);
             }
