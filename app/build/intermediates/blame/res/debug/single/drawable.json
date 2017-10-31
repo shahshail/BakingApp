@@ -24,12 +24,12 @@
         "source": "/Users/shailshah/.android/build-cache/79c6d0990f5a6002a0735056a8e3e0c15284f864/output/res/drawable/design_password_eye.xml"
     },
     {
-        "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
-        "source": "/Users/shailshah/.android/build-cache/3c01fef9a9ebf28c60422ce14504bb21fb2f78d7/output/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
-    },
-    {
         "merged": "/Users/shailshah/Documents/Projects/BakingApp/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_material.xml",
         "source": "/Users/shailshah/.android/build-cache/3c01fef9a9ebf28c60422ce14504bb21fb2f78d7/output/res/drawable/abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
+        "source": "/Users/shailshah/.android/build-cache/3c01fef9a9ebf28c60422ce14504bb21fb2f78d7/output/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
     },
     {
         "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_thumb_material.xml",
@@ -148,6 +148,10 @@
         "source": "/Users/shailshah/.android/build-cache/3c01fef9a9ebf28c60422ce14504bb21fb2f78d7/output/res/drawable/abc_seekbar_thumb_material.xml"
     },
     {
+        "merged": "/Users/shailshah/Documents/Projects/BakingApp/app/build/intermediates/res/merged/debug/drawable/ic_dots.png",
+        "source": "/Users/shailshah/Documents/Projects/BakingApp/app/src/main/res/drawable/ic_dots.png"
+    },
+    {
         "merged": "/Users/shailshah/Documents/Projects/BakingApp/app/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml",
         "source": "/Users/shailshah/.android/build-cache/3c01fef9a9ebf28c60422ce14504bb21fb2f78d7/output/res/drawable/abc_textfield_search_material.xml"
     },
@@ -230,6 +234,10 @@
     {
         "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background.xml",
         "source": "/Users/shailshah/.android/build-cache/3c01fef9a9ebf28c60422ce14504bb21fb2f78d7/output/res/drawable/abc_dialog_material_background.xml"
+    },
+    {
+        "merged": "/Users/shailshah/Documents/Projects/BakingApp/app/build/intermediates/res/merged/debug/drawable/servings.png",
+        "source": "/Users/shailshah/Documents/Projects/BakingApp/app/src/main/res/drawable/servings.png"
     },
     {
         "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
@@ -334,6 +342,10 @@
     {
         "merged": "/Users/shailshah/Documents/Projects/BakingApp/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background.xml",
         "source": "/Users/shailshah/.android/build-cache/3c01fef9a9ebf28c60422ce14504bb21fb2f78d7/output/res/drawable/abc_dialog_material_background.xml"
+    },
+    {
+        "merged": "/Users/shailshah/Documents/Projects/BakingApp/app/build/intermediates/res/merged/debug/drawable/ic_demo_muffin.jpeg",
+        "source": "/Users/shailshah/Documents/Projects/BakingApp/app/src/main/res/drawable/ic_demo_muffin.jpeg"
     },
     {
         "merged": "/Users/shailshah/Documents/Projects/BakingApp/app/build/intermediates/res/merged/debug/drawable/abc_vector_test.xml",
