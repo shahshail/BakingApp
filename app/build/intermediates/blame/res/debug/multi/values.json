@@ -737,14 +737,7 @@
                     "endOffset": 5315
                 },
                 "from": {
-                    "file": "/Users/shailshah/Documents/Projects/BakingApp/app/src/main/res/values/colors.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 199,
-                        "endColumn": 45,
-                        "endOffset": 240
-                    }
+                    "file": "/Users/shailshah/Documents/Projects/BakingApp/app/src/main/res/values/colors.xml"
                 }
             },
             {
@@ -3324,7 +3317,14 @@
                     "endOffset": 61032
                 },
                 "from": {
-                    "file": "/Users/shailshah/Documents/Projects/BakingApp/app/src/main/res/values/dimens.xml"
+                    "file": "/Users/shailshah/Documents/Projects/BakingApp/app/src/main/res/values/dimens.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 146,
+                        "endColumn": 42,
+                        "endOffset": 184
+                    }
                 }
             },
             {

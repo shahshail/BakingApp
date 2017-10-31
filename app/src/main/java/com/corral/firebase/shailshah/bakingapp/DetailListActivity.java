@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.corral.firebase.shailshah.bakingapp.dummy.DummyContent;
+import com.corral.firebase.shailshah.bakingapp.helper.BakeryInformationHelper;
 
 import java.util.List;
 
@@ -110,7 +111,7 @@ public class DetailListActivity extends AppCompatActivity {
 
         @Override
         public int getItemCount() {
-            return mValues.size();
+            return BakeryInformationHelper.getStepsId().length;
         }
 
         public class ViewHolder extends RecyclerView.ViewHolder {
