@@ -5,11 +5,10 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.corral.firebase.shailshah.bakingapp.helper.BakeryInformationHelper;
+import com.corral.firebase.shailshah.bakingapp.helper.BakeryStepsHelper;
 
 import java.util.ArrayList;
 
@@ -30,8 +29,6 @@ public class StepsDetailAcitvity extends AppCompatActivity {
         setContentView(R.layout.activity_detail_detail);
         Toolbar toolbar = (Toolbar) findViewById(R.id.detail_toolbar);
         setSupportActionBar(toolbar);
-
-       mIngredientTextView = (TextView) findViewById(R.id.tv_ingredient_view);
 
 
 

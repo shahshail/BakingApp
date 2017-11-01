@@ -28,6 +28,7 @@ public class RacipesListActivity extends AppCompatActivity implements SetpsAdapt
     private int mPosition = RecyclerView.NO_POSITION;
     private RecipesItemRecyclerViewAdapter mAdapte;
     private TextView mIngredient;
+
     /**
      * Whether or not the activity is in two-pane mode, i.e. running on a tablet
      * device.
@@ -38,21 +39,25 @@ public class RacipesListActivity extends AppCompatActivity implements SetpsAdapt
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_list);
-        String finalResult = null;
 
+        String finalResult = new String();
       mRecyclerView = (RecyclerView) findViewById(R.id.detail_list);
         mRecyclerView.setHasFixedSize(true);
         mAdapte = new RecipesItemRecyclerViewAdapter(this,this);
         mRecyclerView.setAdapter(mAdapte);
         mIngredient = (TextView) findViewById(R.id.tv_ingredient_view);
 
+
         for (int i = 0 ; i< BakeryInformationHelper.getItemQuentity().length ; i++ )
         {
-           finalResult += BakeryInformationHelper.getItemQuentity()[i] + " " + BakeryInformationHelper.getItemMeasure()[i] + " " + BakeryInformationHelper.getItemIngredient()[i] + System.lineSeparator();
+           finalResult += BakeryInformationHelper.getItemQuentity()[i] + " " + BakeryInformationHelper.getItemMeasure()[i] + " " + BakeryInformationHelper.getItemIngredient()[i]+ ". " + System.lineSeparator();
             Log.v(RacipesListActivity.class.getSimpleName(), "Result is  ::: :: :: :: " + finalResult);
 
         }
 
+        BakeryStepsHelper.setIngredientResult(finalResult);
+
+        mIngredient.setText(finalResult);
         if (findViewById(R.id.detail_detail_container) != null) {
             // The detail container view will be present only in the
             // large-screen layouts (res/values-w900dp).

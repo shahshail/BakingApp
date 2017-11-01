@@ -7,7 +7,7 @@ package com.corral.firebase.shailshah.bakingapp.helper;
 public class BakeryStepsHelper {
 
 
-    private String ingredientResult;
+    private static String ingredientResult;
    private static int stepPosition;
 
     public static int getStepPosition() {
@@ -18,11 +18,11 @@ public class BakeryStepsHelper {
         stepPosition = s;
     }
 
-    public String getIngredientResult() {
+    public static String getIngredientResult() {
         return ingredientResult;
     }
 
-    public void setIngredientResult(String ingredientResult) {
-        this.ingredientResult = ingredientResult;
+    public static void setIngredientResult(String ingredientResult) {
+        ingredientResult = ingredientResult;
     }
 }
