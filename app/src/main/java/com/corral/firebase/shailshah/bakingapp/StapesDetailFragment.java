@@ -9,15 +9,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.corral.firebase.shailshah.bakingapp.dummy.DummyContent;
+import com.corral.firebase.shailshah.bakingapp.helper.BakeryInformationHelper;
+import com.corral.firebase.shailshah.bakingapp.helper.BakeryStepsHelper;
 
 /**
  * A fragment representing a single Detail detail screen.
- * This fragment is either contained in a {@link DetailListActivity}
- * in two-pane mode (on tablets) or a {@link DetailDetailActivity}
+ * This fragment is either contained in a {@link RacipesListActivity}
+ * in two-pane mode (on tablets) or a {@link StepsDetailAcitvity}
  * on handsets.
  */
-public class DetailDetailFragment extends Fragment {
+public class StapesDetailFragment extends Fragment {
+    private TextView mDescroptionTextview;
+
     /**
      * The fragment argument representing the item ID that this fragment
      * represents.
@@ -27,43 +30,35 @@ public class DetailDetailFragment extends Fragment {
     /**
      * The dummy content this fragment is presenting.
      */
-    private DummyContent.DummyItem mItem;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
      */
-    public DetailDetailFragment() {
+    public StapesDetailFragment() {
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if (getArguments().containsKey(ARG_ITEM_ID)) {
-            // Load the dummy content specified by the fragment
-            // arguments. In a real-world scenario, use a Loader
-            // to load content from a content provider.
-            mItem = DummyContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
 
             Activity activity = this.getActivity();
             CollapsingToolbarLayout appBarLayout = (CollapsingToolbarLayout) activity.findViewById(R.id.toolbar_layout);
             if (appBarLayout != null) {
-                appBarLayout.setTitle(mItem.content);
+//                appBarLayout.setTitle(mItem.content);
             }
         }
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.detail_detail, container, false);
 
-        // Show the dummy content as text in a TextView.
-        if (mItem != null) {
-            ((TextView) rootView.findViewById(R.id.detail_detail)).setText(mItem.details);
-        }
 
+        mDescroptionTextview = (TextView) rootView.findViewById(R.id.detail_description);
+        mDescroptionTextview.setText(BakeryInformationHelper.getStepsDescription()[BakeryStepsHelper.getStepPosition()]);
         return rootView;
     }
+
 }

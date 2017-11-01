@@ -1,9 +1,57 @@
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/detail_detail"
-    style="?android:attr/textAppearanceLarge"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:textIsSelectable="true"
-    tools:context="com.corral.firebase.shailshah.myapplication.DetailDetailFragment" />
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/detail_detail"
+    tools:context="com.corral.firebase.shailshah.myapplication.DetailDetailFragment">
+
+    <TextView
+        android:id="@+id/detail_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:paddingBottom="30dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="Description will shown here.."
+        android:paddingTop="50dp"
+        android:textSize="20dp"
+        android:layout_marginLeft="8dp"
+        card_view:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        card_view:layout_constraintRight_toRightOf="parent"
+        card_view:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="10dp"
+        card_view:layout_constraintTop_toBottomOf="@+id/card_view"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+
+        android:textColor="#212121"/>
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="@dimen/card_margin"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="@color/cardview_shadow_end_color"
+        android:elevation="3dp"
+        card_view:cardCornerRadius="4dp"
+        card_view:layout_constraintHorizontal_bias="0.0"
+        card_view:layout_constraintLeft_toLeftOf="parent"
+        card_view:layout_constraintRight_toRightOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent">
+
+    </android.support.v7.widget.CardView>
+
+
+</android.support.constraint.ConstraintLayout>

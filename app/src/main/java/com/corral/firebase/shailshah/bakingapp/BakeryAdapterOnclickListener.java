@@ -5,5 +5,5 @@ package com.corral.firebase.shailshah.bakingapp;
  */
 
 public interface BakeryAdapterOnclickListener {
-    void onClick(String movieForday);
+    void onClick(String s);
 }

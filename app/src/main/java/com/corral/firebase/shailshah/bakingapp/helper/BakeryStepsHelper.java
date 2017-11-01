@@ -6,14 +6,23 @@ package com.corral.firebase.shailshah.bakingapp.helper;
 
 public class BakeryStepsHelper {
 
-    private int stepsId;
 
+    private String ingredientResult;
+   private static int stepPosition;
 
-    public int getStepsId() {
-        return stepsId;
+    public static int getStepPosition() {
+        return stepPosition;
     }
 
-    public void setStepsId(int stepsId) {
-        this.stepsId = stepsId;
+    public static void setStepPosition(int s) {
+        stepPosition = s;
+    }
+
+    public String getIngredientResult() {
+        return ingredientResult;
+    }
+
+    public void setIngredientResult(String ingredientResult) {
+        this.ingredientResult = ingredientResult;
     }
 }

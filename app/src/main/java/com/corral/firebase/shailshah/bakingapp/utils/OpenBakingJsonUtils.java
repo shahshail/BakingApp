@@ -47,6 +47,8 @@ public class OpenBakingJsonUtils {
                 for (int j = 0 ; j< ingredients.length() ; j++)
                 {
                     JSONObject indegrientObject = ingredients.getJSONObject(j);
+
+
                     quantity[j] = indegrientObject.getString("quantity");
                     meaasure[j] = indegrientObject.getString("measure");
                     ingre[j] = indegrientObject.getString("ingredient");

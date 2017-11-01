@@ -8,7 +8,7 @@
     android:baselineAligned="false"
     android:divider="?android:attr/dividerHorizontal"
     android:showDividers="middle"
-    tools:context="com.corral.firebase.shailshah.bakingapp.ItemListActivity">
+    tools:context="com.corral.firebase.shailshah.bakingapp.MainActivity">
 
     <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -19,7 +19,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         app:layoutManager="GridLayoutManager"
-        tools:context="com.corral.firebase.shailshah.bakingapp.ItemListActivity"
+        tools:context="com.corral.firebase.shailshah.bakingapp.MainActivity"
         tools:listitem="@layout/item_list_content" />
 
     <FrameLayout

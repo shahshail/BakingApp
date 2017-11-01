@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".ItemListActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
@@ -22,16 +22,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".DetailListActivity"
-            android:parentActivityName=".ItemListActivity">
+            android:name=".RacipesListActivity"
+            android:parentActivityName=".MainActivity">
         </activity>
         <activity
-            android:name=".DetailDetailActivity"
-            android:parentActivityName=".DetailListActivity"
+            android:name=".StepsDetailAcitvity"
+            android:parentActivityName=".RacipesListActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".DetailDetailActivity" />
+                android:value=".StepsDetailAcitvity" />
         </activity>
         <provider
             android:name=".provider.BakingProvider"

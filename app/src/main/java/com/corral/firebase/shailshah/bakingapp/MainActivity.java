@@ -5,8 +5,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
@@ -19,12 +17,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import com.corral.firebase.shailshah.bakingapp.helper.BakeryInformationHelper;
 import com.corral.firebase.shailshah.bakingapp.provider.BakingAppContractor;
 import com.corral.firebase.shailshah.bakingapp.sync.BakerySyncUtils;
 import com.corral.firebase.shailshah.bakingapp.utils.OpenBakingJsonUtils;
 
-public class ItemListActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor>,BakeryAdapterOnclickListener{
+public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor>,BakeryAdapterOnclickListener{
 
     /**
      * Whether or not the activity is in two-pane mode, i.e. running on a tablet
@@ -79,18 +78,10 @@ public class ItemListActivity extends AppCompatActivity implements LoaderManager
         toolbar.setTitle(getTitle());
 
 
-        LoaderManager.LoaderCallbacks<Cursor> callback = ItemListActivity.this;
+        LoaderManager.LoaderCallbacks<Cursor> callback = MainActivity.this;
         Bundle bundleForLoader = null;
         getSupportLoaderManager().initLoader(ID_BAKERY_LOADER, bundleForLoader, callback);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         mRecyclerView = (RecyclerView)findViewById(R.id.item_list);
         mRecyclerView.setHasFixedSize(true);
@@ -203,22 +194,14 @@ public class ItemListActivity extends AppCompatActivity implements LoaderManager
         }
 
         public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-            public final TextView mIdView;
-            public final TextView mContentView;
             TextView mNameView;
 
             public ViewHolder(View view) {
                 super(view);
-                mIdView = (TextView) view.findViewById(R.id.id);
-                mContentView = (TextView) view.findViewById(R.id.content);
                 mNameView = (TextView) view.findViewById(R.id.tv_item_name);
                 view.setOnClickListener(this);
             }
 
-            @Override
-            public String toString() {
-                return super.toString() + " '" + mContentView.getText() + "'";
-            }
 
             @Override
             public void onClick(View v) {
@@ -243,7 +226,7 @@ public class ItemListActivity extends AppCompatActivity implements LoaderManager
 
 
 
-                Log.v(ItemListActivity.class.getSimpleName(),"The Cursotr name for the bakery is "  +BakeryInformationHelper.getItemName());
+                Log.v(MainActivity.class.getSimpleName(),"The Cursotr name for the bakery is "  +BakeryInformationHelper.getItemName());
                 /**if (mTwoPane) {
                  Bundle arguments = new Bundle();
                  arguments.putString(ItemDetailFragment.ARG_ITEM_ID, mItem.id);
@@ -258,7 +241,7 @@ public class ItemListActivity extends AppCompatActivity implements LoaderManager
                  intent.putExtra(ItemDetailFragment.ARG_ITEM_ID, mItem.id);
                  context.startActivity(intent);
                  }*/
-                Intent intent = new Intent(v.getContext(),DetailListActivity.class);
+                Intent intent = new Intent(v.getContext(),RacipesListActivity.class);
                 startActivity(intent);
 
                 mClickHandler.onClick(id);
