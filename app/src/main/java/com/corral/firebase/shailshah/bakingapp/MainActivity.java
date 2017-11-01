@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     private SimpleItemRecyclerViewAdapter mDataAdapter;
     private RecyclerView mRecyclerView;
     private int mPosition = RecyclerView.NO_POSITION;
-
+    private int i =0;
     public static final String[] MAIN_BAKERY_PROJECTION = {
             BakingAppContractor.BakeryEntry._ID,
             BakingAppContractor.BakeryEntry.COLUMN_BAKERY_ID,
@@ -76,6 +77,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setTitle(getTitle());
+
+
 
 
         LoaderManager.LoaderCallbacks<Cursor> callback = MainActivity.this;
@@ -168,11 +171,40 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             View view = LayoutInflater.from(parent.getContext())
                     .inflate(R.layout.item_list_content, parent, false);
+
+            String[] thumbnails = new String[mCursor.getCount()];
+         for(int i = 0 ; i < mCursor.getCount() ; i++)
+         {
+           mCursor.moveToPosition(i);
+
+            String[]  data = OpenBakingJsonUtils.convertStringToArray(mCursor.getString(INDEX_VIDEO_URL));
+             String newData = data[data.length-1];
+             thumbnails[i] = newData;
+
+         }
+
+
+
+            AsyncTask asyncTask = new AsyncTask() {
+                @Override
+                protected Object doInBackground(Object[] params) {
+
+
+                    Log.v(MainActivity.class.getSimpleName(), "Hello my name is   " + params[0] + i );
+                    i++;
+                    return null;
+                }
+            };
+
+            asyncTask.execute("shail","Shah","chandravadan","arvindlal");
             return new ViewHolder(view);
         }
 
+
         @Override
         public void onBindViewHolder(final ViewHolder holder, final int position) {
+
+
 
             mCursor.moveToPosition(position);
 

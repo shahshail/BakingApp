@@ -109,8 +109,8 @@ public class RacipesListActivity extends AppCompatActivity implements SetpsAdapt
                 public void onClick(View v) {
                     BakeryStepsHelper.setStepPosition(position);
 
-                    Log.v(RacipesListActivity.class.getSimpleName(),"Information is " + BakeryInformationHelper.getItemQuentity()[position] + " " + BakeryInformationHelper.getItemMeasure()[position] + " " + BakeryInformationHelper.getItemIngredient()[position]  );
-                    Log.v(RacipesListActivity.class.getSimpleName(),"Stored position is : " + BakeryStepsHelper.getStepPosition());
+                   // Log.v(RacipesListActivity.class.getSimpleName(),"Information is " + BakeryInformationHelper.getItemQuentity()[position] + " " + BakeryInformationHelper.getItemMeasure()[position] + " " + BakeryInformationHelper.getItemIngredient()[position]  );
+                    //Log.v(RacipesListActivity.class.getSimpleName(),"Stored position is : " + BakeryStepsHelper.getStepPosition());
 
                     if (mTwoPane) {
                         StapesDetailFragment fragment = new StapesDetailFragment();

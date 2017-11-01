@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/animator-v21/design_appbar_state_list_animator.xml",
-        "source": "/Users/shailshah/.android/build-cache/79c6d0990f5a6002a0735056a8e3e0c15284f864/output/res/animator-v21/design_appbar_state_list_animator.xml"
-    },
-    {
         "merged": "/Users/shailshah/Documents/Projects/BakingApp/app/build/intermediates/res/merged/debug/animator-v21/design_appbar_state_list_animator.xml",
         "source": "/Users/shailshah/.android/build-cache/79c6d0990f5a6002a0735056a8e3e0c15284f864/output/res/animator-v21/design_appbar_state_list_animator.xml"
     }

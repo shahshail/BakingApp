@@ -5,8 +5,15 @@ import android.app.NotificationManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.media.MediaMetadataRetriever;
 import android.net.Uri;
+import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.media.session.MediaButtonReceiver;
@@ -15,6 +22,7 @@ import android.support.v4.media.session.PlaybackStateCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.corral.firebase.shailshah.bakingapp.helper.BakeryInformationHelper;
@@ -37,6 +45,8 @@ import com.google.android.exoplayer2.ui.SimpleExoPlayerView;
 import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory;
 import com.google.android.exoplayer2.util.Util;
 
+import java.util.HashMap;
+
 /**
  * A fragment representing a single Detail detail screen.
  * This fragment is either contained in a {@link RacipesListActivity}
@@ -49,6 +59,9 @@ public class StapesDetailFragment extends Fragment implements ExoPlayer.EventLis
     private SimpleExoPlayerView mPlayerView;
     private static MediaSessionCompat mMediaSession;private PlaybackStateCompat.Builder mStateBuilder;
     private NotificationManager mNotificationManager;
+    private ProgressBar mProgressbar;
+    private AppBarLayout layout;
+    Drawable d;
 
 
     /**
@@ -146,15 +159,19 @@ public class StapesDetailFragment extends Fragment implements ExoPlayer.EventLis
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.detail_detail, container, false);
+        final View rootView = inflater.inflate(R.layout.detail_detail, container, false);
 
+        mProgressbar = (ProgressBar) rootView.findViewById(R.id.progress_bar);
         mPlayerView = (SimpleExoPlayerView) rootView.findViewById(R.id.playerView);
         mDescroptionTextview = (TextView) rootView.findViewById(R.id.detail_description);
         mDescroptionTextview.setText(BakeryInformationHelper.getStepsDescription()[BakeryStepsHelper.getStepPosition()]);
         inititalizeMediaSession();
 
+        layout = (AppBarLayout) rootView.findViewById(R.id.app_bar);
         Uri myuri = Uri.parse(BakeryInformationHelper.getStepsVideoUrl()[BakeryStepsHelper.getStepPosition()]);
         initializePlayer(myuri);
+
+
         return rootView;
     }
 
@@ -178,11 +195,22 @@ public class StapesDetailFragment extends Fragment implements ExoPlayer.EventLis
         if((playbackState == ExoPlayer.STATE_READY) && playWhenReady){
             mStateBuilder.setState(PlaybackStateCompat.STATE_PLAYING,
                     mExoPlayer.getCurrentPosition(), 1f);
-        } else if((playbackState == ExoPlayer.STATE_READY)){
+        } else if((playbackState == ExoPlayer.STATE_IDLE)){
             mStateBuilder.setState(PlaybackStateCompat.STATE_PAUSED,
                     mExoPlayer.getCurrentPosition(), 1f);
+                    mProgressbar.setVisibility(View.INVISIBLE);
+
         }
         mMediaSession.setPlaybackState(mStateBuilder.build());
+
+        if (playbackState == ExoPlayer.STATE_BUFFERING)
+        {
+            mProgressbar.setVisibility(View.VISIBLE);
+
+        }else
+        {
+            mProgressbar.setVisibility(View.INVISIBLE);
+        }
     }
 
     @Override
