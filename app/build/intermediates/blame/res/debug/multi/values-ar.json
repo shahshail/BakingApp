@@ -368,8 +368,141 @@
                     "startLine": 21,
                     "startColumn": 4,
                     "startOffset": 1982,
+                    "endColumn": 77,
+                    "endOffset": 2055
+                },
+                "from": {
+                    "file": "/Users/shailshah/.android/build-cache/43e68a4ebc236922f16dab3b9a16b7146fc3cac0/output/res/values-ar/values-ar.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 77,
+                        "endOffset": 128
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 2060,
                     "endColumn": 80,
-                    "endOffset": 2058
+                    "endOffset": 2136
+                },
+                "from": {
+                    "file": "/Users/shailshah/.android/build-cache/43e68a4ebc236922f16dab3b9a16b7146fc3cac0/output/res/values-ar/values-ar.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 133,
+                        "endColumn": 80,
+                        "endOffset": 209
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 2141,
+                    "endColumn": 71,
+                    "endOffset": 2208
+                },
+                "from": {
+                    "file": "/Users/shailshah/.android/build-cache/43e68a4ebc236922f16dab3b9a16b7146fc3cac0/output/res/values-ar/values-ar.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 214,
+                        "endColumn": 71,
+                        "endOffset": 281
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 2213,
+                    "endColumn": 65,
+                    "endOffset": 2274
+                },
+                "from": {
+                    "file": "/Users/shailshah/.android/build-cache/43e68a4ebc236922f16dab3b9a16b7146fc3cac0/output/res/values-ar/values-ar.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 286,
+                        "endColumn": 65,
+                        "endOffset": 347
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 2279,
+                    "endColumn": 84,
+                    "endOffset": 2359
+                },
+                "from": {
+                    "file": "/Users/shailshah/.android/build-cache/43e68a4ebc236922f16dab3b9a16b7146fc3cac0/output/res/values-ar/values-ar.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 352,
+                        "endColumn": 84,
+                        "endOffset": 432
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 2364,
+                    "endColumn": 67,
+                    "endOffset": 2427
+                },
+                "from": {
+                    "file": "/Users/shailshah/.android/build-cache/43e68a4ebc236922f16dab3b9a16b7146fc3cac0/output/res/values-ar/values-ar.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 437,
+                        "endColumn": 67,
+                        "endOffset": 500
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 2432,
+                    "endColumn": 65,
+                    "endOffset": 2493
+                },
+                "from": {
+                    "file": "/Users/shailshah/.android/build-cache/43e68a4ebc236922f16dab3b9a16b7146fc3cac0/output/res/values-ar/values-ar.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 505,
+                        "endColumn": 65,
+                        "endOffset": 566
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 2498,
+                    "endColumn": 80,
+                    "endOffset": 2574
                 },
                 "from": {
                     "file": "/Users/shailshah/.android/build-cache/3c01fef9a9ebf28c60422ce14504bb21fb2f78d7/output/res/values-ar/values-ar.xml",
@@ -384,11 +517,11 @@
             },
             {
                 "to": {
-                    "startLine": 22,
+                    "startLine": 29,
                     "startColumn": 4,
-                    "startOffset": 2063,
+                    "startOffset": 2579,
                     "endColumn": 100,
-                    "endOffset": 2159
+                    "endOffset": 2675
                 },
                 "from": {
                     "file": "/Users/shailshah/.android/build-cache/3c01fef9a9ebf28c60422ce14504bb21fb2f78d7/output/res/values-ar/values-ar.xml",

@@ -772,8 +772,141 @@
                     "startLine": 21,
                     "startColumn": 4,
                     "startOffset": 2012,
+                    "endColumn": 77,
+                    "endOffset": 2085
+                },
+                "from": {
+                    "file": "/Users/shailshah/.android/build-cache/43e68a4ebc236922f16dab3b9a16b7146fc3cac0/output/res/values-in/values-in.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 77,
+                        "endOffset": 128
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 2090,
+                    "endColumn": 75,
+                    "endOffset": 2161
+                },
+                "from": {
+                    "file": "/Users/shailshah/.android/build-cache/43e68a4ebc236922f16dab3b9a16b7146fc3cac0/output/res/values-in/values-in.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 133,
+                        "endColumn": 75,
+                        "endOffset": 204
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 2166,
+                    "endColumn": 65,
+                    "endOffset": 2227
+                },
+                "from": {
+                    "file": "/Users/shailshah/.android/build-cache/43e68a4ebc236922f16dab3b9a16b7146fc3cac0/output/res/values-in/values-in.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 209,
+                        "endColumn": 65,
+                        "endOffset": 270
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 2232,
+                    "endColumn": 65,
+                    "endOffset": 2293
+                },
+                "from": {
+                    "file": "/Users/shailshah/.android/build-cache/43e68a4ebc236922f16dab3b9a16b7146fc3cac0/output/res/values-in/values-in.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 275,
+                        "endColumn": 65,
+                        "endOffset": 336
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 2298,
+                    "endColumn": 79,
+                    "endOffset": 2373
+                },
+                "from": {
+                    "file": "/Users/shailshah/.android/build-cache/43e68a4ebc236922f16dab3b9a16b7146fc3cac0/output/res/values-in/values-in.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 341,
+                        "endColumn": 79,
+                        "endOffset": 416
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 2378,
+                    "endColumn": 73,
+                    "endOffset": 2447
+                },
+                "from": {
+                    "file": "/Users/shailshah/.android/build-cache/43e68a4ebc236922f16dab3b9a16b7146fc3cac0/output/res/values-in/values-in.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 421,
+                        "endColumn": 73,
+                        "endOffset": 490
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 2452,
+                    "endColumn": 68,
+                    "endOffset": 2516
+                },
+                "from": {
+                    "file": "/Users/shailshah/.android/build-cache/43e68a4ebc236922f16dab3b9a16b7146fc3cac0/output/res/values-in/values-in.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 495,
+                        "endColumn": 68,
+                        "endOffset": 559
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 2521,
                     "endColumn": 83,
-                    "endOffset": 2091
+                    "endOffset": 2600
                 },
                 "from": {
                     "file": "/Users/shailshah/.android/build-cache/3c01fef9a9ebf28c60422ce14504bb21fb2f78d7/output/res/values-in/values-in.xml",
@@ -788,11 +921,11 @@
             },
             {
                 "to": {
-                    "startLine": 22,
+                    "startLine": 29,
                     "startColumn": 4,
-                    "startOffset": 2096,
+                    "startOffset": 2605,
                     "endColumn": 100,
-                    "endOffset": 2192
+                    "endOffset": 2701
                 },
                 "from": {
                     "file": "/Users/shailshah/.android/build-cache/3c01fef9a9ebf28c60422ce14504bb21fb2f78d7/output/res/values-in/values-in.xml",

@@ -19,6 +19,13 @@
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"공유 대상"</string>
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"%s와(과) 공유"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"접기"</string>
+    <string name="exo_controls_fastforward_description">"빨리 감기"</string>
+    <string name="exo_controls_next_description">"다음 트랙"</string>
+    <string name="exo_controls_pause_description">"일시중지"</string>
+    <string name="exo_controls_play_description">"재생"</string>
+    <string name="exo_controls_previous_description">"이전 트랙"</string>
+    <string name="exo_controls_rewind_description">"되감기"</string>
+    <string name="exo_controls_stop_description">"중지"</string>
     <string msgid="146198913615257606" name="search_menu_title">"검색"</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
 </resources>

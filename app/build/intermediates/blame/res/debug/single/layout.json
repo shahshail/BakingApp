@@ -104,12 +104,12 @@
         "source": "/Users/shailshah/.android/build-cache/44a1edf99a4f58a746e4ec93f6a11e16afccc4ed/output/res/layout/preference_category.xml"
     },
     {
-        "merged": "/Users/shailshah/Documents/Projects/BakingApp/app/build/intermediates/res/merged/debug/layout/activity_detail_list.xml",
-        "source": "/Users/shailshah/Documents/Projects/BakingApp/app/src/main/res/layout/activity_detail_list.xml"
-    },
-    {
         "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
         "source": "/Users/shailshah/.android/build-cache/3c01fef9a9ebf28c60422ce14504bb21fb2f78d7/output/res/layout/abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "/Users/shailshah/Documents/Projects/BakingApp/app/build/intermediates/res/merged/debug/layout/activity_detail_list.xml",
+        "source": "/Users/shailshah/Documents/Projects/BakingApp/app/src/main/res/layout/activity_detail_list.xml"
     },
     {
         "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
@@ -288,6 +288,10 @@
         "source": "/Users/shailshah/.android/build-cache/3c01fef9a9ebf28c60422ce14504bb21fb2f78d7/output/res/layout/abc_popup_menu_item_layout.xml"
     },
     {
+        "merged": "/Users/shailshah/Documents/Projects/BakingApp/app/build/intermediates/res/merged/debug/layout/exo_simple_player_view.xml",
+        "source": "/Users/shailshah/.android/build-cache/43e68a4ebc236922f16dab3b9a16b7146fc3cac0/output/res/layout/exo_simple_player_view.xml"
+    },
+    {
         "merged": "/Users/shailshah/Documents/Projects/BakingApp/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_title_material.xml",
         "source": "/Users/shailshah/.android/build-cache/3c01fef9a9ebf28c60422ce14504bb21fb2f78d7/output/res/layout/abc_alert_dialog_title_material.xml"
     },
@@ -374,6 +378,10 @@
     {
         "merged": "/Users/shailshah/Documents/Projects/BakingApp/app/build/intermediates/res/merged/debug/layout/preference_dialog_edittext.xml",
         "source": "/Users/shailshah/.android/build-cache/44a1edf99a4f58a746e4ec93f6a11e16afccc4ed/output/res/layout/preference_dialog_edittext.xml"
+    },
+    {
+        "merged": "/Users/shailshah/Documents/Projects/BakingApp/app/build/intermediates/res/merged/debug/layout/exo_playback_control_view.xml",
+        "source": "/Users/shailshah/.android/build-cache/43e68a4ebc236922f16dab3b9a16b7146fc3cac0/output/res/layout/exo_playback_control_view.xml"
     },
     {
         "merged": "/Users/shailshah/Documents/Projects/FireChatUdacity/BakingApp/app/build/intermediates/res/merged/debug/layout/preference_recyclerview.xml",

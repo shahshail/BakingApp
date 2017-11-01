@@ -19,6 +19,13 @@
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Bendrinti naudojant"</string>
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Bendrinti naudojant „%s“"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Sutraukti"</string>
+    <string name="exo_controls_fastforward_description">"Sukti pirmyn"</string>
+    <string name="exo_controls_next_description">"Kitas takelis"</string>
+    <string name="exo_controls_pause_description">"Pristabdyti"</string>
+    <string name="exo_controls_play_description">"Leisti"</string>
+    <string name="exo_controls_previous_description">"Ankstesnis takelis"</string>
+    <string name="exo_controls_rewind_description">"Sukti atgal"</string>
+    <string name="exo_controls_stop_description">"Stabdyti"</string>
     <string msgid="146198913615257606" name="search_menu_title">"Paieška"</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
 </resources>
