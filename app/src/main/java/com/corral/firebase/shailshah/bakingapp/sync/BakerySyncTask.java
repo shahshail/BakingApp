@@ -27,6 +27,7 @@ public class BakerySyncTask {
                         bakeryDataValues);
                 Log.v(BakerySyncTask.class.getSimpleName(),"Total numbers of rows are inserted.. " + status);
 
+
             }
             else
             {

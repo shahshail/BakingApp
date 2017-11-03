@@ -1,7 +1,9 @@
 package com.corral.firebase.shailshah.bakingapp;
 
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
@@ -14,6 +16,7 @@ import android.widget.TextView;
 import com.corral.firebase.shailshah.bakingapp.dummy.DummyContent;
 import com.corral.firebase.shailshah.bakingapp.helper.BakeryInformationHelper;
 import com.corral.firebase.shailshah.bakingapp.helper.BakeryStepsHelper;
+import com.corral.firebase.shailshah.bakingapp.provider.BakingAppContractor;
 
 /**
  * An activity representing a list of Detail. This activity
@@ -28,6 +31,10 @@ public class RacipesListActivity extends AppCompatActivity implements SetpsAdapt
     private int mPosition = RecyclerView.NO_POSITION;
     private RecipesItemRecyclerViewAdapter mAdapte;
     private TextView mIngredient;
+    private Cursor mCursor;
+    int newString;
+    String value;
+
 
     /**
      * Whether or not the activity is in two-pane mode, i.e. running on a tablet
@@ -39,6 +46,33 @@ public class RacipesListActivity extends AppCompatActivity implements SetpsAdapt
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_list);
+
+
+
+
+
+        Bundle values = getIntent().getExtras();
+        if (values == null)
+        {
+            newString = BakeryStepsHelper.getStepPosition();
+        }
+        else
+        {
+            value = values.getString("Values");
+            newString = Integer.parseInt(value);
+        }
+
+
+
+
+
+        ContentResolver resolver = getContentResolver();
+        mCursor = resolver.query(BakingAppContractor.BakeryEntry.CONTENT_URI,null,null,null,null);
+        mCursor.moveToPosition(newString);
+
+        Log.v(RacipesListActivity.class.getSimpleName(), "CURSOR POSITION IS AS FOLLOWs :::::::: ::::: :::::: :" + newString );
+
+
 
         String finalResult = new String();
       mRecyclerView = (RecyclerView) findViewById(R.id.detail_list);
@@ -120,6 +154,7 @@ public class RacipesListActivity extends AppCompatActivity implements SetpsAdapt
                     } else {
                         Context context = v.getContext();
                         Intent intent = new Intent(context, StepsDetailAcitvity.class);
+                        intent.putExtra("Step",position);
                         //intent.putExtra(StapesDetailFragment.ARG_ITEM_ID, holder.mItem.id);
 
                         context.startActivity(intent);

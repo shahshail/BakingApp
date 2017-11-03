@@ -6,46 +6,43 @@
     android:orientation="horizontal">
 
     <android.support.v7.widget.CardView
-        android:id="@+id/card_view"
+        android:id="@+id/card_view_home"
         android:layout_width="match_parent"
         android:layout_height="230dp"
         android:layout_gravity="center"
         android:layout_margin="@dimen/card_margin"
         android:elevation="3dp"
         card_view:cardCornerRadius="4dp"
-        android:backgroundTint="@color/cardview_shadow_end_color">
+        >
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/thumbnail"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/album_cover_height"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:clickable="true"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ic_demo_muffin"
-                >
-
-            </ImageView>
-
+                android:layout_height="180dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/thumnail_image_pview" />
             <TextView
                 android:id="@+id/tv_item_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/thumbnail"
                 android:paddingLeft="@dimen/album_title_padding"
                 android:paddingRight="@dimen/album_title_padding"
                 android:paddingTop="@dimen/album_title_padding"
-                android:textColor="@color/album_title"
-                android:textSize="@dimen/album_title" />
+                android:textColor="#212121"
+                android:textSize="@dimen/album_title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+            android:shadowColor="@color/album_title"
+                android:layout_below="@+id/thumnail_image_pview"
+                android:layout_alignParentStart="true" />
 
             <TextView
                 android:id="@+id/content"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
                 android:layout_margin="@dimen/text_margin"
                 android:textAppearance="?attr/textAppearanceListItem"
                 android:visibility="gone" />
@@ -68,15 +65,6 @@
                 android:paddingRight="@dimen/album_title_padding"
                 android:textSize="@dimen/songs_count" />
 
-            <ImageView
-                android:id="@+id/overflow"
-                android:layout_width="@dimen/ic_album_overflow_width"
-                android:layout_height="@dimen/ic_album_overflow_height"
-                android:layout_alignParentRight="true"
-                android:layout_below="@id/thumbnail"
-                android:layout_marginTop="@dimen/ic_album_overflow_margin_top"
-                android:scaleType="fitCenter"
-                android:src="@drawable/ic_dots" />
         </RelativeLayout>
 
     </android.support.v7.widget.CardView>

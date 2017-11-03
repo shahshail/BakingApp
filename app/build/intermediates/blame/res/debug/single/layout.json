@@ -12,12 +12,12 @@
         "source": "/Users/shailshah/.android/build-cache/79c6d0990f5a6002a0735056a8e3e0c15284f864/output/res/layout/design_navigation_item_header.xml"
     },
     {
-        "merged": "/Users/shailshah/Documents/Projects/BakingApp/app/build/intermediates/res/merged/debug/layout/abc_select_dialog_material.xml",
-        "source": "/Users/shailshah/.android/build-cache/3c01fef9a9ebf28c60422ce14504bb21fb2f78d7/output/res/layout/abc_select_dialog_material.xml"
-    },
-    {
         "merged": "/Users/shailshah/Documents/Projects/BakingApp/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
         "source": "/Users/shailshah/.android/build-cache/3c01fef9a9ebf28c60422ce14504bb21fb2f78d7/output/res/layout/abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "/Users/shailshah/Documents/Projects/BakingApp/app/build/intermediates/res/merged/debug/layout/abc_select_dialog_material.xml",
+        "source": "/Users/shailshah/.android/build-cache/3c01fef9a9ebf28c60422ce14504bb21fb2f78d7/output/res/layout/abc_select_dialog_material.xml"
     },
     {
         "merged": "/Users/shailshah/Documents/Projects/BakingApp/app/build/intermediates/res/merged/debug/layout/notification_action_tombstone.xml",
@@ -126,6 +126,10 @@
     {
         "merged": "/Users/shailshah/Documents/Projects/BakingApp/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
         "source": "/Users/shailshah/.android/build-cache/3c01fef9a9ebf28c60422ce14504bb21fb2f78d7/output/res/layout/abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "/Users/shailshah/Documents/Projects/BakingApp/app/build/intermediates/res/merged/debug/layout/bakery_widjet_provider.xml",
+        "source": "/Users/shailshah/Documents/Projects/BakingApp/app/src/main/res/layout/bakery_widjet_provider.xml"
     },
     {
         "merged": "/Users/shailshah/Documents/Projects/BakingApp/app/build/intermediates/res/merged/debug/layout/abc_search_view.xml",

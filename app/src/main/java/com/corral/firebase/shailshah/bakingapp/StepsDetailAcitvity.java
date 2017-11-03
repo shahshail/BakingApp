@@ -1,12 +1,8 @@
 package com.corral.firebase.shailshah.bakingapp;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.media.MediaMetadataRetriever;
-import android.os.AsyncTask;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.v7.app.ActionBar;
@@ -19,7 +15,6 @@ import android.widget.TextView;
 import com.corral.firebase.shailshah.bakingapp.helper.BakeryInformationHelper;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 /**
  * An activity representing a single Detail detail screen. This
@@ -45,41 +40,14 @@ public class StepsDetailAcitvity extends AppCompatActivity {
         layout = (AppBarLayout) findViewById(R.id.app_bar);
         layout.setBackground(getResources().getDrawable(R.drawable.ic_demo_muffin));
 
-        new AsyncTask<Void, Void, Bitmap>() {
 
-            @Override
-            protected Bitmap doInBackground(Void... params) {
-                Bitmap bitmap = null;
-                String videoPath = BakeryInformationHelper.getStepsVideoUrl()[0];
-                MediaMetadataRetriever mediaMetadataRetriever = null ;
-                try {
-                    mediaMetadataRetriever = new MediaMetadataRetriever();
-                    if (Build.VERSION.SDK_INT >= 14)
-                        // no headers included
-                        mediaMetadataRetriever.setDataSource(videoPath, new HashMap<String, String>());
-                    else
-                        mediaMetadataRetriever.setDataSource(videoPath);
-                    //   mediaMetadataRetriever.setDataSource(videoPath);
-                    bitmap = mediaMetadataRetriever.getFrameAtTime();
-                } catch (Exception e) {
-                    e.printStackTrace();
+        Bundle Steps = getIntent().getExtras();
 
-                } finally {
-                    if (mediaMetadataRetriever != null)
-                        mediaMetadataRetriever.release();
-                }
-                return bitmap;
-            }
+        drawable = new BitmapDrawable(BakeryInformationHelper.getStepsThumbnailUrl());
 
-            @Override
-            protected void onPostExecute(Bitmap bitmap) {
-                super.onPostExecute(bitmap);
-                if (bitmap != null)
-                    drawable = new BitmapDrawable(getResources(),bitmap);
                 layout.setBackground(drawable);
 
-            }
-        }.execute();
+
         // Show the Up button in the action bar.
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
@@ -87,11 +55,8 @@ public class StepsDetailAcitvity extends AppCompatActivity {
         }
         if (savedInstanceState == null) {
 
-            Bundle arguments = new Bundle();
-            arguments.putString(StapesDetailFragment.ARG_ITEM_ID,
-                    getIntent().getStringExtra(StapesDetailFragment.ARG_ITEM_ID));
             StapesDetailFragment fragment = new StapesDetailFragment();
-            fragment.setArguments(arguments);
+            fragment.setArguments(Steps);
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.detail_detail_container, fragment)
                     .commit();

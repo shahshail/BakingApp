@@ -21,6 +21,7 @@ public class BakeryFirebaseJobservices extends JobService {
                 Context context = getApplicationContext();
                 BakerySyncTask.syncBakery(context);
 
+
                 return null;
             }
         }.execute();

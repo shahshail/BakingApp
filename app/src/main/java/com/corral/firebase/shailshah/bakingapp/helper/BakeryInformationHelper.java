@@ -1,5 +1,7 @@
 package com.corral.firebase.shailshah.bakingapp.helper;
 
+import android.graphics.Bitmap;
+
 /**
  * Created by shailshah on 10/25/17.
  */
@@ -16,7 +18,7 @@ public class BakeryInformationHelper {
     private static String[] stepsShortDescription;
     private static String[] stepsDescription;
     private static String[] stepsVideoUrl;
-    private static String[] stepsThumbnailUrl;
+    private static Bitmap stepsThumbnailUrl;
     private static String itemServings;
     private static String itemImagePath;
 
@@ -93,11 +95,11 @@ public class BakeryInformationHelper {
         BakeryInformationHelper.stepsVideoUrl = stepsVideoUrl;
     }
 
-    public static String[] getStepsThumbnailUrl() {
+    public static Bitmap getStepsThumbnailUrl() {
         return stepsThumbnailUrl;
     }
 
-    public static void setStepsThumbnailUrl(String[] stepsThumbnailUrl) {
+    public static void setStepsThumbnailUrl(Bitmap stepsThumbnailUrl) {
         BakeryInformationHelper.stepsThumbnailUrl = stepsThumbnailUrl;
     }
 

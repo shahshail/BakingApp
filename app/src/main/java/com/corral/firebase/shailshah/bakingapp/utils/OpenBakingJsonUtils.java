@@ -2,6 +2,10 @@ package com.corral.firebase.shailshah.bakingapp.utils;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.media.MediaMetadataRetriever;
+import android.os.Build;
 
 import com.corral.firebase.shailshah.bakingapp.provider.BakingAppContractor;
 
@@ -9,8 +13,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.net.URL;
+import java.util.HashMap;
 
 /**
  * Created by shailshah on 10/25/17.
@@ -64,7 +70,7 @@ public class OpenBakingJsonUtils {
                 String[] shortDescription = new String[stepsArray.length()];
                 String[] description = new String[stepsArray.length()];
                 String[] videoUrl = new String[stepsArray.length()];
-                String[] thumbnailUrl = new String[stepsArray.length()];
+                String thumbnailUrl = new String();
 
                 for (int j = 0; j< stepsArray.length(); j++)
                 {
@@ -73,12 +79,39 @@ public class OpenBakingJsonUtils {
                     shortDescription[j] = stepsObject.getString("shortDescription");
                     description[j] = stepsObject.getString("description");
                     videoUrl[j] = stepsObject.getString("videoURL");
-                    thumbnailUrl[j] = stepsObject.getString("thumbnailURL");
+
+
+
 
                 }
+                thumbnailUrl = videoUrl[videoUrl.length-1];
+                Bitmap bitmap = null;
+                MediaMetadataRetriever mediaMetadataRetriever = null ;
+                try {
+                    mediaMetadataRetriever = new MediaMetadataRetriever();
+                    if (Build.VERSION.SDK_INT >= 14)
+                        // no headers included
+                        mediaMetadataRetriever.setDataSource(thumbnailUrl, new HashMap<String, String>());
+                    else
+                        mediaMetadataRetriever.setDataSource(thumbnailUrl);
+                    //   mediaMetadataRetriever.setDataSource(videoPath);
+                    bitmap = mediaMetadataRetriever.getFrameAtTime(15000000);
+                } catch (Exception e) {
+                    e.printStackTrace();
+
+                } finally {
+                    if (mediaMetadataRetriever != null)
+                        mediaMetadataRetriever.release();
+                }
+
+
+
+
 
                 String servings = object.getString("servings");
                 String image = object.getString("image");
+
+
 
 
 
@@ -91,7 +124,7 @@ public class OpenBakingJsonUtils {
                 bakingValues.put(BakingAppContractor.BakeryEntry.COLUMN_SHORT_DESCRIPTION,OpenBakingJsonUtils.convertArrayToString(shortDescription));
                 bakingValues.put(BakingAppContractor.BakeryEntry.COLUMN_DESCRIPTION,OpenBakingJsonUtils.convertArrayToString(description));
                 bakingValues.put(BakingAppContractor.BakeryEntry.COLUMN_VIDEO_URL,OpenBakingJsonUtils.convertArrayToString(videoUrl));
-                bakingValues.put(BakingAppContractor.BakeryEntry.COLUMN_THUMBNAIL_URL, OpenBakingJsonUtils.convertArrayToString(thumbnailUrl));
+                bakingValues.put(BakingAppContractor.BakeryEntry.COLUMN_THUMBNAIL_URL, convertBitmaptoByte(bitmap));
                 bakingValues.put(BakingAppContractor.BakeryEntry.COLUMN_SERVINGS,servings);
                 bakingValues.put(BakingAppContractor.BakeryEntry.COLIMN_IMAGE_URL,image);
 
@@ -123,6 +156,16 @@ public class OpenBakingJsonUtils {
     public static String[] convertStringToArray(String str){
         String[] arr = str.split(strSeparator);
         return arr;
+    }
+    public static byte[] convertBitmaptoByte(Bitmap bitmap) {
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 0, stream);
+        return stream.toByteArray();
+    }
+
+    // convert from byte array to bitmap
+    public static Bitmap convertByteToBitmap(byte[] image) {
+        return BitmapFactory.decodeByteArray(image, 0, image.length);
     }
 
 

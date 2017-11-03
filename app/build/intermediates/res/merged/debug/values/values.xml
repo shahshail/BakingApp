@@ -685,6 +685,7 @@
     <dimen name="songs_count">12dp</dimen>
     <dimen name="songs_count_padding_bottom">5dp</dimen>
     <dimen name="text_margin">16dp</dimen>
+    <dimen name="widget_margin">8dp</dimen>
     <drawable name="notification_template_icon_bg">#3333B5E5</drawable>
     <drawable name="notification_template_icon_low_bg">#0cffffff</drawable>
     <item name="action_bar_activity_content" type="id"/>
@@ -757,8 +758,10 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
+    <string name="add_widget">Add widget</string>
     <string name="app_name">Baking App</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="appwidget_text">EXAMPLE</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="exo_controls_fastforward_description">Fast forward</string>

@@ -3,8 +3,9 @@ package com.corral.firebase.shailshah.bakingapp;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
@@ -17,9 +18,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.corral.firebase.shailshah.bakingapp.helper.BakeryInformationHelper;
+import com.corral.firebase.shailshah.bakingapp.helper.BakeryStepsHelper;
 import com.corral.firebase.shailshah.bakingapp.provider.BakingAppContractor;
 import com.corral.firebase.shailshah.bakingapp.sync.BakerySyncUtils;
 import com.corral.firebase.shailshah.bakingapp.utils.OpenBakingJsonUtils;
@@ -37,6 +41,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     private RecyclerView mRecyclerView;
     private int mPosition = RecyclerView.NO_POSITION;
     private int i =0;
+    private ProgressBar mProgressbar;
+
     public static final String[] MAIN_BAKERY_PROJECTION = {
             BakingAppContractor.BakeryEntry._ID,
             BakingAppContractor.BakeryEntry.COLUMN_BAKERY_ID,
@@ -74,17 +80,18 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_list);
 
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setTitle(getTitle());
-
-
 
 
         LoaderManager.LoaderCallbacks<Cursor> callback = MainActivity.this;
         Bundle bundleForLoader = null;
         getSupportLoaderManager().initLoader(ID_BAKERY_LOADER, bundleForLoader, callback);
 
+
+        mProgressbar = (ProgressBar) findViewById(R.id.main_progressbar);
 
         mRecyclerView = (RecyclerView)findViewById(R.id.item_list);
         mRecyclerView.setHasFixedSize(true);
@@ -107,6 +114,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     @Override
     public Loader<Cursor> onCreateLoader(int id, Bundle bundle) {
+        mProgressbar = (ProgressBar) findViewById(R.id.main_progressbar);
+        mProgressbar.setVisibility(View.VISIBLE);
         switch (id)
         {
             case ID_BAKERY_LOADER: {
@@ -130,6 +139,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     @Override
     public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
 
+        mProgressbar.setVisibility(View.INVISIBLE);
         mDataAdapter.swapCursor(data);
         if (mPosition == RecyclerView.NO_POSITION) mPosition = 0;
         mRecyclerView.smoothScrollToPosition(mPosition);
@@ -172,6 +182,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             View view = LayoutInflater.from(parent.getContext())
                     .inflate(R.layout.item_list_content, parent, false);
 
+
+
+/**
             String[] thumbnails = new String[mCursor.getCount()];
          for(int i = 0 ; i < mCursor.getCount() ; i++)
          {
@@ -182,7 +195,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
              thumbnails[i] = newData;
 
          }
-
 
 
             AsyncTask asyncTask = new AsyncTask() {
@@ -197,6 +209,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             };
 
             asyncTask.execute("shail","Shah","chandravadan","arvindlal");
+ */
             return new ViewHolder(view);
         }
 
@@ -210,6 +223,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
             String name  = mCursor.getString(INDEX_BAKERY_NAME);
             holder.mNameView.setText(name);
+            Drawable drawable = new BitmapDrawable(OpenBakingJsonUtils.convertByteToBitmap(mCursor.getBlob(INDEX_THUMBNAIL_URL)));
+            holder.mThumbnail.setBackgroundDrawable(drawable);
             newPosition = position;
 
         }
@@ -227,10 +242,13 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
         public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
             TextView mNameView;
+            private ImageView mThumbnail;
 
             public ViewHolder(View view) {
                 super(view);
                 mNameView = (TextView) view.findViewById(R.id.tv_item_name);
+                mThumbnail = (ImageView) view.findViewById(R.id.thumnail_image_pview);
+
                 view.setOnClickListener(this);
             }
 
@@ -242,9 +260,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 String name = mCursor.getString(INDEX_BAKERY_NAME);
                 String id = mCursor.getString(INDEX_ID);
 
-                BakeryInformationHelper.setID(id);
+                BakeryInformationHelper.setID(mCursor.getString(INDEX_ID));
                 BakeryInformationHelper.setBakeryId(mCursor.getString(INDEX_BAKERY_ID));
-                BakeryInformationHelper.setItemName(name);
+                BakeryInformationHelper.setItemName(mCursor.getString(INDEX_BAKERY_NAME));
                 BakeryInformationHelper.setItemQuentity(OpenBakingJsonUtils.convertStringToArray(mCursor.getString(INDEX_QUANTITY)));
                 BakeryInformationHelper.setItemMeasure(OpenBakingJsonUtils.convertStringToArray(mCursor.getString(INDEX_MEASURE)));
                 BakeryInformationHelper.setItemIngredient(OpenBakingJsonUtils.convertStringToArray(mCursor.getString(INDEX_INGREDIENT)));
@@ -252,11 +270,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 BakeryInformationHelper.setStepsShortDescription(OpenBakingJsonUtils.convertStringToArray(mCursor.getString(INDEX_SHORT_DESCRIPTION)));
                 BakeryInformationHelper.setStepsDescription(OpenBakingJsonUtils.convertStringToArray(mCursor.getString(INDEX_DESCRIPTION)));
                 BakeryInformationHelper.setStepsVideoUrl(OpenBakingJsonUtils.convertStringToArray(mCursor.getString(INDEX_VIDEO_URL)));
-                BakeryInformationHelper.setStepsThumbnailUrl(OpenBakingJsonUtils.convertStringToArray(mCursor.getString(INDEX_THUMBNAIL_URL)));
+                BakeryInformationHelper.setStepsThumbnailUrl(OpenBakingJsonUtils.convertByteToBitmap(mCursor.getBlob(INDEX_THUMBNAIL_URL)));
                 BakeryInformationHelper.setItemServings(mCursor.getString(INDEX_SERVINGS));
                 BakeryInformationHelper.setItemImagePath(mCursor.getString(INDEX_IMAGE_URL));
-
-
 
                 Log.v(MainActivity.class.getSimpleName(),"The Cursotr name for the bakery is "  +BakeryInformationHelper.getItemName());
                 /**if (mTwoPane) {
@@ -274,6 +290,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                  context.startActivity(intent);
                  }*/
                 Intent intent = new Intent(v.getContext(),RacipesListActivity.class);
+                //intent.putExtra("Values",String.valueOf(mCursor.getPosition()));
+                BakeryStepsHelper.setStepPosition(mCursor.getPosition());
                 startActivity(intent);
 
                 mClickHandler.onClick(id);

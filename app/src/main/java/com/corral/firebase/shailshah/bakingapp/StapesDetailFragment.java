@@ -5,28 +5,28 @@ import android.app.NotificationManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.media.MediaMetadataRetriever;
 import android.net.Uri;
-import android.os.AsyncTask;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.media.session.MediaButtonReceiver;
 import android.support.v4.media.session.MediaSessionCompat;
 import android.support.v4.media.session.PlaybackStateCompat;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.corral.firebase.shailshah.bakingapp.helper.BakeryInformationHelper;
 import com.corral.firebase.shailshah.bakingapp.helper.BakeryStepsHelper;
+import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.DefaultLoadControl;
 import com.google.android.exoplayer2.ExoPlaybackException;
 import com.google.android.exoplayer2.ExoPlayer;
@@ -45,8 +45,6 @@ import com.google.android.exoplayer2.ui.SimpleExoPlayerView;
 import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory;
 import com.google.android.exoplayer2.util.Util;
 
-import java.util.HashMap;
-
 /**
  * A fragment representing a single Detail detail screen.
  * This fragment is either contained in a {@link RacipesListActivity}
@@ -61,7 +59,15 @@ public class StapesDetailFragment extends Fragment implements ExoPlayer.EventLis
     private NotificationManager mNotificationManager;
     private ProgressBar mProgressbar;
     private AppBarLayout layout;
+    private Button mNextButton;
     Drawable d;
+    private int position;
+    private final String STATE_RESUME_WINDOW = "resumeWindow";
+    private final String STATE_RESUME_POSITION = "resumePosition";
+    private final String STATE_PLAYER_FULLSCREEN = "playerFullscreen";
+    private int mResumeWindow;
+    private long mResumePosition;
+
 
 
     /**
@@ -91,8 +97,11 @@ public class StapesDetailFragment extends Fragment implements ExoPlayer.EventLis
             if (appBarLayout != null) {
 //                appBarLayout.setTitle(mItem.content);
             }
-
-
+        if (savedInstanceState != null) {
+            mResumeWindow = savedInstanceState.getInt(STATE_RESUME_WINDOW);
+            mResumePosition = savedInstanceState.getLong(STATE_RESUME_POSITION);
+           // mExoPlayerFullscreen = savedInstanceState.getBoolean(STATE_PLAYER_FULLSCREEN);
+        }
 
         }
 
@@ -135,7 +144,11 @@ public class StapesDetailFragment extends Fragment implements ExoPlayer.EventLis
 
             // Set the ExoPlayer.EventListener to this activity.
             mExoPlayer.addListener(this);
+            boolean haveResumePosition = mResumeWindow != C.INDEX_UNSET;
 
+            if (haveResumePosition) {
+               mExoPlayer.seekTo(mResumeWindow, mResumePosition);
+            }
             // Prepare the MediaSource.
             String userAgent = Util.getUserAgent(getContext(), "ClassicalMusicQuiz");
             MediaSource mediaSource = new ExtractorMediaSource(mediaUri, new DefaultDataSourceFactory(
@@ -156,20 +169,70 @@ public class StapesDetailFragment extends Fragment implements ExoPlayer.EventLis
         mExoPlayer.release();
         mExoPlayer = null;
     }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+
+        outState.putInt(STATE_RESUME_WINDOW, mResumeWindow);
+        outState.putLong(STATE_RESUME_POSITION, mResumePosition);
+        //outState.putBoolean(STATE_PLAYER_FULLSCREEN, mExoPlayerFullscreen);
+
+        super.onSaveInstanceState(outState);
+    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.detail_detail, container, false);
 
+        if (BakeryStepsHelper.getNextPosition() != null)
+        {
+            position = Integer.parseInt(BakeryStepsHelper.getNextPosition());
+
+        }
+        else
+        {
+            position = getArguments().getInt("Step");
+        }
+
+
+
+        Log.v(StapesDetailFragment.class.getSimpleName(), "Step for this Fragment is :: " + position);
         mProgressbar = (ProgressBar) rootView.findViewById(R.id.progress_bar);
         mPlayerView = (SimpleExoPlayerView) rootView.findViewById(R.id.playerView);
         mDescroptionTextview = (TextView) rootView.findViewById(R.id.detail_description);
-        mDescroptionTextview.setText(BakeryInformationHelper.getStepsDescription()[BakeryStepsHelper.getStepPosition()]);
-        inititalizeMediaSession();
+        mDescroptionTextview.setText(BakeryInformationHelper.getStepsDescription()[position]);
+
 
         layout = (AppBarLayout) rootView.findViewById(R.id.app_bar);
-        Uri myuri = Uri.parse(BakeryInformationHelper.getStepsVideoUrl()[BakeryStepsHelper.getStepPosition()]);
-        initializePlayer(myuri);
+
+        if (BakeryInformationHelper.getStepsVideoUrl()[position] == null)
+        {
+            Toast.makeText(getContext(), "No Video Available for this Step..", Toast.LENGTH_SHORT).show();
+        }
+
+        mNextButton = (Button)rootView.findViewById(R.id.next_button);
+
+        mNextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),StepsDetailAcitvity.class);
+                BakeryStepsHelper.setNextPosition(String.valueOf(position+1));
+                startActivity(intent);
+
+            }
+        });
+        try {
+            inititalizeMediaSession();
+            Uri myuri = Uri.parse(BakeryInformationHelper.getStepsVideoUrl()[position]);
+            initializePlayer(myuri);
+        }catch (Exception E)
+        {
+            Snackbar.make(rootView,"NotVideo Available !!!", 100).show();
+
+            E.printStackTrace();
+        }
+
+
 
 
         return rootView;
@@ -223,6 +286,14 @@ public class StapesDetailFragment extends Fragment implements ExoPlayer.EventLis
 
     }
 
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        mResumeWindow = mExoPlayer.getCurrentWindowIndex();
+        mResumePosition = Math.max(0, mExoPlayer.getCurrentPosition());
+    }
+
     private class MySessionCallback extends MediaSessionCompat.Callback {
         @Override
         public void onPlay() {
@@ -231,6 +302,9 @@ public class StapesDetailFragment extends Fragment implements ExoPlayer.EventLis
 
         @Override
         public void onPause() {
+            mProgressbar.setVisibility(View.INVISIBLE);
+
+
             mExoPlayer.setPlayWhenReady(false);
         }
 

@@ -32,6 +32,10 @@
         "source": "/Users/shailshah/.android/build-cache/3c01fef9a9ebf28c60422ce14504bb21fb2f78d7/output/res/drawable/abc_ratingbar_material.xml"
     },
     {
+        "merged": "/Users/shailshah/Documents/Projects/BakingApp/app/build/intermediates/res/merged/debug/drawable/ic_icon.png",
+        "source": "/Users/shailshah/Documents/Projects/BakingApp/app/src/main/res/drawable/ic_icon.png"
+    },
+    {
         "merged": "/Users/shailshah/Documents/Projects/BakingApp/app/build/intermediates/res/merged/debug/drawable/abc_ic_ab_back_material.xml",
         "source": "/Users/shailshah/.android/build-cache/3c01fef9a9ebf28c60422ce14504bb21fb2f78d7/output/res/drawable/abc_ic_ab_back_material.xml"
     },

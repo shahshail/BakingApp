@@ -18,7 +18,8 @@
         android:paddingRight="15dp"
         android:text="Description will shown here.."
         android:paddingTop="50dp"
-        android:textSize="20dp"
+        android:textSize="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
         android:layout_marginLeft="8dp"
         card_view:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginRight="8dp"
@@ -26,33 +27,28 @@
         card_view:layout_constraintHorizontal_bias="0.0"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-
         android:textColor="#212121"
+        card_view:layout_constraintTop_toBottomOf="@+id/view" />
+    <View
+        android:layout_width="368dp"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
         android:layout_marginTop="8dp"
-        card_view:layout_constraintTop_toBottomOf="@+id/playerView" />
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="300dp"
-        android:layout_height="100dp"
+        card_view:layout_constraintTop_toBottomOf="@+id/playerView"
         android:layout_marginLeft="8dp"
         card_view:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginRight="8dp"
         card_view:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="8dp"
-        card_view:layout_constraintTop_toBottomOf="@+id/detail_description"
-        card_view:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        android:src="@drawable/ic_demo_muffin"
-        android:scaleType="centerCrop"
-
-        card_view:layout_constraintVertical_bias="0.0" />
+        card_view:layout_constraintHorizontal_bias="0.0"
+        android:id="@+id/view"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
     <com.google.android.exoplayer2.ui.SimpleExoPlayerView
         android:id="@+id/playerView"
         android:layout_width="0dp"
         android:layout_height="282dp"
-        android:layout_marginTop="0dp"
-        card_view:layout_constraintHorizontal_bias="1.0"
+        card_view:layout_constraintHorizontal_bias="0.0"
         card_view:layout_constraintLeft_toLeftOf="parent"
         card_view:layout_constraintRight_toRightOf="parent"
         card_view:layout_constraintTop_toTopOf="parent">
@@ -72,7 +68,22 @@
             card_view:layout_constraintRight_toRightOf="parent"
             card_view:layout_constraintTop_toTopOf="@+id/playerView"
             card_view:layout_constraintVertical_bias="0.23" />
+
     </com.google.android.exoplayer2.ui.SimpleExoPlayerView>
+
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="88dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        card_view:layout_constraintTop_toBottomOf="@+id/detail_description"
+        android:layout_marginLeft="8dp"
+        card_view:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        android:text="Next"
+        card_view:layout_constraintRight_toRightOf="parent"
+        card_view:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp" />
 
 
 </android.support.constraint.ConstraintLayout>
