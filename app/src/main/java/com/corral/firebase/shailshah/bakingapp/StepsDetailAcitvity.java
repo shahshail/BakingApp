@@ -41,6 +41,7 @@ public class StepsDetailAcitvity extends AppCompatActivity {
         layout.setBackground(getResources().getDrawable(R.drawable.ic_demo_muffin));
 
 
+        setTitle(BakeryInformationHelper.getItemName());
         Bundle Steps = getIntent().getExtras();
 
         drawable = new BitmapDrawable(BakeryInformationHelper.getStepsThumbnailUrl());

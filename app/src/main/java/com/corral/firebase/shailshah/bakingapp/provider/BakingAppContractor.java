@@ -14,12 +14,12 @@ public class BakingAppContractor {
 
     public static final Uri BASE_CONTENT_URI = Uri.parse("content://" + CONTENT_AUTHORITY);
 
-    public static final String PATH_BAKERY = "bakery";
+    public static final String PATH_BAKERY = "baking";
 
 
     public static final class BakeryEntry implements BaseColumns
     {
-        public static final String TABLE_NAME = "bakery";
+        public static final String TABLE_NAME = "baking";
 
         public static final String COLUMN_BAKERY_ID = "item_id";
 
@@ -44,6 +44,7 @@ public class BakingAppContractor {
         public static final String COLUMN_SERVINGS = "servings";
 
         public static final String COLIMN_IMAGE_URL = "images";
+        public static final String COLUMN_WIDGET_INFO = "widgetinfo";
         public static final Uri CONTENT_URI = BASE_CONTENT_URI.buildUpon()
                 .appendPath(PATH_BAKERY)
                 .build();

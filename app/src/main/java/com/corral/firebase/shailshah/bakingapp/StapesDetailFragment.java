@@ -45,12 +45,7 @@ import com.google.android.exoplayer2.ui.SimpleExoPlayerView;
 import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory;
 import com.google.android.exoplayer2.util.Util;
 
-/**
- * A fragment representing a single Detail detail screen.
- * This fragment is either contained in a {@link RacipesListActivity}
- * in two-pane mode (on tablets) or a {@link StepsDetailAcitvity}
- * on handsets.
- */
+
 public class StapesDetailFragment extends Fragment implements ExoPlayer.EventListener{
     private TextView mDescroptionTextview;
     private SimpleExoPlayer mExoPlayer;
@@ -68,22 +63,8 @@ public class StapesDetailFragment extends Fragment implements ExoPlayer.EventLis
     private int mResumeWindow;
     private long mResumePosition;
 
-
-
-    /**
-     * The fragment argument representing the item ID that this fragment
-     * represents.
-     */
     public static final String ARG_ITEM_ID = "item_id";
 
-    /**
-     * The dummy content this fragment is presenting.
-     */
-
-    /**
-     * Mandatory empty constructor for the fragment manager to instantiate the
-     * fragment (e.g. upon screen orientation changes).
-     */
     public StapesDetailFragment() {
     }
 
@@ -95,7 +76,7 @@ public class StapesDetailFragment extends Fragment implements ExoPlayer.EventLis
             Activity activity = this.getActivity();
             CollapsingToolbarLayout appBarLayout = (CollapsingToolbarLayout) activity.findViewById(R.id.toolbar_layout);
             if (appBarLayout != null) {
-//                appBarLayout.setTitle(mItem.content);
+            //appBarLayout.setTitle(mItem.content);
             }
         if (savedInstanceState != null) {
             mResumeWindow = savedInstanceState.getInt(STATE_RESUME_WINDOW);
@@ -175,7 +156,6 @@ public class StapesDetailFragment extends Fragment implements ExoPlayer.EventLis
 
         outState.putInt(STATE_RESUME_WINDOW, mResumeWindow);
         outState.putLong(STATE_RESUME_POSITION, mResumePosition);
-        //outState.putBoolean(STATE_PLAYER_FULLSCREEN, mExoPlayerFullscreen);
 
         super.onSaveInstanceState(outState);
     }
@@ -215,9 +195,20 @@ public class StapesDetailFragment extends Fragment implements ExoPlayer.EventLis
         mNextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),StepsDetailAcitvity.class);
-                BakeryStepsHelper.setNextPosition(String.valueOf(position+1));
-                startActivity(intent);
+                mExoPlayer.stop();
+                if ( Integer.parseInt(BakeryStepsHelper.getTotalSteps()) > position+1)
+                {
+                    Intent intent = new Intent(getActivity(),StepsDetailAcitvity.class);
+                    BakeryStepsHelper.setNextPosition(String.valueOf(position+1));
+                    Log.v(StapesDetailFragment.class.getSimpleName()," Total Step is :" + Integer.parseInt(BakeryStepsHelper.getTotalSteps()) + " Currnt position : " +position  + "Next Position :" + BakeryStepsHelper.getNextPosition());
+                    startActivity(intent);
+                }
+                else
+                {
+                    Intent intent = new Intent(getActivity(),MainActivity.class);
+                    startActivity(intent);
+                }
+
 
             }
         });

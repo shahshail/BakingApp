@@ -796,6 +796,9 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.Headline.Inverse" parent="TextAppearance.AppCompat.Headline">
+        <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
+    </style>
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

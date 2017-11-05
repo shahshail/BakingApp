@@ -40,6 +40,7 @@ dependencies {
     compile 'com.google.android.exoplayer:exoplayer:r2.2.0'
     compile 'frankiesardo:icepick:3.2.0'
     provided 'frankiesardo:icepick-processor:3.2.0'
+    compile 'jp.wasabeef:blurry:2.1.1'
     testCompile 'junit:junit:4.12'
 
 

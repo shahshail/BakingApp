@@ -7,11 +7,10 @@ package com.corral.firebase.shailshah.bakingapp.helper;
 public class BakeryStepsHelper {
 
 
-    private static String ingredientResult;
-    private static int cursor;
-
     private static String nextPosition;
-   private static int stepPosition;
+    private static int stepPosition;
+
+    private static  String totalSteps;
 
     public static int getStepPosition() {
         return stepPosition;
@@ -21,21 +20,7 @@ public class BakeryStepsHelper {
         stepPosition = s;
     }
 
-    public static String getIngredientResult() {
-        return ingredientResult;
-    }
 
-    public static void setIngredientResult(String ingredientResult) {
-        ingredientResult = ingredientResult;
-    }
-
-    public static int getCursor() {
-        return cursor;
-    }
-
-    public static void setCursor(int cursor) {
-        BakeryStepsHelper.cursor = cursor;
-    }
 
     public static String getNextPosition() {
         return nextPosition;
@@ -43,5 +28,13 @@ public class BakeryStepsHelper {
 
     public static void setNextPosition(String nextPosition) {
         BakeryStepsHelper.nextPosition = nextPosition;
+    }
+
+    public static String getTotalSteps() {
+        return totalSteps;
+    }
+
+    public static void setTotalSteps(String totalSteps) {
+        BakeryStepsHelper.totalSteps = totalSteps;
     }
 }

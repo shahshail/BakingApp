@@ -23,12 +23,15 @@
                 android:id="@+id/id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="45dp"
+                android:gravity="left"
                 android:paddingLeft="@dimen/album_title_padding"
                 android:paddingRight="@dimen/album_title_padding"
                 android:paddingTop="@dimen/album_title_padding"
-                android:textColor="@color/album_title"
-                android:textSize="@dimen/album_title"
-                android:layout_toEndOf="@+id/textView" />
+                android:textColor="#212121"
+                android:textSize="@dimen/album_title" />
 
             <TextView
                 android:id="@+id/textView"
@@ -38,8 +41,8 @@
                 android:paddingLeft="@dimen/album_title_padding"
                 android:paddingRight="@dimen/album_title_padding"
                 android:paddingTop="@dimen/album_title_padding"
-                android:text="Step "
-                android:textColor="@color/album_title"
+                android:text="Step"
+                android:textColor="#212121"
                 android:textSize="@dimen/album_title" />
 
             <TextView
@@ -50,16 +53,18 @@
                 android:paddingBottom="@dimen/songs_count_padding_bottom"
                 android:paddingLeft="@dimen/album_title_padding"
                 android:paddingRight="@dimen/album_title_padding"
+                android:textColor="#212121"
                 android:textSize="@dimen/songs_count" />
 
             <ImageView
                 android:id="@+id/overflow"
                 android:layout_width="@dimen/ic_album_overflow_width"
                 android:layout_height="@dimen/ic_album_overflow_height"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="@dimen/ic_album_overflow_margin_top"
                 android:scaleType="fitCenter"
-                android:src="@drawable/ic_dots" />
+                android:src="@drawable/ic_next"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="8dp" />
 
 
         </RelativeLayout>

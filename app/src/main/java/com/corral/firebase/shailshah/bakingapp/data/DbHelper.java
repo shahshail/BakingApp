@@ -12,8 +12,8 @@ import com.corral.firebase.shailshah.bakingapp.provider.BakingAppContractor;
 
 public class DbHelper extends SQLiteOpenHelper {
 
-    private static final String DATABASE_NAME = "bakerydb.db";
-    private static final int DATABASE_VERSION = 8;
+    private static final String DATABASE_NAME = "app.db";
+    private static final int DATABASE_VERSION = 22;
     public DbHelper(Context context)
     {
          super(context,DATABASE_NAME,null,DATABASE_VERSION);
@@ -34,7 +34,8 @@ public class DbHelper extends SQLiteOpenHelper {
                  BakingAppContractor.BakeryEntry.COLUMN_VIDEO_URL + " REAL, " +
                  BakingAppContractor.BakeryEntry.COLUMN_THUMBNAIL_URL + " BLOB, " +
                  BakingAppContractor.BakeryEntry.COLUMN_SERVINGS + " REAL, " +
-                 BakingAppContractor.BakeryEntry.COLIMN_IMAGE_URL + " REAL" +
+                 BakingAppContractor.BakeryEntry.COLIMN_IMAGE_URL + " REAL, " +
+                 BakingAppContractor.BakeryEntry.COLUMN_WIDGET_INFO + " REAL" +
                  ");";
 
 

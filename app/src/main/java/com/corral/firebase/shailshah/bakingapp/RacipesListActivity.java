@@ -13,19 +13,26 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.corral.firebase.shailshah.bakingapp.dummy.DummyContent;
 import com.corral.firebase.shailshah.bakingapp.helper.BakeryInformationHelper;
 import com.corral.firebase.shailshah.bakingapp.helper.BakeryStepsHelper;
 import com.corral.firebase.shailshah.bakingapp.provider.BakingAppContractor;
+import com.corral.firebase.shailshah.bakingapp.utils.OpenBakingJsonUtils;
 
-/**
- * An activity representing a list of Detail. This activity
- * has different presentations for handset and tablet-size devices. On
- * handsets, the activity presents a list of items, which when touched,
- * lead to a {@link StepsDetailAcitvity} representing
- * item details. On tablets, the activity presents the list of items and
- * item details side-by-side using two vertical panes.
- */
+import static com.corral.firebase.shailshah.bakingapp.MainActivity.INDEX_BAKERY_ID;
+import static com.corral.firebase.shailshah.bakingapp.MainActivity.INDEX_BAKERY_NAME;
+import static com.corral.firebase.shailshah.bakingapp.MainActivity.INDEX_DESCRIPTION;
+import static com.corral.firebase.shailshah.bakingapp.MainActivity.INDEX_ID;
+import static com.corral.firebase.shailshah.bakingapp.MainActivity.INDEX_IMAGE_URL;
+import static com.corral.firebase.shailshah.bakingapp.MainActivity.INDEX_INGREDIENT;
+import static com.corral.firebase.shailshah.bakingapp.MainActivity.INDEX_MEASURE;
+import static com.corral.firebase.shailshah.bakingapp.MainActivity.INDEX_QUANTITY;
+import static com.corral.firebase.shailshah.bakingapp.MainActivity.INDEX_SERVINGS;
+import static com.corral.firebase.shailshah.bakingapp.MainActivity.INDEX_SHORT_DESCRIPTION;
+import static com.corral.firebase.shailshah.bakingapp.MainActivity.INDEX_STEPS_ID;
+import static com.corral.firebase.shailshah.bakingapp.MainActivity.INDEX_THUMBNAIL_URL;
+import static com.corral.firebase.shailshah.bakingapp.MainActivity.INDEX_VIDEO_URL;
+import static java.lang.System.lineSeparator;
+
 public class RacipesListActivity extends AppCompatActivity implements SetpsAdapterOnclickListner{
     private RecyclerView mRecyclerView;
     private int mPosition = RecyclerView.NO_POSITION;
@@ -36,21 +43,13 @@ public class RacipesListActivity extends AppCompatActivity implements SetpsAdapt
     String value;
 
 
-    /**
-     * Whether or not the activity is in two-pane mode, i.e. running on a tablet
-     * device.
-     */
     private boolean mTwoPane;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_list);
-
-
-
-
-
+        setTitle(BakeryInformationHelper.getItemName()+" Ingredients");
         Bundle values = getIntent().getExtras();
         if (values == null)
         {
@@ -60,19 +59,32 @@ public class RacipesListActivity extends AppCompatActivity implements SetpsAdapt
         {
             value = values.getString("Values");
             newString = Integer.parseInt(value);
+            ContentResolver resolver = getContentResolver();
+            mCursor = resolver.query(BakingAppContractor.BakeryEntry.CONTENT_URI,null,null,null,null);
+            mCursor.moveToPosition(newString);
+            String name = mCursor.getString(INDEX_BAKERY_NAME);
+            String id = mCursor.getString(INDEX_ID);
+
+            BakeryInformationHelper.setID(mCursor.getString(INDEX_ID));
+            BakeryInformationHelper.setBakeryId(mCursor.getString(INDEX_BAKERY_ID));
+            BakeryInformationHelper.setItemName(mCursor.getString(INDEX_BAKERY_NAME));
+            BakeryInformationHelper.setItemQuentity(OpenBakingJsonUtils.convertStringToArray(mCursor.getString(INDEX_QUANTITY)));
+            BakeryInformationHelper.setItemMeasure(OpenBakingJsonUtils.convertStringToArray(mCursor.getString(INDEX_MEASURE)));
+            BakeryInformationHelper.setItemIngredient(OpenBakingJsonUtils.convertStringToArray(mCursor.getString(INDEX_INGREDIENT)));
+            BakeryInformationHelper.setStepsId(OpenBakingJsonUtils.convertStringToArray(mCursor.getString(INDEX_STEPS_ID)));
+            BakeryInformationHelper.setStepsShortDescription(OpenBakingJsonUtils.convertStringToArray(mCursor.getString(INDEX_SHORT_DESCRIPTION)));
+            BakeryInformationHelper.setStepsDescription(OpenBakingJsonUtils.convertStringToArray(mCursor.getString(INDEX_DESCRIPTION)));
+            BakeryInformationHelper.setStepsVideoUrl(OpenBakingJsonUtils.convertStringToArray(mCursor.getString(INDEX_VIDEO_URL)));
+            BakeryInformationHelper.setStepsThumbnailUrl(OpenBakingJsonUtils.convertByteToBitmap(mCursor.getBlob(INDEX_THUMBNAIL_URL)));
+            BakeryInformationHelper.setItemServings(mCursor.getString(INDEX_SERVINGS));
+            BakeryInformationHelper.setItemImagePath(mCursor.getString(INDEX_IMAGE_URL));
+
+
         }
-
-
-
-
 
         ContentResolver resolver = getContentResolver();
         mCursor = resolver.query(BakingAppContractor.BakeryEntry.CONTENT_URI,null,null,null,null);
         mCursor.moveToPosition(newString);
-
-        Log.v(RacipesListActivity.class.getSimpleName(), "CURSOR POSITION IS AS FOLLOWs :::::::: ::::: :::::: :" + newString );
-
-
 
         String finalResult = new String();
       mRecyclerView = (RecyclerView) findViewById(R.id.detail_list);
@@ -81,15 +93,18 @@ public class RacipesListActivity extends AppCompatActivity implements SetpsAdapt
         mRecyclerView.setAdapter(mAdapte);
         mIngredient = (TextView) findViewById(R.id.tv_ingredient_view);
 
-
         for (int i = 0 ; i< BakeryInformationHelper.getItemQuentity().length ; i++ )
         {
-           finalResult += BakeryInformationHelper.getItemQuentity()[i] + " " + BakeryInformationHelper.getItemMeasure()[i] + " " + BakeryInformationHelper.getItemIngredient()[i]+ ". " + System.lineSeparator();
+            if (i==0)
+            {
+                finalResult += BakeryInformationHelper.getItemQuentity()[i] + " " + BakeryInformationHelper.getItemMeasure()[i] + " " + BakeryInformationHelper.getItemIngredient()[i]+ ". " ;
+            }
+           finalResult += lineSeparator() + BakeryInformationHelper.getItemQuentity()[i] + " " + BakeryInformationHelper.getItemMeasure()[i] + " " + BakeryInformationHelper.getItemIngredient()[i]+ ". " ;
             Log.v(RacipesListActivity.class.getSimpleName(), "Result is  ::: :: :: :: " + finalResult);
 
         }
 
-        BakeryStepsHelper.setIngredientResult(finalResult);
+        //BakeryStepsHelper.setIngredientResult(finalResult);
 
         mIngredient.setText(finalResult);
         if (findViewById(R.id.detail_detail_container) != null) {
@@ -99,6 +114,8 @@ public class RacipesListActivity extends AppCompatActivity implements SetpsAdapt
             // activity should be in two-pane mode.
             mTwoPane = true;
         }
+
+
     }
 
 
@@ -125,6 +142,7 @@ public class RacipesListActivity extends AppCompatActivity implements SetpsAdapt
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             View view = LayoutInflater.from(parent.getContext())
                     .inflate(R.layout.detail_list_content, parent, false);
+
             return new ViewHolder(view);
         }
 
@@ -133,7 +151,15 @@ public class RacipesListActivity extends AppCompatActivity implements SetpsAdapt
 
             String[] stepsId = BakeryInformationHelper.getStepsId();
             String[] stepsShortDescription = BakeryInformationHelper.getStepsShortDescription();
-            holder.mStepsIdView.setText(stepsId[position]);
+           if (Integer.valueOf(stepsId[position]) == 0)
+           {
+               holder.stepView.setText("Recipe Introduction");
+           }
+           else
+           {
+               holder.mStepsIdView.setText(stepsId[position]);
+           }
+
             holder.mStepsDescriptionView.setText(stepsShortDescription[position]);
 
 
@@ -146,8 +172,11 @@ public class RacipesListActivity extends AppCompatActivity implements SetpsAdapt
                    // Log.v(RacipesListActivity.class.getSimpleName(),"Information is " + BakeryInformationHelper.getItemQuentity()[position] + " " + BakeryInformationHelper.getItemMeasure()[position] + " " + BakeryInformationHelper.getItemIngredient()[position]  );
                     //Log.v(RacipesListActivity.class.getSimpleName(),"Stored position is : " + BakeryStepsHelper.getStepPosition());
 
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("Step",position);
                     if (mTwoPane) {
                         StapesDetailFragment fragment = new StapesDetailFragment();
+                        fragment.setArguments(bundle);
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.detail_detail_container, fragment)
                                 .commit();
@@ -172,14 +201,14 @@ public class RacipesListActivity extends AppCompatActivity implements SetpsAdapt
             public final View mView;
             private TextView mStepsIdView;
             private TextView mStepsDescriptionView;
-            public DummyContent.DummyItem mItem;
+            TextView stepView;
 
             public ViewHolder(View view) {
                 super(view);
                 mView = view;
                 mStepsIdView = (TextView)mView.findViewById(R.id.id);
                 mStepsDescriptionView = (TextView)mView.findViewById(R.id.content);
-
+                stepView = (TextView)mView.findViewById(R.id.textView);
             }
 
 

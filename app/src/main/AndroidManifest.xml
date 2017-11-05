@@ -37,8 +37,11 @@
         <provider
             android:name=".provider.BakingProvider"
             android:authorities="com.corral.firebase.shailshah.bakingapp.provider"
-            android:exported="false" />
+            android:exported="true" />
 
+        <service
+            android:name=".GridWidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
         <service
             android:name=".sync.BakeryIntentServices"
             android:exported="false" />

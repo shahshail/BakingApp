@@ -50,6 +50,7 @@ public class OpenBakingJsonUtils {
                 String[] quantity = new String[ingredients.length()];
                 String[] meaasure = new String[ingredients.length()];
                 String[] ingre = new String[ingredients.length()];
+                String[] widgetInfo = new String[ingredients.length()];
                 for (int j = 0 ; j< ingredients.length() ; j++)
                 {
                     JSONObject indegrientObject = ingredients.getJSONObject(j);
@@ -58,8 +59,8 @@ public class OpenBakingJsonUtils {
                     quantity[j] = indegrientObject.getString("quantity");
                     meaasure[j] = indegrientObject.getString("measure");
                     ingre[j] = indegrientObject.getString("ingredient");
-
-                   // Log.v(OpenBakingJsonUtils.class.getSimpleName(),"The Quantity are : " + quantity[j]);
+                    widgetInfo[j] = quantity[j] + " " + meaasure[j]+  " " + ingre[j] + System.lineSeparator();
+                    // Log.v(OpenBakingJsonUtils.class.getSimpleName(),"The Quantity are : " + quantity[j]);
                     //Log.v(OpenBakingJsonUtils.class.getSimpleName(),"The measure are : " + meaasure[j]);
                    // Log.v(OpenBakingJsonUtils.class.getSimpleName(),"The ingredient are : " + ingre[j]);
 
@@ -127,7 +128,7 @@ public class OpenBakingJsonUtils {
                 bakingValues.put(BakingAppContractor.BakeryEntry.COLUMN_THUMBNAIL_URL, convertBitmaptoByte(bitmap));
                 bakingValues.put(BakingAppContractor.BakeryEntry.COLUMN_SERVINGS,servings);
                 bakingValues.put(BakingAppContractor.BakeryEntry.COLIMN_IMAGE_URL,image);
-
+                bakingValues.put(BakingAppContractor.BakeryEntry.COLUMN_WIDGET_INFO,OpenBakingJsonUtils.convertArrayToString(widgetInfo));
                 BakingContentValue[i] = bakingValues;
 
             }

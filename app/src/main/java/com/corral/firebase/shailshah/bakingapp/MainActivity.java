@@ -56,7 +56,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             BakingAppContractor.BakeryEntry.COLUMN_VIDEO_URL,
             BakingAppContractor.BakeryEntry.COLUMN_THUMBNAIL_URL,
             BakingAppContractor.BakeryEntry.COLUMN_SERVINGS,
-            BakingAppContractor.BakeryEntry.COLIMN_IMAGE_URL
+            BakingAppContractor.BakeryEntry.COLIMN_IMAGE_URL,
+            BakingAppContractor.BakeryEntry.COLUMN_WIDGET_INFO
     };
 
 
@@ -73,6 +74,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public static final int INDEX_THUMBNAIL_URL = 10;
     public static final int INDEX_SERVINGS = 11;
     public static final int INDEX_IMAGE_URL = 12;
+    public static final int INDEX_WIDGET_INFO = 13;
+
 
 
     @Override
@@ -182,34 +185,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             View view = LayoutInflater.from(parent.getContext())
                     .inflate(R.layout.item_list_content, parent, false);
 
-
-
-/**
-            String[] thumbnails = new String[mCursor.getCount()];
-         for(int i = 0 ; i < mCursor.getCount() ; i++)
-         {
-           mCursor.moveToPosition(i);
-
-            String[]  data = OpenBakingJsonUtils.convertStringToArray(mCursor.getString(INDEX_VIDEO_URL));
-             String newData = data[data.length-1];
-             thumbnails[i] = newData;
-
-         }
-
-
-            AsyncTask asyncTask = new AsyncTask() {
-                @Override
-                protected Object doInBackground(Object[] params) {
-
-
-                    Log.v(MainActivity.class.getSimpleName(), "Hello my name is   " + params[0] + i );
-                    i++;
-                    return null;
-                }
-            };
-
-            asyncTask.execute("shail","Shah","chandravadan","arvindlal");
- */
             return new ViewHolder(view);
         }
 
@@ -225,6 +200,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             holder.mNameView.setText(name);
             Drawable drawable = new BitmapDrawable(OpenBakingJsonUtils.convertByteToBitmap(mCursor.getBlob(INDEX_THUMBNAIL_URL)));
             holder.mThumbnail.setBackgroundDrawable(drawable);
+            holder.mServings.setText(mCursor.getString(INDEX_SERVINGS));
             newPosition = position;
 
         }
@@ -243,11 +219,13 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
             TextView mNameView;
             private ImageView mThumbnail;
+            TextView mServings;
 
             public ViewHolder(View view) {
                 super(view);
                 mNameView = (TextView) view.findViewById(R.id.tv_item_name);
                 mThumbnail = (ImageView) view.findViewById(R.id.thumnail_image_pview);
+                mServings = (TextView) view.findViewById(R.id.tv_servings);
 
                 view.setOnClickListener(this);
             }
@@ -274,21 +252,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 BakeryInformationHelper.setItemServings(mCursor.getString(INDEX_SERVINGS));
                 BakeryInformationHelper.setItemImagePath(mCursor.getString(INDEX_IMAGE_URL));
 
+               BakeryStepsHelper.setTotalSteps(String.valueOf(BakeryInformationHelper.getStepsId().length));
+
                 Log.v(MainActivity.class.getSimpleName(),"The Cursotr name for the bakery is "  +BakeryInformationHelper.getItemName());
-                /**if (mTwoPane) {
-                 Bundle arguments = new Bundle();
-                 arguments.putString(ItemDetailFragment.ARG_ITEM_ID, mItem.id);
-                 ItemDetailFragment fragment = new ItemDetailFragment();
-                 fragment.setArguments(arguments);
-                 getSupportFragmentManager().beginTransaction()
-                 .replace(R.id.item_detail_container, fragment)
-                 .commit();
-                 } else {
-                 Context context = v.getContext();
-                 Intent intent = new Intent(context, ItemDetailActivity.class);
-                 intent.putExtra(ItemDetailFragment.ARG_ITEM_ID, mItem.id);
-                 context.startActivity(intent);
-                 }*/
                 Intent intent = new Intent(v.getContext(),RacipesListActivity.class);
                 //intent.putExtra("Values",String.valueOf(mCursor.getPosition()));
                 BakeryStepsHelper.setStepPosition(mCursor.getPosition());
