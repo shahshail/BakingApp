@@ -146,7 +146,6 @@ ADDED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/An
 		ADDED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml:63:17-58
 uses-sdk
 INJECTED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:multidex:1.0.1] /Users/shailshah/.android/build-cache/29a755acf4d32dded4cd3d7c68d8534cccd21335/output/AndroidManifest.xml:18:5-42
 MERGED from [com.android.support:preference-v7:25.3.1] /Users/shailshah/.android/build-cache/44a1edf99a4f58a746e4ec93f6a11e16afccc4ed/output/AndroidManifest.xml:20:5-43
 MERGED from [com.firebase:firebase-jobdispatcher:0.5.0] /Users/shailshah/.android/build-cache/4562bfb36155703e61c93b5adf8a43aaba2e2249/output/AndroidManifest.xml:22:5-24:41
 MERGED from [com.android.support:design:25.3.1] /Users/shailshah/.android/build-cache/79c6d0990f5a6002a0735056a8e3e0c15284f864/output/AndroidManifest.xml:21:5-23:62

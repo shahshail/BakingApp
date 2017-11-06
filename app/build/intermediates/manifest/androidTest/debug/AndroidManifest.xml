@@ -3,7 +3,7 @@
     package="com.corral.firebase.shailshah.bakingapp.test" >
 
     <uses-sdk
-        android:minSdkVersion="19"
+        android:minSdkVersion="23"
         android:targetSdkVersion="25" />
 
     <instrumentation

@@ -5,13 +5,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.GridView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.corral.firebase.shailshah.bakingapp.helper.BakeryInformationHelper;
@@ -45,7 +45,7 @@ public class RacipesListActivity extends AppCompatActivity implements SetpsAdapt
     String value;
     private int adapterPosition;
     TextView mItemName;
-    private
+    private LinearLayoutManager layoutManager;
 
 
 
@@ -97,6 +97,8 @@ public class RacipesListActivity extends AppCompatActivity implements SetpsAdapt
         String finalResult = new String();
       mRecyclerView = (RecyclerView) findViewById(R.id.detail_list);
         mRecyclerView.setHasFixedSize(true);
+        layoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(layoutManager);
         mAdapte = new RecipesItemRecyclerViewAdapter(this,this);
         mRecyclerView.setAdapter(mAdapte);
         mIngredient = (TextView) findViewById(R.id.tv_ingredient_view);
@@ -135,7 +137,7 @@ public class RacipesListActivity extends AppCompatActivity implements SetpsAdapt
         //gridView = (GridView) findViewById(R.id.main_grid_layout);
         int mCurrentPosition = adapterPosition;
         mPosition = mCurrentPosition;
-        if (mPosition != GridView.INVALID_POSITION) {
+        if (mPosition != ListView.INVALID_POSITION) {
             outState.putInt(SELECTED_KEY, mPosition);
         }
         mAdapte.notifyDataSetChanged();
@@ -145,10 +147,10 @@ public class RacipesListActivity extends AppCompatActivity implements SetpsAdapt
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
 
         mPosition = savedInstanceState.getInt(SELECTED_KEY);
-        if (mPosition != GridView.INVALID_POSITION) {
+        if (mPosition != ListView.INVALID_POSITION) {
             layoutManager.smoothScrollToPosition(mRecyclerView,null,mPosition);
         }
-        mmovieDataAdapter.notifyDataSetChanged();
+        mAdapte.notifyDataSetChanged();
         super.onRestoreInstanceState(savedInstanceState);
     }
 
@@ -188,6 +190,7 @@ public class RacipesListActivity extends AppCompatActivity implements SetpsAdapt
            if (position==0)
            {
                holder.stepView.setText("Recipe Introduction");
+               holder.mStepsIdView.setText("");
            }
            else
            {

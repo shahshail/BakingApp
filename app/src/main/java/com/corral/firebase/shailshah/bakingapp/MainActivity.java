@@ -12,6 +12,7 @@ import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -19,6 +20,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -42,6 +44,10 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     private int mPosition = RecyclerView.NO_POSITION;
     private int i =0;
     private ProgressBar mProgressbar;
+    private int adapterPosition;
+    private LinearLayoutManager layoutManager;
+    private static final String SELECTED_KEY = "selected_position";
+
 
     public static final String[] MAIN_BAKERY_PROJECTION = {
             BakingAppContractor.BakeryEntry._ID,
@@ -100,6 +106,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         mRecyclerView.setHasFixedSize(true);
         mDataAdapter = new SimpleItemRecyclerViewAdapter(this,this);
         mRecyclerView.setAdapter(mDataAdapter);
+        layoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(layoutManager);
        // View recyclerView = findViewById(R.id.item_list);
 
         if (findViewById(R.id.item_layout_info) != null) {
@@ -112,6 +120,28 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
         BakerySyncUtils.initialize(this);
 
+    }
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+
+        //gridView = (GridView) findViewById(R.id.main_grid_layout);
+        int mCurrentPosition = adapterPosition;
+        mPosition = mCurrentPosition;
+        if (mPosition != ListView.INVALID_POSITION) {
+            outState.putInt(SELECTED_KEY, mPosition);
+        }
+        mDataAdapter.notifyDataSetChanged();
+        super.onSaveInstanceState(outState);
+    }
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+
+        mPosition = savedInstanceState.getInt(SELECTED_KEY);
+        if (mPosition != ListView.INVALID_POSITION) {
+            layoutManager.smoothScrollToPosition(mRecyclerView,null,mPosition);
+        }
+        mDataAdapter.notifyDataSetChanged();
+        super.onRestoreInstanceState(savedInstanceState);
     }
 
 
@@ -202,6 +232,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             holder.mThumbnail.setBackgroundDrawable(drawable);
             holder.mServings.setText(mCursor.getString(INDEX_SERVINGS));
             newPosition = position;
+            adapterPosition = position;
 
         }
         void swapCursor(Cursor newCursor) {
