@@ -13,7 +13,7 @@
         android:label="Tests for com.corral.firebase.shailshah.bakingapp"
         android:targetPackage="com.corral.firebase.shailshah.bakingapp" />
 
-    <application>
+    <application android:label="Intents" >
         <uses-library android:name="android.test.runner" />
     </application>
 

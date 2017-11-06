@@ -1,18 +1,18 @@
 [
     {
-        "merged": "/Users/shailshah/Documents/Projects/BakingApp/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
-        "source": "/Users/shailshah/.android/build-cache/3c01fef9a9ebf28c60422ce14504bb21fb2f78d7/output/res/layout-v21/notification_template_custom_big.xml"
-    },
-    {
-        "merged": "/Users/shailshah/Documents/Projects/BakingApp/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
-        "source": "/Users/shailshah/.android/build-cache/3c01fef9a9ebf28c60422ce14504bb21fb2f78d7/output/res/layout-v21/notification_action_tombstone.xml"
-    },
-    {
-        "merged": "/Users/shailshah/Documents/Projects/BakingApp/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "merged": "/Users/shailshah/Documents/Android/Projects/BakingApp/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
         "source": "/Users/shailshah/.android/build-cache/3c01fef9a9ebf28c60422ce14504bb21fb2f78d7/output/res/layout-v21/notification_template_icon_group.xml"
     },
     {
-        "merged": "/Users/shailshah/Documents/Projects/BakingApp/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "merged": "/Users/shailshah/Documents/Android/Projects/BakingApp/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/shailshah/.android/build-cache/3c01fef9a9ebf28c60422ce14504bb21fb2f78d7/output/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/shailshah/Documents/Android/Projects/BakingApp/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
         "source": "/Users/shailshah/.android/build-cache/3c01fef9a9ebf28c60422ce14504bb21fb2f78d7/output/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/Users/shailshah/Documents/Android/Projects/BakingApp/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/shailshah/.android/build-cache/3c01fef9a9ebf28c60422ce14504bb21fb2f78d7/output/res/layout-v21/notification_template_custom_big.xml"
     }
 ]

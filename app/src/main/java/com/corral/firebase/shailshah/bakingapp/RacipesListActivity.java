@@ -5,12 +5,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridView;
 import android.widget.TextView;
 
 import com.corral.firebase.shailshah.bakingapp.helper.BakeryInformationHelper;
@@ -40,7 +41,12 @@ public class RacipesListActivity extends AppCompatActivity implements SetpsAdapt
     private TextView mIngredient;
     private Cursor mCursor;
     int newString;
+    private static final String SELECTED_KEY = "selected_position";
     String value;
+    private int adapterPosition;
+    TextView mItemName;
+    private
+
 
 
     private boolean mTwoPane;
@@ -51,6 +57,8 @@ public class RacipesListActivity extends AppCompatActivity implements SetpsAdapt
         setContentView(R.layout.activity_detail_list);
         setTitle(BakeryInformationHelper.getItemName()+" Ingredients");
         Bundle values = getIntent().getExtras();
+        mItemName = (TextView) findViewById(R.id.item_name);
+        mItemName.setText(BakeryInformationHelper.getItemName());
         if (values == null)
         {
             newString = BakeryStepsHelper.getStepPosition();
@@ -100,7 +108,6 @@ public class RacipesListActivity extends AppCompatActivity implements SetpsAdapt
                 finalResult += BakeryInformationHelper.getItemQuentity()[i] + " " + BakeryInformationHelper.getItemMeasure()[i] + " " + BakeryInformationHelper.getItemIngredient()[i]+ ". " ;
             }
            finalResult += lineSeparator() + BakeryInformationHelper.getItemQuentity()[i] + " " + BakeryInformationHelper.getItemMeasure()[i] + " " + BakeryInformationHelper.getItemIngredient()[i]+ ". " ;
-            Log.v(RacipesListActivity.class.getSimpleName(), "Result is  ::: :: :: :: " + finalResult);
 
         }
 
@@ -113,9 +120,36 @@ public class RacipesListActivity extends AppCompatActivity implements SetpsAdapt
             // If this view is present, then the
             // activity should be in two-pane mode.
             mTwoPane = true;
+            BakeryStepsHelper.setTwoPaneMode(true);
+        }
+        if (savedInstanceState != null && savedInstanceState.containsKey(SELECTED_KEY)) {
+            mPosition = savedInstanceState.getInt(SELECTED_KEY);
         }
 
 
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+
+        //gridView = (GridView) findViewById(R.id.main_grid_layout);
+        int mCurrentPosition = adapterPosition;
+        mPosition = mCurrentPosition;
+        if (mPosition != GridView.INVALID_POSITION) {
+            outState.putInt(SELECTED_KEY, mPosition);
+        }
+        mAdapte.notifyDataSetChanged();
+        super.onSaveInstanceState(outState);
+    }
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+
+        mPosition = savedInstanceState.getInt(SELECTED_KEY);
+        if (mPosition != GridView.INVALID_POSITION) {
+            layoutManager.smoothScrollToPosition(mRecyclerView,null,mPosition);
+        }
+        mmovieDataAdapter.notifyDataSetChanged();
+        super.onRestoreInstanceState(savedInstanceState);
     }
 
 
@@ -151,18 +185,19 @@ public class RacipesListActivity extends AppCompatActivity implements SetpsAdapt
 
             String[] stepsId = BakeryInformationHelper.getStepsId();
             String[] stepsShortDescription = BakeryInformationHelper.getStepsShortDescription();
-           if (Integer.valueOf(stepsId[position]) == 0)
+           if (position==0)
            {
                holder.stepView.setText("Recipe Introduction");
            }
            else
            {
+               holder.stepView.setText("Step");
                holder.mStepsIdView.setText(stepsId[position]);
            }
 
             holder.mStepsDescriptionView.setText(stepsShortDescription[position]);
 
-
+            adapterPosition = position;
 
             holder.mView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -184,6 +219,7 @@ public class RacipesListActivity extends AppCompatActivity implements SetpsAdapt
                         Context context = v.getContext();
                         Intent intent = new Intent(context, StepsDetailAcitvity.class);
                         intent.putExtra("Step",position);
+                        intent.putExtra(Intent.ACTION_DEFAULT,"shail");
                         //intent.putExtra(StapesDetailFragment.ARG_ITEM_ID, holder.mItem.id);
 
                         context.startActivity(intent);

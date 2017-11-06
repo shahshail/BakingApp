@@ -9,7 +9,7 @@ public class BakeryStepsHelper {
 
     private static String nextPosition;
     private static int stepPosition;
-
+    private static boolean twoPaneMode;
     private static  String totalSteps;
 
     public static int getStepPosition() {
@@ -36,5 +36,13 @@ public class BakeryStepsHelper {
 
     public static void setTotalSteps(String totalSteps) {
         BakeryStepsHelper.totalSteps = totalSteps;
+    }
+
+    public static boolean isTwoPaneMode() {
+        return twoPaneMode;
+    }
+
+    public static void setTwoPaneMode(boolean twoPaneMode) {
+        BakeryStepsHelper.twoPaneMode = twoPaneMode;
     }
 }

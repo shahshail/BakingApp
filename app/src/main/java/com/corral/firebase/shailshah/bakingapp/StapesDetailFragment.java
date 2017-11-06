@@ -62,6 +62,7 @@ public class StapesDetailFragment extends Fragment implements ExoPlayer.EventLis
     private final String STATE_PLAYER_FULLSCREEN = "playerFullscreen";
     private int mResumeWindow;
     private long mResumePosition;
+    private static boolean mTwoPane;
 
     public static final String ARG_ITEM_ID = "item_id";
 
@@ -72,7 +73,7 @@ public class StapesDetailFragment extends Fragment implements ExoPlayer.EventLis
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
+        Log.v(StapesDetailFragment.class.getSimpleName()," Total Step is :" + Integer.parseInt(BakeryStepsHelper.getTotalSteps()) + " Currnt position : " +position );
             Activity activity = this.getActivity();
             CollapsingToolbarLayout appBarLayout = (CollapsingToolbarLayout) activity.findViewById(R.id.toolbar_layout);
             if (appBarLayout != null) {
@@ -83,6 +84,7 @@ public class StapesDetailFragment extends Fragment implements ExoPlayer.EventLis
             mResumePosition = savedInstanceState.getLong(STATE_RESUME_POSITION);
            // mExoPlayerFullscreen = savedInstanceState.getBoolean(STATE_PLAYER_FULLSCREEN);
         }
+
 
         }
 
@@ -163,7 +165,7 @@ public class StapesDetailFragment extends Fragment implements ExoPlayer.EventLis
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.detail_detail, container, false);
-
+        mNextButton = (Button)rootView.findViewById(R.id.next_button);
         if (BakeryStepsHelper.getNextPosition() != null)
         {
             position = Integer.parseInt(BakeryStepsHelper.getNextPosition());
@@ -174,7 +176,14 @@ public class StapesDetailFragment extends Fragment implements ExoPlayer.EventLis
             position = getArguments().getInt("Step");
         }
 
-
+        if (Integer.parseInt(BakeryStepsHelper.getTotalSteps()) == position+1)
+        {
+            mNextButton.setText("Finish");
+        }
+        else
+        {
+            mNextButton.setText("Step "+ Integer.valueOf(position+1) +"  ");
+        }
 
         Log.v(StapesDetailFragment.class.getSimpleName(), "Step for this Fragment is :: " + position);
         mProgressbar = (ProgressBar) rootView.findViewById(R.id.progress_bar);
@@ -190,7 +199,12 @@ public class StapesDetailFragment extends Fragment implements ExoPlayer.EventLis
             Toast.makeText(getContext(), "No Video Available for this Step..", Toast.LENGTH_SHORT).show();
         }
 
-        mNextButton = (Button)rootView.findViewById(R.id.next_button);
+        mTwoPane = BakeryStepsHelper.isTwoPaneMode();
+
+        if (mTwoPane)
+        {
+            mNextButton.setVisibility(View.GONE);
+        }
 
         mNextButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -198,14 +212,18 @@ public class StapesDetailFragment extends Fragment implements ExoPlayer.EventLis
                 mExoPlayer.stop();
                 if ( Integer.parseInt(BakeryStepsHelper.getTotalSteps()) > position+1)
                 {
+
                     Intent intent = new Intent(getActivity(),StepsDetailAcitvity.class);
                     BakeryStepsHelper.setNextPosition(String.valueOf(position+1));
-                    Log.v(StapesDetailFragment.class.getSimpleName()," Total Step is :" + Integer.parseInt(BakeryStepsHelper.getTotalSteps()) + " Currnt position : " +position  + "Next Position :" + BakeryStepsHelper.getNextPosition());
+                    intent.putExtra(Intent.ACTION_DEFAULT,"Shail");
+                    intent.putExtra("Position",position+1);
                     startActivity(intent);
                 }
                 else
                 {
                     Intent intent = new Intent(getActivity(),MainActivity.class);
+                    intent.putExtra(Intent.ACTION_DEFAULT,"Shail");
+                    intent.putExtra("Position",position+1);
                     startActivity(intent);
                 }
 

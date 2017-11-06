@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/shailshah/Documents/Projects/BakingApp/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v14/values-v14.xml",
+        "outputFile": "/Users/shailshah/Documents/Android/Projects/BakingApp/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v14/values-v14.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 94
                 },
                 "from": {
-                    "file": "/Users/shailshah/Documents/Projects/BakingApp/app/src/main/res/values-v14/dimens.xml",
+                    "file": "/Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/res/values-v14/dimens.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,

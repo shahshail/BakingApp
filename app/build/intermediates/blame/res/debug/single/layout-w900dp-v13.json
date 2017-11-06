@@ -1,10 +1,10 @@
 [
     {
-        "merged": "/Users/shailshah/Documents/Projects/BakingApp/app/build/intermediates/res/merged/debug/layout-w900dp-v13/item_list.xml",
-        "source": "/Users/shailshah/Documents/Projects/BakingApp/app/src/main/res/layout-w900dp/item_list.xml"
+        "merged": "/Users/shailshah/Documents/Android/Projects/BakingApp/app/build/intermediates/res/merged/debug/layout-w900dp-v13/detail_list.xml",
+        "source": "/Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/res/layout-w900dp/detail_list.xml"
     },
     {
-        "merged": "/Users/shailshah/Documents/Projects/BakingApp/app/build/intermediates/res/merged/debug/layout-w900dp-v13/detail_list.xml",
-        "source": "/Users/shailshah/Documents/Projects/BakingApp/app/src/main/res/layout-w900dp/detail_list.xml"
+        "merged": "/Users/shailshah/Documents/Android/Projects/BakingApp/app/build/intermediates/res/merged/debug/layout-w900dp-v13/item_list.xml",
+        "source": "/Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/res/layout-w900dp/item_list.xml"
     }
 ]
