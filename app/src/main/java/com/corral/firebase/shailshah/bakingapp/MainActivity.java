@@ -1,7 +1,10 @@
 package com.corral.firebase.shailshah.bakingapp;
 
+import android.appwidget.AppWidgetManager;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -29,6 +32,7 @@ import com.corral.firebase.shailshah.bakingapp.helper.BakeryStepsHelper;
 import com.corral.firebase.shailshah.bakingapp.provider.BakingAppContractor;
 import com.corral.firebase.shailshah.bakingapp.sync.BakerySyncUtils;
 import com.corral.firebase.shailshah.bakingapp.utils.OpenBakingJsonUtils;
+import com.squareup.picasso.Picasso;
 
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor>,BakeryAdapterOnclickListener{
 
@@ -61,6 +65,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             BakingAppContractor.BakeryEntry.COLUMN_DESCRIPTION,
             BakingAppContractor.BakeryEntry.COLUMN_VIDEO_URL,
             BakingAppContractor.BakeryEntry.COLUMN_THUMBNAIL_URL,
+            BakingAppContractor.BakeryEntry.COLUMN_THUMBNAIL,
             BakingAppContractor.BakeryEntry.COLUMN_SERVINGS,
             BakingAppContractor.BakeryEntry.COLIMN_IMAGE_URL,
             BakingAppContractor.BakeryEntry.COLUMN_WIDGET_INFO
@@ -78,9 +83,10 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public static final int INDEX_DESCRIPTION = 8;
     public static final int INDEX_VIDEO_URL = 9;
     public static final int INDEX_THUMBNAIL_URL = 10;
-    public static final int INDEX_SERVINGS = 11;
-    public static final int INDEX_IMAGE_URL = 12;
-    public static final int INDEX_WIDGET_INFO = 13;
+    public static final int INDEX_THUMBNAILS = 11;
+    public static final int INDEX_SERVINGS = 12;
+    public static final int INDEX_IMAGE_URL = 13;
+    public static final int INDEX_WIDGET_INFO = 14;
 
 
 
@@ -228,8 +234,17 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
             String name  = mCursor.getString(INDEX_BAKERY_NAME);
             holder.mNameView.setText(name);
-            Drawable drawable = new BitmapDrawable(OpenBakingJsonUtils.convertByteToBitmap(mCursor.getBlob(INDEX_THUMBNAIL_URL)));
-            holder.mThumbnail.setBackgroundDrawable(drawable);
+            if (mCursor.getString(INDEX_IMAGE_URL).equals(""))
+
+            {
+                Drawable drawable = new BitmapDrawable(OpenBakingJsonUtils.convertByteToBitmap(mCursor.getBlob(INDEX_THUMBNAIL_URL)));
+                holder.mThumbnail.setBackgroundDrawable(drawable);
+            }
+            else
+            {
+                Picasso.with(mContext).load(mCursor.getString(INDEX_IMAGE_URL)).into(holder.mThumbnail);
+            }
+
             holder.mServings.setText(mCursor.getString(INDEX_SERVINGS));
             newPosition = position;
             adapterPosition = position;
@@ -282,16 +297,30 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 BakeryInformationHelper.setStepsThumbnailUrl(OpenBakingJsonUtils.convertByteToBitmap(mCursor.getBlob(INDEX_THUMBNAIL_URL)));
                 BakeryInformationHelper.setItemServings(mCursor.getString(INDEX_SERVINGS));
                 BakeryInformationHelper.setItemImagePath(mCursor.getString(INDEX_IMAGE_URL));
-
+                BakeryInformationHelper.setThumbnails(OpenBakingJsonUtils.convertStringToArray(mCursor.getString(INDEX_THUMBNAILS)));
                BakeryStepsHelper.setTotalSteps(String.valueOf(BakeryInformationHelper.getStepsId().length));
 
                 Log.v(MainActivity.class.getSimpleName(),"The Cursotr name for the bakery is "  +BakeryInformationHelper.getItemName());
+
+                SharedPreferences sharedPref = mContext.getSharedPreferences(getString(R.string.widget_preference),0);
+                SharedPreferences.Editor editor = sharedPref.edit();
+                editor.putInt(getString(R.string.widget_preference), AdapterPosition);
+                editor.commit();
+
+              updateAllWidgets();
                 Intent intent = new Intent(v.getContext(),RacipesListActivity.class);
                 //intent.putExtra("Values",String.valueOf(mCursor.getPosition()));
                 BakeryStepsHelper.setStepPosition(mCursor.getPosition());
                 startActivity(intent);
 
                 mClickHandler.onClick(id);
+            }
+        }
+        private void updateAllWidgets(){
+            AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(getApplicationContext());
+            int[] appWidgetIds = appWidgetManager.getAppWidgetIds(new ComponentName(mContext, BakeryWidjetProvider.class));
+            if (appWidgetIds.length > 0) {
+                new BakeryWidjetProvider().onUpdate(mContext, appWidgetManager, appWidgetIds);
             }
         }
 

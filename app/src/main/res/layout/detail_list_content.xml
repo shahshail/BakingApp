@@ -41,7 +41,7 @@
                 android:paddingLeft="@dimen/album_title_padding"
                 android:paddingRight="@dimen/album_title_padding"
                 android:paddingTop="@dimen/album_title_padding"
-                android:text="Step"
+               android:text="@string/recipe_step"
                 android:textColor="#212121"
                 android:textSize="@dimen/album_title" />
 

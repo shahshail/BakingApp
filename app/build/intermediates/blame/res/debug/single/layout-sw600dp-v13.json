@@ -1,6 +1,14 @@
 [
     {
+        "merged": "/Users/shailshah/Documents/Android/Projects/BakingApp/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/item_list.xml",
+        "source": "/Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/res/layout-sw600dp/item_list.xml"
+    },
+    {
         "merged": "/Users/shailshah/Documents/Android/Projects/BakingApp/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
         "source": "/Users/shailshah/.android/build-cache/79c6d0990f5a6002a0735056a8e3e0c15284f864/output/res/layout-sw600dp-v13/design_layout_snackbar.xml"
+    },
+    {
+        "merged": "/Users/shailshah/Documents/Android/Projects/BakingApp/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/detail_list.xml",
+        "source": "/Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/res/layout-sw600dp/detail_list.xml"
     }
 ]

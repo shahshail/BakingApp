@@ -1,14 +1,17 @@
 package com.corral.firebase.shailshah.bakingapp;
 
-import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
-import android.content.Intent;
+import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Log;
 import android.widget.RemoteViews;
+
+import com.corral.firebase.shailshah.bakingapp.provider.BakingAppContractor;
+import com.corral.firebase.shailshah.bakingapp.utils.OpenBakingJsonUtils;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -18,18 +21,54 @@ import java.io.ByteArrayOutputStream;
  */
 public class BakeryWidjetProvider extends AppWidgetProvider {
 
+private static Cursor mCursor;
+    private static Bitmap thumbnail_backgroung1;
 
     static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
                                 int appWidgetId) {
 
-        RemoteViews rv;
-        rv = getBakingAppRemoteView(context);
+        RemoteViews remoteview  = new RemoteViews(context.getPackageName(),R.layout.bakery_widjet_provider);
+        //RemoteViews rv;
+        //rv = getBakingAppRemoteView(context);
+        mCursor = context.getContentResolver().query(
+                BakingAppContractor.BakeryEntry.CONTENT_URI,
+                null,
+                null,
+                null
+                ,null
+        );
 
+        SharedPreferences prefs = context.getSharedPreferences("widget_pref",0);
+        int position = prefs.getInt("widget_pref",0);
+
+
+
+        Log.v(BakeryWidjetProvider.class.getSimpleName(),"The value of widget preference is "+ position);
+
+        mCursor.moveToPosition(position);
+
+        String result = new String();
+
+        String [] ingredient = OpenBakingJsonUtils.convertStringToArray(mCursor.getString(MainActivity.INDEX_WIDGET_INFO));
+        for (int i = 0; i< ingredient.length ; i++ )
+        {
+            result += ingredient[i];
+        }
+
+        thumbnail_backgroung1 = OpenBakingJsonUtils.convertByteToBitmap(mCursor.getBlob(MainActivity.INDEX_THUMBNAIL_URL));
+        Log.v(GridWidgetService.class.getSimpleName(),"The result is "  + result);
+
+        remoteview.setTextViewText(R.id.name,mCursor.getString(MainActivity.INDEX_BAKERY_NAME));
+        remoteview.setTextViewText(R.id.ingredient_widget,result);
+        remoteview.setTextViewText(R.id.widget_titlebar,mCursor.getString(MainActivity.INDEX_BAKERY_NAME)+ " Ingredients");
+        remoteview.setImageViewBitmap(R.id.imageview4,thumbnail_backgroung1);
+
+        String value = String.valueOf(position);
         // Instruct the widget manager to update the widget
-        appWidgetManager.updateAppWidget(appWidgetId, rv);
+        appWidgetManager.updateAppWidget(appWidgetId, remoteview);
     }
 
-
+/**
     private static RemoteViews getBakingAppRemoteView(Context context)
     {
 
@@ -42,6 +81,7 @@ public class BakeryWidjetProvider extends AppWidgetProvider {
         remoteview.setEmptyView(R.id.widget_list_view,R.id.empty_view);
         return remoteview;
     }
+ */
 
     public static Bitmap scaleDownBitmap(Bitmap photo, int newHeight, Context context) {
 
@@ -74,6 +114,8 @@ public class BakeryWidjetProvider extends AppWidgetProvider {
         for (int appWidgetId : appWidgetIds) {
             updateAppWidget(context, appWidgetManager, appWidgetId);
         }
+
+
     }
 
     @Override

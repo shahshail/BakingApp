@@ -29,7 +29,8 @@ public class RacepiActivityTest {
                 .perform(RecyclerViewActions.actionOnItemAtPosition(0,
                         click()));
 
-        onView(withId(R.id.item_content))
+
+        onView(withId(R.id.detail_list))
                 .perform(RecyclerViewActions.actionOnItemAtPosition(0,
                         click()));
 

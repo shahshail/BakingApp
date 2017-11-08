@@ -9,6 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
+        android:id="@+id/coordinate"
         tools:context="com.corral.firebase.shailshah.myapplication.DetailDetailActivity"
         tools:ignore="MergeRootFrame">
 
@@ -47,7 +48,6 @@
             android:id="@+id/detail_detail_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="20dp"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 

@@ -1,4 +1,5 @@
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,8 +17,9 @@
         android:paddingBottom="30dp"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:text="Description will shown here.."
+        android:text="@string/detail_description"
         android:paddingTop="50dp"
+        android:gravity="top"
         android:textSize="16dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
         android:layout_marginLeft="8dp"
@@ -29,9 +31,9 @@
         android:layout_marginEnd="8dp"
         android:textColor="#212121"
         card_view:layout_constraintTop_toBottomOf="@+id/view"
-        android:layout_marginTop="25dp" />
+        android:layout_marginTop="-1dp" />
     <View
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="1dp"
         android:background="@android:color/darker_gray"
         android:layout_marginTop="23dp"
@@ -52,7 +54,7 @@
         android:layout_marginLeft="8dp"
         card_view:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginRight="8dp"
-        android:text="Step  "
+        android:text="@string/detail_step"
         android:textAlignment="center"
         android:backgroundTint="@color/colorPrimary"
         android:textColor="#FFFF"
@@ -61,18 +63,20 @@
         card_view:layout_constraintRight_toRightOf="parent"
         card_view:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
-        card_view:layout_constraintHorizontal_bias="0.992"
+        card_view:layout_constraintHorizontal_bias="0.993"
         android:layout_marginTop="8dp"
         card_view:layout_constraintTop_toBottomOf="@+id/detail_description"
-        card_view:layout_constraintVertical_bias="0.965" />
+        card_view:layout_constraintVertical_bias="0.447"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
     <com.google.android.exoplayer2.ui.SimpleExoPlayerView
         android:id="@+id/playerView"
         android:layout_width="0dp"
         android:layout_height="300dp"
         android:layout_marginTop="25dp"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         card_view:layout_constraintHorizontal_bias="0.0"
         card_view:layout_constraintLeft_toLeftOf="parent"
         card_view:layout_constraintRight_toRightOf="parent"

@@ -73,7 +73,7 @@ public class StapesDetailFragment extends Fragment implements ExoPlayer.EventLis
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Log.v(StapesDetailFragment.class.getSimpleName()," Total Step is :" + Integer.parseInt(BakeryStepsHelper.getTotalSteps()) + " Currnt position : " +position );
+       // Log.v(StapesDetailFragment.class.getSimpleName()," Total Step is :" + Integer.parseInt(BakeryStepsHelper.getTotalSteps()) + " Currnt position : " +position );
             Activity activity = this.getActivity();
             CollapsingToolbarLayout appBarLayout = (CollapsingToolbarLayout) activity.findViewById(R.id.toolbar_layout);
             if (appBarLayout != null) {
@@ -148,9 +148,11 @@ public class StapesDetailFragment extends Fragment implements ExoPlayer.EventLis
     }
 
     private void releasePlayer() {
-        mExoPlayer.stop();
-        mExoPlayer.release();
-        mExoPlayer = null;
+        if (mExoPlayer != null) {
+            mExoPlayer.stop();
+            mExoPlayer.release();
+            mExoPlayer = null;
+        }
     }
 
     @Override
@@ -296,11 +298,21 @@ public class StapesDetailFragment extends Fragment implements ExoPlayer.EventLis
     }
 
 
+
     @Override
     public void onPause() {
         super.onPause();
         mResumeWindow = mExoPlayer.getCurrentWindowIndex();
         mResumePosition = Math.max(0, mExoPlayer.getCurrentPosition());
+        releasePlayer();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Uri myuri = Uri.parse(BakeryInformationHelper.getStepsVideoUrl()[position]);
+        initializePlayer(myuri);
+        inititalizeMediaSession();
     }
 
     private class MySessionCallback extends MediaSessionCompat.Callback {
@@ -312,8 +324,6 @@ public class StapesDetailFragment extends Fragment implements ExoPlayer.EventLis
         @Override
         public void onPause() {
             mProgressbar.setVisibility(View.INVISIBLE);
-
-
             mExoPlayer.setPlayWhenReady(false);
         }
 

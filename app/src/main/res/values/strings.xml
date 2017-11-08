@@ -3,4 +3,8 @@
     <string name="title_item_detail">Item Detail</string>
     <string name="appwidget_text">EXAMPLE</string>
     <string name="add_widget">Add widget</string>
+    <string name="detail_description">Description will shown here..</string>
+    <string name="detail_step">Step  </string>
+    <string name="recipe_step">Step</string>
+    <string name="widget_preference">widget_pref</string>
 </resources>

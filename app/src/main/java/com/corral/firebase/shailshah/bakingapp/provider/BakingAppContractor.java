@@ -41,6 +41,8 @@ public class BakingAppContractor {
 
         public static final String COLUMN_THUMBNAIL_URL = "step_thumbnail_url";
 
+        public static final String COLUMN_THUMBNAIL = "step_thumbnails";
+
         public static final String COLUMN_SERVINGS = "servings";
 
         public static final String COLIMN_IMAGE_URL = "images";

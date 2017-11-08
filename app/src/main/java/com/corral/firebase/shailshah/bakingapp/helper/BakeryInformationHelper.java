@@ -21,6 +21,7 @@ public class BakeryInformationHelper {
     private static Bitmap stepsThumbnailUrl;
     private static String itemServings;
     private static String itemImagePath;
+    private static String[] thumbnails;
 
 
     public static String getBakeryId() {
@@ -125,5 +126,14 @@ public class BakeryInformationHelper {
 
     public static void setID(String ID) {
         BakeryInformationHelper.ID = ID;
+    }
+
+
+    public static String[] getThumbnails() {
+        return thumbnails;
+    }
+
+    public static void setThumbnails(String[] thumbnails) {
+        BakeryInformationHelper.thumbnails = thumbnails;
     }
 }

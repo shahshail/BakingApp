@@ -30,6 +30,7 @@ import static com.corral.firebase.shailshah.bakingapp.MainActivity.INDEX_QUANTIT
 import static com.corral.firebase.shailshah.bakingapp.MainActivity.INDEX_SERVINGS;
 import static com.corral.firebase.shailshah.bakingapp.MainActivity.INDEX_SHORT_DESCRIPTION;
 import static com.corral.firebase.shailshah.bakingapp.MainActivity.INDEX_STEPS_ID;
+import static com.corral.firebase.shailshah.bakingapp.MainActivity.INDEX_THUMBNAILS;
 import static com.corral.firebase.shailshah.bakingapp.MainActivity.INDEX_THUMBNAIL_URL;
 import static com.corral.firebase.shailshah.bakingapp.MainActivity.INDEX_VIDEO_URL;
 import static java.lang.System.lineSeparator;
@@ -86,6 +87,7 @@ public class RacipesListActivity extends AppCompatActivity implements SetpsAdapt
             BakeryInformationHelper.setStepsThumbnailUrl(OpenBakingJsonUtils.convertByteToBitmap(mCursor.getBlob(INDEX_THUMBNAIL_URL)));
             BakeryInformationHelper.setItemServings(mCursor.getString(INDEX_SERVINGS));
             BakeryInformationHelper.setItemImagePath(mCursor.getString(INDEX_IMAGE_URL));
+            BakeryInformationHelper.setThumbnails(OpenBakingJsonUtils.convertStringToArray(mCursor.getString(INDEX_THUMBNAILS)));
 
 
         }

@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.MediaMetadataRetriever;
 import android.os.Build;
+import android.util.Log;
 
 import com.corral.firebase.shailshah.bakingapp.provider.BakingAppContractor;
 
@@ -71,7 +72,10 @@ public class OpenBakingJsonUtils {
                 String[] shortDescription = new String[stepsArray.length()];
                 String[] description = new String[stepsArray.length()];
                 String[] videoUrl = new String[stepsArray.length()];
-                String thumbnailUrl = new String();
+                String thumbnailFromVideo = new String();
+                String[] thumbnail_URL = new String[stepsArray.length()];
+                String thumbnails = new String();
+                String bitmap2 = null;
 
                 for (int j = 0; j< stepsArray.length(); j++)
                 {
@@ -80,21 +84,30 @@ public class OpenBakingJsonUtils {
                     shortDescription[j] = stepsObject.getString("shortDescription");
                     description[j] = stepsObject.getString("description");
                     videoUrl[j] = stepsObject.getString("videoURL");
+                    if (stepsObject.getString("thumbnailURL").equals(""))
+                    {
+                        thumbnail_URL[j] = " ";
+
+                    }
+                    else
+                    {
+                        thumbnail_URL[j] = stepsObject.getString("thumbnailURL");
+                    }
 
 
 
 
                 }
-                thumbnailUrl = videoUrl[videoUrl.length-1];
+                thumbnailFromVideo = videoUrl[videoUrl.length-1];
                 Bitmap bitmap = null;
                 MediaMetadataRetriever mediaMetadataRetriever = null ;
                 try {
                     mediaMetadataRetriever = new MediaMetadataRetriever();
                     if (Build.VERSION.SDK_INT >= 14)
                         // no headers included
-                        mediaMetadataRetriever.setDataSource(thumbnailUrl, new HashMap<String, String>());
+                        mediaMetadataRetriever.setDataSource(thumbnailFromVideo, new HashMap<String, String>());
                     else
-                        mediaMetadataRetriever.setDataSource(thumbnailUrl);
+                        mediaMetadataRetriever.setDataSource(thumbnailFromVideo);
                     //   mediaMetadataRetriever.setDataSource(videoPath);
                     bitmap = mediaMetadataRetriever.getFrameAtTime(15000000);
                 } catch (Exception e) {
@@ -109,8 +122,13 @@ public class OpenBakingJsonUtils {
 
 
 
+
                 String servings = object.getString("servings");
-                String image = object.getString("image");
+                String image = null ;
+                image = object.getString("image");
+
+
+                Log.v(OpenBakingJsonUtils.class.getSimpleName(), "Thumbnails are :::::: "  + OpenBakingJsonUtils.convertArrayToString(thumbnail_URL));
 
 
 
@@ -126,6 +144,7 @@ public class OpenBakingJsonUtils {
                 bakingValues.put(BakingAppContractor.BakeryEntry.COLUMN_DESCRIPTION,OpenBakingJsonUtils.convertArrayToString(description));
                 bakingValues.put(BakingAppContractor.BakeryEntry.COLUMN_VIDEO_URL,OpenBakingJsonUtils.convertArrayToString(videoUrl));
                 bakingValues.put(BakingAppContractor.BakeryEntry.COLUMN_THUMBNAIL_URL, convertBitmaptoByte(bitmap));
+                bakingValues.put(BakingAppContractor.BakeryEntry.COLUMN_THUMBNAIL,OpenBakingJsonUtils.convertArrayToString(thumbnail_URL));
                 bakingValues.put(BakingAppContractor.BakeryEntry.COLUMN_SERVINGS,servings);
                 bakingValues.put(BakingAppContractor.BakeryEntry.COLIMN_IMAGE_URL,image);
                 bakingValues.put(BakingAppContractor.BakeryEntry.COLUMN_WIDGET_INFO,OpenBakingJsonUtils.convertArrayToString(widgetInfo));
