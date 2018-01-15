@@ -13,6 +13,29 @@ Android Baking App that will allow Udacity’s resident baker-in-chief, Miriam, 
 * [IcePick]
 * [Blurry]
 
+## Screens
+
+### Main Screen
+![atp txt](https://github.com/shahshail/BakingApp/blob/master/Screenshots/device_home.png)
+
+### Detail Screen 1
+![atp txt](https://github.com/shahshail/BakingApp/blob/master/Screenshots/device_detail.png)
+
+### Detail Screen 2
+![atp txt](https://github.com/shahshail/BakingApp/blob/master/Screenshots/device_detail_detail.png)
+
+### Detail Screen 3
+![atp txt](https://github.com/shahshail/BakingApp/blob/master/Screenshots/device_detail_detail2.png)
+
+### Tablet Home
+![atp txt](https://github.com/shahshail/BakingApp/blob/master/Screenshots/tablet_home.png)
+
+### Tablet Detail
+![atp txt](https://github.com/shahshail/BakingApp/blob/master/Screenshots/tablet_detail.png)
+
+### Widget
+![atp txt](https://github.com/shahshail/BakingApp/blob/master/Screenshots/tablet_widget.png)
+
 ## Project Overview
 You will productionize an app, taking it from a functional state to a production-ready state. This will involve finding and handling error cases, adding accessibility features, allowing for localization, adding a widget, and adding a library.
 
