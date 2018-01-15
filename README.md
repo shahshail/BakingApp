@@ -2,7 +2,6 @@
 
 
 ## Used Libraries
-* [RxJava 2](https://github.com/ReactiveX/RxJava), [RxAndroid](https://github.com/ReactiveX/RxAndroid), [RxJava2Interop](https://github.com/akarnokd/RxJava2Interop)
 * [Dagger 2](https://github.com/google/dagger)
 * [Retrofit 2](https://github.com/square/retrofit) with [RxJava adapter](https://github.com/square/retrofit/tree/master/retrofit-adapters/rxjava2) and [Gson converter](https://github.com/square/retrofit/tree/master/retrofit-converters/gson)
 * [OkHttp](https://github.com/square/okhttp)
@@ -46,3 +45,7 @@ In this project you will:
 ### Homescreen Widget
 - [x] Application has a companion homescreen widget.
 - [x] Widget displays ingredient list for desired recipe.
+
+## Android Developer Nanodegree
+[![Udacity](https://cloud.githubusercontent.com/assets/3719141/14508774/c7f6cbce-01d1-11e6-9daf-02bcd10b6400.jpeg)](https://www.udacity.com/course/android-developer-nanodegree--nd801)
+
