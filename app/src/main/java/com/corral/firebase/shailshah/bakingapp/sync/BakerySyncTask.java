@@ -13,8 +13,14 @@ import com.corral.firebase.shailshah.bakingapp.utils.OpenBakingJsonUtils;
  */
 
 public class BakerySyncTask {
+
+
+
     synchronized public static void syncBakery(Context context)
     {
+
+
+
         try {
             ContentValues[] bakeryDataValues = OpenBakingJsonUtils.getSimpleMovieDataFromJson(context);
 

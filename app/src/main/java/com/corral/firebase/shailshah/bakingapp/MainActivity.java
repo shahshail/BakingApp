@@ -99,7 +99,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setTitle(getTitle());
-
+        MainActivityComponent mainActivityComponent = DaggerMainActivityComponent.builder()
+                .mainActivityModule(new MainActivityModule(MainActivity.this))
+                .build();
 
         LoaderManager.LoaderCallbacks<Cursor> callback = MainActivity.this;
         Bundle bundleForLoader = null;
@@ -124,7 +126,10 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             mTwoPane = true;
         }
 
-        BakerySyncUtils.initialize(this);
+        BakerySyncUtils.initialize(mainActivityComponent.context());
+
+
+
 
     }
     @Override

@@ -1,18 +1,51 @@
 -- Merging decision tree log ---
 manifest
 ADDED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml:2:1-68:12
+INJECTED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml:2:1-68:12
+INJECTED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml:2:1-68:12
+INJECTED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml:2:1-68:12
+MERGED from [com.android.support:preference-v7:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/preference-v7-25.3.1.aar/d4ae117fbba10548e6d7e8c3b684b25d/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:design:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/fe168cc2de46a1372a9458f47222e7e2/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/97421bdc1d740afdd9dbef1868115cec/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.3.1.aar/0d77e0266e0210baab0d5c81ced723f0/AndroidManifest.xml:17:1-26:12
+MERGED from [com.firebase:firebase-jobdispatcher:0.5.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/firebase-jobdispatcher-0.5.0.aar/267850584884c42732507e03c5fa0297/AndroidManifest.xml:17:1-42:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/329e983554873d277256bf8b40be3a26/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:cardview-v7:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/cardview-v7-25.3.1.aar/2ec13a3efc142927cbba217a5dff5cc0/AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-appindexing:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/play-services-appindexing-9.8.0.aar/f2b9356717ae422eee67ff424784f64e/AndroidManifest.xml:16:1-19:12
+MERGED from [com.android.support.test.espresso:espresso-idling-resource:2.2.2] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/espresso-idling-resource-2.2.2.aar/0ff90c8bcf05999cac1e4431500ec3d5/AndroidManifest.xml:17:1-26:12
+MERGED from [com.google.android.exoplayer:exoplayer:r2.2.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/exoplayer-r2.2.0.aar/639856b69ebc49c7c202f3b0c816ca08/AndroidManifest.xml:17:1-25:12
+MERGED from [jp.wasabeef:blurry:2.1.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/blurry-2.1.1.aar/ccdba83f6490b5e49ef77587935812ab/AndroidManifest.xml:2:1-12:12
+MERGED from [com.android.support:multidex:1.0.2] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/15ffd8717fa35f624cf01580898bd805/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/ca8d7cb9b20f5f1986553f16c0f1f160/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/3d9ae55c38e16eedf79fdcd8f5a78f54/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:transition:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/transition-25.3.1.aar/5875ad07f615ab77bcc94d9f00cae2b0/AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-base:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/play-services-base-9.8.0.aar/015369d879d88ee4fe6180feb7923222/AndroidManifest.xml:16:1-21:12
+MERGED from [com.google.firebase:firebase-common:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/firebase-common-9.8.0.aar/d7bd629f365583a8ae66207c8c2a352c/AndroidManifest.xml:2:1-8:12
+MERGED from [com.google.android.gms:play-services-tasks:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/play-services-tasks-9.8.0.aar/58b3a4e71555f179612957fb593bcbb1/AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-basement:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/play-services-basement-9.8.0.aar/f0070fc65d2b29caf7d3ddac9913315a/AndroidManifest.xml:16:1-23:12
+MERGED from [com.android.support:support-v4:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/1fbb0cf97bc21f3b3f73b06adac3e3d9/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/bd77dc23ee82bc0e330c3f5e88ef6253/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/29ff1a6efc3add5d0fe24c9ac7ca845f/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/51246daa61ccea9237bb5fb9ad63ee73/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/7edac27689f0fd74129a4aba50184f3a/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/d1c7512daf1ec17da6c36d838f20bd78/AndroidManifest.xml:17:1-31:12
+INJECTED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml:2:1-68:12
+INJECTED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml:2:1-68:12
+INJECTED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml:2:1-68:12
 	package
 		ADDED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml:3:5-54
 		INJECTED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml
+		ADDED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml:2:1-68:12
+		INJECTED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml
+		ADDED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml:2:1-68:12
 		INJECTED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml:2:11-69
-	android:versionCode
-		INJECTED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.INTERNET
 ADDED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml:5:5-67
 	android:name
@@ -23,37 +56,58 @@ ADDED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/An
 		ADDED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml:6:22-76
 application
 ADDED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml:8:5-66:19
-MERGED from [com.android.support:preference-v7:25.3.1] /Users/shailshah/.android/build-cache/44a1edf99a4f58a746e4ec93f6a11e16afccc4ed/output/AndroidManifest.xml:26:5-20
-MERGED from [com.firebase:firebase-jobdispatcher:0.5.0] /Users/shailshah/.android/build-cache/4562bfb36155703e61c93b5adf8a43aaba2e2249/output/AndroidManifest.xml:26:5-40:19
-MERGED from [com.android.support:design:25.3.1] /Users/shailshah/.android/build-cache/79c6d0990f5a6002a0735056a8e3e0c15284f864/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/shailshah/.android/build-cache/3c01fef9a9ebf28c60422ce14504bb21fb2f78d7/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/shailshah/.android/build-cache/76a4448a019a908612e43754c6a8e0f83f0b9fa2/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/shailshah/.android/build-cache/ab720f6170c9ca5448c9c11c1a854a7497603ea3/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:transition:25.3.1] /Users/shailshah/.android/build-cache/2fc7f1fd3595d099d5d4dac389ea83d805c7a540/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/shailshah/.android/build-cache/6d9bbf36ad389760fe513734f52463fd19632694/output/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:cardview-v7:25.3.1] /Users/shailshah/.android/build-cache/3eec29cdee4d729a5d40c7e123e1f7ab5a002c7d/output/AndroidManifest.xml:26:5-20
-MERGED from [com.google.android.gms:play-services-appindexing:9.8.0] /Users/shailshah/.android/build-cache/858fc569d4f3ed2facba24d7104916734c01e0b2/output/AndroidManifest.xml:18:5-19
-MERGED from [com.google.android.gms:play-services-base:9.8.0] /Users/shailshah/.android/build-cache/12c1022337d9eff4591c59edef1ff700112d4359/output/AndroidManifest.xml:18:5-20:19
-MERGED from [com.google.firebase:firebase-common:9.8.0] /Users/shailshah/.android/build-cache/1207d51f6c3a531cdc1dec5aaadd6773b465dbbd/output/AndroidManifest.xml:4:5-7:19
-MERGED from [com.google.android.gms:play-services-tasks:9.8.0] /Users/shailshah/.android/build-cache/f64e1f62833ab79c8b6f4061b47a9dd2ddd2297f/output/AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-basement:9.8.0] /Users/shailshah/.android/build-cache/ebb3980828d13179223f690b17c008e2a62818e6/output/AndroidManifest.xml:19:5-21:19
-MERGED from [com.android.support:support-v4:25.3.1] /Users/shailshah/.android/build-cache/d28cd16222a62043a07eac435e7c99e75c426fac/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:25.3.1] /Users/shailshah/.android/build-cache/19e32b657e30ceccf736a984136d6d154d3cc2cf/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:25.3.1] /Users/shailshah/.android/build-cache/d47746392228eaf6d7fbeff476aa3081d3d9b9af/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:25.3.1] /Users/shailshah/.android/build-cache/17fb5bc25187d6913998c46d7d3d8df5ca0fe049/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:25.3.1] /Users/shailshah/.android/build-cache/b2f48b22b4910ef35f41deb7b445cb0603e8a7f2/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-compat:25.3.1] /Users/shailshah/.android/build-cache/427f858068df7774b6f25f0e70151e3af6fd1a18/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support.test.espresso:espresso-idling-resource:2.2.2] /Users/shailshah/.android/build-cache/08ee8f991724108f8f5329f494694be1d4222a0e/output/AndroidManifest.xml:24:5-20
-	android:label
-		ADDED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml:11:9-41
+MERGED from [com.android.support:preference-v7:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/preference-v7-25.3.1.aar/d4ae117fbba10548e6d7e8c3b684b25d/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:preference-v7:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/preference-v7-25.3.1.aar/d4ae117fbba10548e6d7e8c3b684b25d/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:design:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/fe168cc2de46a1372a9458f47222e7e2/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:design:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/fe168cc2de46a1372a9458f47222e7e2/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/97421bdc1d740afdd9dbef1868115cec/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/97421bdc1d740afdd9dbef1868115cec/AndroidManifest.xml:29:5-20
+MERGED from [com.firebase:firebase-jobdispatcher:0.5.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/firebase-jobdispatcher-0.5.0.aar/267850584884c42732507e03c5fa0297/AndroidManifest.xml:26:5-40:19
+MERGED from [com.firebase:firebase-jobdispatcher:0.5.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/firebase-jobdispatcher-0.5.0.aar/267850584884c42732507e03c5fa0297/AndroidManifest.xml:26:5-40:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/329e983554873d277256bf8b40be3a26/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/329e983554873d277256bf8b40be3a26/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:cardview-v7:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/cardview-v7-25.3.1.aar/2ec13a3efc142927cbba217a5dff5cc0/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:cardview-v7:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/cardview-v7-25.3.1.aar/2ec13a3efc142927cbba217a5dff5cc0/AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-appindexing:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/play-services-appindexing-9.8.0.aar/f2b9356717ae422eee67ff424784f64e/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-appindexing:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/play-services-appindexing-9.8.0.aar/f2b9356717ae422eee67ff424784f64e/AndroidManifest.xml:18:5-19
+MERGED from [com.android.support.test.espresso:espresso-idling-resource:2.2.2] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/espresso-idling-resource-2.2.2.aar/0ff90c8bcf05999cac1e4431500ec3d5/AndroidManifest.xml:24:5-20
+MERGED from [com.android.support.test.espresso:espresso-idling-resource:2.2.2] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/espresso-idling-resource-2.2.2.aar/0ff90c8bcf05999cac1e4431500ec3d5/AndroidManifest.xml:24:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/ca8d7cb9b20f5f1986553f16c0f1f160/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/ca8d7cb9b20f5f1986553f16c0f1f160/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/3d9ae55c38e16eedf79fdcd8f5a78f54/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/3d9ae55c38e16eedf79fdcd8f5a78f54/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/transition-25.3.1.aar/5875ad07f615ab77bcc94d9f00cae2b0/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/transition-25.3.1.aar/5875ad07f615ab77bcc94d9f00cae2b0/AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-base:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/play-services-base-9.8.0.aar/015369d879d88ee4fe6180feb7923222/AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-base:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/play-services-base-9.8.0.aar/015369d879d88ee4fe6180feb7923222/AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.firebase:firebase-common:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/firebase-common-9.8.0.aar/d7bd629f365583a8ae66207c8c2a352c/AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.firebase:firebase-common:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/firebase-common-9.8.0.aar/d7bd629f365583a8ae66207c8c2a352c/AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.android.gms:play-services-tasks:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/play-services-tasks-9.8.0.aar/58b3a4e71555f179612957fb593bcbb1/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-tasks:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/play-services-tasks-9.8.0.aar/58b3a4e71555f179612957fb593bcbb1/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/play-services-basement-9.8.0.aar/f0070fc65d2b29caf7d3ddac9913315a/AndroidManifest.xml:19:5-21:19
+MERGED from [com.google.android.gms:play-services-basement:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/play-services-basement-9.8.0.aar/f0070fc65d2b29caf7d3ddac9913315a/AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:support-v4:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/1fbb0cf97bc21f3b3f73b06adac3e3d9/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/1fbb0cf97bc21f3b3f73b06adac3e3d9/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/bd77dc23ee82bc0e330c3f5e88ef6253/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/bd77dc23ee82bc0e330c3f5e88ef6253/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/29ff1a6efc3add5d0fe24c9ac7ca845f/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/29ff1a6efc3add5d0fe24c9ac7ca845f/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/51246daa61ccea9237bb5fb9ad63ee73/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/51246daa61ccea9237bb5fb9ad63ee73/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/7edac27689f0fd74129a4aba50184f3a/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/7edac27689f0fd74129a4aba50184f3a/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/d1c7512daf1ec17da6c36d838f20bd78/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/d1c7512daf1ec17da6c36d838f20bd78/AndroidManifest.xml:29:5-20
 	android:supportsRtl
 		ADDED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml:13:9-35
+	android:label
+		ADDED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml:11:9-41
 	android:roundIcon
 		ADDED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml:12:9-46
-	android:allowBackup
-		ADDED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml:9:9-35
 	android:icon
 		ADDED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml:10:9-41
+	android:allowBackup
+		ADDED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml:9:9-35
 	android:theme
 		ADDED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml:14:9-40
 activity#com.corral.firebase.shailshah.bakingapp.MainActivity
@@ -146,92 +200,137 @@ ADDED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/An
 		ADDED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml:63:17-58
 uses-sdk
 INJECTED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:preference-v7:25.3.1] /Users/shailshah/.android/build-cache/44a1edf99a4f58a746e4ec93f6a11e16afccc4ed/output/AndroidManifest.xml:20:5-43
-MERGED from [com.firebase:firebase-jobdispatcher:0.5.0] /Users/shailshah/.android/build-cache/4562bfb36155703e61c93b5adf8a43aaba2e2249/output/AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:design:25.3.1] /Users/shailshah/.android/build-cache/79c6d0990f5a6002a0735056a8e3e0c15284f864/output/AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/shailshah/.android/build-cache/3c01fef9a9ebf28c60422ce14504bb21fb2f78d7/output/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/shailshah/.android/build-cache/76a4448a019a908612e43754c6a8e0f83f0b9fa2/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/shailshah/.android/build-cache/ab720f6170c9ca5448c9c11c1a854a7497603ea3/output/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/shailshah/.android/build-cache/b0f698a96ad58044f079ca82244b67fa0451733d/output/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:transition:25.3.1] /Users/shailshah/.android/build-cache/2fc7f1fd3595d099d5d4dac389ea83d805c7a540/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/shailshah/.android/build-cache/6d9bbf36ad389760fe513734f52463fd19632694/output/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:cardview-v7:25.3.1] /Users/shailshah/.android/build-cache/3eec29cdee4d729a5d40c7e123e1f7ab5a002c7d/output/AndroidManifest.xml:20:5-43
-MERGED from [com.google.android.gms:play-services-appindexing:9.8.0] /Users/shailshah/.android/build-cache/858fc569d4f3ed2facba24d7104916734c01e0b2/output/AndroidManifest.xml:17:5-42
-MERGED from [com.google.android.gms:play-services-base:9.8.0] /Users/shailshah/.android/build-cache/12c1022337d9eff4591c59edef1ff700112d4359/output/AndroidManifest.xml:17:5-42
-MERGED from [com.google.firebase:firebase-common:9.8.0] /Users/shailshah/.android/build-cache/1207d51f6c3a531cdc1dec5aaadd6773b465dbbd/output/AndroidManifest.xml:3:5-42
-MERGED from [com.google.android.gms:play-services-tasks:9.8.0] /Users/shailshah/.android/build-cache/f64e1f62833ab79c8b6f4061b47a9dd2ddd2297f/output/AndroidManifest.xml:3:5-42
-MERGED from [com.google.android.gms:play-services-basement:9.8.0] /Users/shailshah/.android/build-cache/ebb3980828d13179223f690b17c008e2a62818e6/output/AndroidManifest.xml:17:5-42
-MERGED from [com.android.support:support-v4:25.3.1] /Users/shailshah/.android/build-cache/d28cd16222a62043a07eac435e7c99e75c426fac/output/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.3.1] /Users/shailshah/.android/build-cache/19e32b657e30ceccf736a984136d6d154d3cc2cf/output/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.3.1] /Users/shailshah/.android/build-cache/d47746392228eaf6d7fbeff476aa3081d3d9b9af/output/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.3.1] /Users/shailshah/.android/build-cache/17fb5bc25187d6913998c46d7d3d8df5ca0fe049/output/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.3.1] /Users/shailshah/.android/build-cache/b2f48b22b4910ef35f41deb7b445cb0603e8a7f2/output/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.3.1] /Users/shailshah/.android/build-cache/427f858068df7774b6f25f0e70151e3af6fd1a18/output/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support.test.espresso:espresso-idling-resource:2.2.2] /Users/shailshah/.android/build-cache/08ee8f991724108f8f5329f494694be1d4222a0e/output/AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer:r2.2.0] /Users/shailshah/.android/build-cache/43e68a4ebc236922f16dab3b9a16b7146fc3cac0/output/AndroidManifest.xml:21:5-23:41
-MERGED from [jp.wasabeef:blurry:2.1.1] /Users/shailshah/.android/build-cache/3b57159216530a3b0fc04c88f8177e382a44dbae/output/AndroidManifest.xml:8:5-10:41
+INJECTED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml
+INJECTED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:preference-v7:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/preference-v7-25.3.1.aar/d4ae117fbba10548e6d7e8c3b684b25d/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:preference-v7:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/preference-v7-25.3.1.aar/d4ae117fbba10548e6d7e8c3b684b25d/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/fe168cc2de46a1372a9458f47222e7e2/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/fe168cc2de46a1372a9458f47222e7e2/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/97421bdc1d740afdd9dbef1868115cec/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/97421bdc1d740afdd9dbef1868115cec/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.3.1.aar/0d77e0266e0210baab0d5c81ced723f0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.3.1.aar/0d77e0266e0210baab0d5c81ced723f0/AndroidManifest.xml:20:5-43
+MERGED from [com.firebase:firebase-jobdispatcher:0.5.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/firebase-jobdispatcher-0.5.0.aar/267850584884c42732507e03c5fa0297/AndroidManifest.xml:22:5-24:41
+MERGED from [com.firebase:firebase-jobdispatcher:0.5.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/firebase-jobdispatcher-0.5.0.aar/267850584884c42732507e03c5fa0297/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/329e983554873d277256bf8b40be3a26/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/329e983554873d277256bf8b40be3a26/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:cardview-v7:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/cardview-v7-25.3.1.aar/2ec13a3efc142927cbba217a5dff5cc0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:cardview-v7:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/cardview-v7-25.3.1.aar/2ec13a3efc142927cbba217a5dff5cc0/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-appindexing:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/play-services-appindexing-9.8.0.aar/f2b9356717ae422eee67ff424784f64e/AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-appindexing:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/play-services-appindexing-9.8.0.aar/f2b9356717ae422eee67ff424784f64e/AndroidManifest.xml:17:5-42
+MERGED from [com.android.support.test.espresso:espresso-idling-resource:2.2.2] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/espresso-idling-resource-2.2.2.aar/0ff90c8bcf05999cac1e4431500ec3d5/AndroidManifest.xml:20:5-22:41
+MERGED from [com.android.support.test.espresso:espresso-idling-resource:2.2.2] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/espresso-idling-resource-2.2.2.aar/0ff90c8bcf05999cac1e4431500ec3d5/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer:r2.2.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/exoplayer-r2.2.0.aar/639856b69ebc49c7c202f3b0c816ca08/AndroidManifest.xml:21:5-23:41
+MERGED from [com.google.android.exoplayer:exoplayer:r2.2.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/exoplayer-r2.2.0.aar/639856b69ebc49c7c202f3b0c816ca08/AndroidManifest.xml:21:5-23:41
+MERGED from [jp.wasabeef:blurry:2.1.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/blurry-2.1.1.aar/ccdba83f6490b5e49ef77587935812ab/AndroidManifest.xml:8:5-10:41
+MERGED from [jp.wasabeef:blurry:2.1.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/blurry-2.1.1.aar/ccdba83f6490b5e49ef77587935812ab/AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:multidex:1.0.2] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/15ffd8717fa35f624cf01580898bd805/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:multidex:1.0.2] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/15ffd8717fa35f624cf01580898bd805/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/ca8d7cb9b20f5f1986553f16c0f1f160/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/ca8d7cb9b20f5f1986553f16c0f1f160/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/3d9ae55c38e16eedf79fdcd8f5a78f54/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/3d9ae55c38e16eedf79fdcd8f5a78f54/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/transition-25.3.1.aar/5875ad07f615ab77bcc94d9f00cae2b0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/transition-25.3.1.aar/5875ad07f615ab77bcc94d9f00cae2b0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/play-services-base-9.8.0.aar/015369d879d88ee4fe6180feb7923222/AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-base:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/play-services-base-9.8.0.aar/015369d879d88ee4fe6180feb7923222/AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-common:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/firebase-common-9.8.0.aar/d7bd629f365583a8ae66207c8c2a352c/AndroidManifest.xml:3:5-42
+MERGED from [com.google.firebase:firebase-common:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/firebase-common-9.8.0.aar/d7bd629f365583a8ae66207c8c2a352c/AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-tasks:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/play-services-tasks-9.8.0.aar/58b3a4e71555f179612957fb593bcbb1/AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-tasks:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/play-services-tasks-9.8.0.aar/58b3a4e71555f179612957fb593bcbb1/AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-basement:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/play-services-basement-9.8.0.aar/f0070fc65d2b29caf7d3ddac9913315a/AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-basement:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/play-services-basement-9.8.0.aar/f0070fc65d2b29caf7d3ddac9913315a/AndroidManifest.xml:17:5-42
+MERGED from [com.android.support:support-v4:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/1fbb0cf97bc21f3b3f73b06adac3e3d9/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/1fbb0cf97bc21f3b3f73b06adac3e3d9/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/bd77dc23ee82bc0e330c3f5e88ef6253/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/bd77dc23ee82bc0e330c3f5e88ef6253/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/29ff1a6efc3add5d0fe24c9ac7ca845f/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/29ff1a6efc3add5d0fe24c9ac7ca845f/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/51246daa61ccea9237bb5fb9ad63ee73/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/51246daa61ccea9237bb5fb9ad63ee73/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/7edac27689f0fd74129a4aba50184f3a/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/7edac27689f0fd74129a4aba50184f3a/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/d1c7512daf1ec17da6c36d838f20bd78/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/d1c7512daf1ec17da6c36d838f20bd78/AndroidManifest.xml:21:5-23:58
+INJECTED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml
+INJECTED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:25.3.1] /Users/shailshah/.android/build-cache/79c6d0990f5a6002a0735056a8e3e0c15284f864/output/AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/fe168cc2de46a1372a9458f47222e7e2/AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
 		INJECTED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml
+		ADDED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml
+		ADDED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/shailshah/Documents/Android/Projects/BakingApp/app/src/main/AndroidManifest.xml
 meta-data#android.support.VERSION
-ADDED from [com.android.support:preference-v7:25.3.1] /Users/shailshah/.android/build-cache/44a1edf99a4f58a746e4ec93f6a11e16afccc4ed/output/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:design:25.3.1] /Users/shailshah/.android/build-cache/79c6d0990f5a6002a0735056a8e3e0c15284f864/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/shailshah/.android/build-cache/3c01fef9a9ebf28c60422ce14504bb21fb2f78d7/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/shailshah/.android/build-cache/76a4448a019a908612e43754c6a8e0f83f0b9fa2/output/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/shailshah/.android/build-cache/ab720f6170c9ca5448c9c11c1a854a7497603ea3/output/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/shailshah/.android/build-cache/b0f698a96ad58044f079ca82244b67fa0451733d/output/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:transition:25.3.1] /Users/shailshah/.android/build-cache/2fc7f1fd3595d099d5d4dac389ea83d805c7a540/output/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:cardview-v7:25.3.1] /Users/shailshah/.android/build-cache/3eec29cdee4d729a5d40c7e123e1f7ab5a002c7d/output/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-v4:25.3.1] /Users/shailshah/.android/build-cache/d28cd16222a62043a07eac435e7c99e75c426fac/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-fragment:25.3.1] /Users/shailshah/.android/build-cache/19e32b657e30ceccf736a984136d6d154d3cc2cf/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-media-compat:25.3.1] /Users/shailshah/.android/build-cache/d47746392228eaf6d7fbeff476aa3081d3d9b9af/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-ui:25.3.1] /Users/shailshah/.android/build-cache/17fb5bc25187d6913998c46d7d3d8df5ca0fe049/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-utils:25.3.1] /Users/shailshah/.android/build-cache/b2f48b22b4910ef35f41deb7b445cb0603e8a7f2/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-compat:25.3.1] /Users/shailshah/.android/build-cache/427f858068df7774b6f25f0e70151e3af6fd1a18/output/AndroidManifest.xml:25:5-27:34
+ADDED from [com.android.support:preference-v7:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/preference-v7-25.3.1.aar/d4ae117fbba10548e6d7e8c3b684b25d/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:design:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/fe168cc2de46a1372a9458f47222e7e2/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:design:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/fe168cc2de46a1372a9458f47222e7e2/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/97421bdc1d740afdd9dbef1868115cec/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/97421bdc1d740afdd9dbef1868115cec/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.3.1.aar/0d77e0266e0210baab0d5c81ced723f0/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.3.1.aar/0d77e0266e0210baab0d5c81ced723f0/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:cardview-v7:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/cardview-v7-25.3.1.aar/2ec13a3efc142927cbba217a5dff5cc0/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:cardview-v7:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/cardview-v7-25.3.1.aar/2ec13a3efc142927cbba217a5dff5cc0/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/ca8d7cb9b20f5f1986553f16c0f1f160/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/ca8d7cb9b20f5f1986553f16c0f1f160/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/3d9ae55c38e16eedf79fdcd8f5a78f54/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/3d9ae55c38e16eedf79fdcd8f5a78f54/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/transition-25.3.1.aar/5875ad07f615ab77bcc94d9f00cae2b0/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/transition-25.3.1.aar/5875ad07f615ab77bcc94d9f00cae2b0/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/1fbb0cf97bc21f3b3f73b06adac3e3d9/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/1fbb0cf97bc21f3b3f73b06adac3e3d9/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/bd77dc23ee82bc0e330c3f5e88ef6253/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/bd77dc23ee82bc0e330c3f5e88ef6253/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/29ff1a6efc3add5d0fe24c9ac7ca845f/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/29ff1a6efc3add5d0fe24c9ac7ca845f/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/51246daa61ccea9237bb5fb9ad63ee73/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/51246daa61ccea9237bb5fb9ad63ee73/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/7edac27689f0fd74129a4aba50184f3a/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/7edac27689f0fd74129a4aba50184f3a/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/d1c7512daf1ec17da6c36d838f20bd78/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/d1c7512daf1ec17da6c36d838f20bd78/AndroidManifest.xml:25:5-27:34
 	android:value
-		ADDED from [com.android.support:preference-v7:25.3.1] /Users/shailshah/.android/build-cache/44a1edf99a4f58a746e4ec93f6a11e16afccc4ed/output/AndroidManifest.xml:24:9-31
+		ADDED from [com.android.support:preference-v7:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/preference-v7-25.3.1.aar/d4ae117fbba10548e6d7e8c3b684b25d/AndroidManifest.xml:24:9-31
 	android:name
-		ADDED from [com.android.support:preference-v7:25.3.1] /Users/shailshah/.android/build-cache/44a1edf99a4f58a746e4ec93f6a11e16afccc4ed/output/AndroidManifest.xml:23:9-47
+		ADDED from [com.android.support:preference-v7:25.3.1] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/preference-v7-25.3.1.aar/d4ae117fbba10548e6d7e8c3b684b25d/AndroidManifest.xml:23:9-47
 service#com.firebase.jobdispatcher.GooglePlayReceiver
-ADDED from [com.firebase:firebase-jobdispatcher:0.5.0] /Users/shailshah/.android/build-cache/4562bfb36155703e61c93b5adf8a43aaba2e2249/output/AndroidManifest.xml:32:9-39:19
+ADDED from [com.firebase:firebase-jobdispatcher:0.5.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/firebase-jobdispatcher-0.5.0.aar/267850584884c42732507e03c5fa0297/AndroidManifest.xml:32:9-39:19
 	android:exported
-		ADDED from [com.firebase:firebase-jobdispatcher:0.5.0] /Users/shailshah/.android/build-cache/4562bfb36155703e61c93b5adf8a43aaba2e2249/output/AndroidManifest.xml:34:13-36
+		ADDED from [com.firebase:firebase-jobdispatcher:0.5.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/firebase-jobdispatcher-0.5.0.aar/267850584884c42732507e03c5fa0297/AndroidManifest.xml:34:13-36
 	android:permission
-		ADDED from [com.firebase:firebase-jobdispatcher:0.5.0] /Users/shailshah/.android/build-cache/4562bfb36155703e61c93b5adf8a43aaba2e2249/output/AndroidManifest.xml:35:13-93
+		ADDED from [com.firebase:firebase-jobdispatcher:0.5.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/firebase-jobdispatcher-0.5.0.aar/267850584884c42732507e03c5fa0297/AndroidManifest.xml:35:13-93
 	android:name
-		ADDED from [com.firebase:firebase-jobdispatcher:0.5.0] /Users/shailshah/.android/build-cache/4562bfb36155703e61c93b5adf8a43aaba2e2249/output/AndroidManifest.xml:33:13-73
+		ADDED from [com.firebase:firebase-jobdispatcher:0.5.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/firebase-jobdispatcher-0.5.0.aar/267850584884c42732507e03c5fa0297/AndroidManifest.xml:33:13-73
 intent-filter#com.google.android.gms.gcm.ACTION_TASK_READY
-ADDED from [com.firebase:firebase-jobdispatcher:0.5.0] /Users/shailshah/.android/build-cache/4562bfb36155703e61c93b5adf8a43aaba2e2249/output/AndroidManifest.xml:36:13-38:29
+ADDED from [com.firebase:firebase-jobdispatcher:0.5.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/firebase-jobdispatcher-0.5.0.aar/267850584884c42732507e03c5fa0297/AndroidManifest.xml:36:13-38:29
 action#com.google.android.gms.gcm.ACTION_TASK_READY
-ADDED from [com.firebase:firebase-jobdispatcher:0.5.0] /Users/shailshah/.android/build-cache/4562bfb36155703e61c93b5adf8a43aaba2e2249/output/AndroidManifest.xml:37:17-87
+ADDED from [com.firebase:firebase-jobdispatcher:0.5.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/firebase-jobdispatcher-0.5.0.aar/267850584884c42732507e03c5fa0297/AndroidManifest.xml:37:17-87
 	android:name
-		ADDED from [com.firebase:firebase-jobdispatcher:0.5.0] /Users/shailshah/.android/build-cache/4562bfb36155703e61c93b5adf8a43aaba2e2249/output/AndroidManifest.xml:37:25-84
+		ADDED from [com.firebase:firebase-jobdispatcher:0.5.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/firebase-jobdispatcher-0.5.0.aar/267850584884c42732507e03c5fa0297/AndroidManifest.xml:37:25-84
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:9.8.0] /Users/shailshah/.android/build-cache/12c1022337d9eff4591c59edef1ff700112d4359/output/AndroidManifest.xml:19:9-172
+ADDED from [com.google.android.gms:play-services-base:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/play-services-base-9.8.0.aar/015369d879d88ee4fe6180feb7923222/AndroidManifest.xml:19:9-172
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:9.8.0] /Users/shailshah/.android/build-cache/12c1022337d9eff4591c59edef1ff700112d4359/output/AndroidManifest.xml:19:146-170
+		ADDED from [com.google.android.gms:play-services-base:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/play-services-base-9.8.0.aar/015369d879d88ee4fe6180feb7923222/AndroidManifest.xml:19:146-170
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:9.8.0] /Users/shailshah/.android/build-cache/12c1022337d9eff4591c59edef1ff700112d4359/output/AndroidManifest.xml:19:86-145
+		ADDED from [com.google.android.gms:play-services-base:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/play-services-base-9.8.0.aar/015369d879d88ee4fe6180feb7923222/AndroidManifest.xml:19:86-145
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:9.8.0] /Users/shailshah/.android/build-cache/12c1022337d9eff4591c59edef1ff700112d4359/output/AndroidManifest.xml:19:19-85
+		ADDED from [com.google.android.gms:play-services-base:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/play-services-base-9.8.0.aar/015369d879d88ee4fe6180feb7923222/AndroidManifest.xml:19:19-85
 provider#com.google.firebase.provider.FirebaseInitProvider
-ADDED from [com.google.firebase:firebase-common:9.8.0] /Users/shailshah/.android/build-cache/1207d51f6c3a531cdc1dec5aaadd6773b465dbbd/output/AndroidManifest.xml:6:9-175
+ADDED from [com.google.firebase:firebase-common:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/firebase-common-9.8.0.aar/d7bd629f365583a8ae66207c8c2a352c/AndroidManifest.xml:6:9-175
 	android:authorities
-		ADDED from [com.google.firebase:firebase-common:9.8.0] /Users/shailshah/.android/build-cache/1207d51f6c3a531cdc1dec5aaadd6773b465dbbd/output/AndroidManifest.xml:6:19-78
+		ADDED from [com.google.firebase:firebase-common:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/firebase-common-9.8.0.aar/d7bd629f365583a8ae66207c8c2a352c/AndroidManifest.xml:6:19-78
 	android:exported
-		ADDED from [com.google.firebase:firebase-common:9.8.0] /Users/shailshah/.android/build-cache/1207d51f6c3a531cdc1dec5aaadd6773b465dbbd/output/AndroidManifest.xml:6:125-149
+		ADDED from [com.google.firebase:firebase-common:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/firebase-common-9.8.0.aar/d7bd629f365583a8ae66207c8c2a352c/AndroidManifest.xml:6:125-149
 	android:initOrder
-		ADDED from [com.google.firebase:firebase-common:9.8.0] /Users/shailshah/.android/build-cache/1207d51f6c3a531cdc1dec5aaadd6773b465dbbd/output/AndroidManifest.xml:6:150-173
+		ADDED from [com.google.firebase:firebase-common:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/firebase-common-9.8.0.aar/d7bd629f365583a8ae66207c8c2a352c/AndroidManifest.xml:6:150-173
 	android:name
-		ADDED from [com.google.firebase:firebase-common:9.8.0] /Users/shailshah/.android/build-cache/1207d51f6c3a531cdc1dec5aaadd6773b465dbbd/output/AndroidManifest.xml:6:79-124
+		ADDED from [com.google.firebase:firebase-common:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/firebase-common-9.8.0.aar/d7bd629f365583a8ae66207c8c2a352c/AndroidManifest.xml:6:79-124
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:9.8.0] /Users/shailshah/.android/build-cache/ebb3980828d13179223f690b17c008e2a62818e6/output/AndroidManifest.xml:20:9-121
+ADDED from [com.google.android.gms:play-services-basement:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/play-services-basement-9.8.0.aar/f0070fc65d2b29caf7d3ddac9913315a/AndroidManifest.xml:20:9-121
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:9.8.0] /Users/shailshah/.android/build-cache/ebb3980828d13179223f690b17c008e2a62818e6/output/AndroidManifest.xml:20:66-119
+		ADDED from [com.google.android.gms:play-services-basement:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/play-services-basement-9.8.0.aar/f0070fc65d2b29caf7d3ddac9913315a/AndroidManifest.xml:20:66-119
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:9.8.0] /Users/shailshah/.android/build-cache/ebb3980828d13179223f690b17c008e2a62818e6/output/AndroidManifest.xml:20:20-65
+		ADDED from [com.google.android.gms:play-services-basement:9.8.0] /Users/shailshah/.gradle/caches/transforms-1/files-1.1/play-services-basement-9.8.0.aar/f0070fc65d2b29caf7d3ddac9913315a/AndroidManifest.xml:20:20-65
