@@ -4,9 +4,7 @@ Android Baking App that will allow Udacity’s resident baker-in-chief, Miriam, 
 
 ## Used Libraries
 * [Dagger 2](https://github.com/google/dagger)
-* [Retrofit 2](https://github.com/square/retrofit) with [RxJava adapter](https://github.com/square/retrofit/tree/master/retrofit-adapters/rxjava2) and [Gson converter](https://github.com/square/retrofit/tree/master/retrofit-converters/gson)
 * [OkHttp](https://github.com/square/okhttp)
-* [Retrolambda](https://github.com/evant/gradle-retrolambda)
 * [Glide](https://github.com/bumptech/glide)
 * [Material Values](https://github.com/AoDevBlue/MaterialValues)
 * [ExoPlayer](https://github.com/google/ExoPlayer)
