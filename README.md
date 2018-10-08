@@ -3,7 +3,6 @@ App for [Android Developer Nanodegree program](https://www.udacity.com/course/an
 Android Baking App that will allow Udacity’s resident baker-in-chief, Miriam, to share her recipes with the world. You will create an app that will allow a user to select a recipe and see video-guided steps for how to complete it.
 
 ## Used Libraries
-* [Dagger 2](https://github.com/google/dagger)
 * [OkHttp](https://github.com/square/okhttp)
 * [Glide](https://github.com/bumptech/glide)
 * [Material Values](https://github.com/AoDevBlue/MaterialValues)
